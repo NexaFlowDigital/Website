@@ -20,34 +20,40 @@
 
 
 /*--------------------- 0- Global CSS (Start) ---------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
 
 :root{
-    --purple: #BC8CF2;
-    --black: #000000;
-    --white: #F7F5F2;
-    --grey: #DFDFDE;
+    --primary: #49B7D8;
+    --secondary: #173F73;
+    --accent: #5A4BD6;
+    --dark: #0F172A;
+    --dark-light: #162033;
+    --white: #F8FBFD;
+    --grey: #B8C4D6;
+    --light-bg: #F4F8FB;
+    --card-bg: #13203A;
+    --border: rgba(73,183,216,0.18);
 }
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: none;
     border: none;
     outline: none;
     -webkit-transition: all 0.2s linear;
        -moz-transition: all 0.2s linear;
          -o-transition: all 0.2s linear;
-  	        transition: all 0.2s linear;
+            transition: all 0.2s linear;
 }
 
 *::selection{
     color: var(--white);
-    background-color: var(--purple);
+    background-color: var(--accent);
 }
 
 html{
@@ -58,7 +64,7 @@ html{
 }
 
 body{
-    background-color: var(--black);
+    background-color: var(--dark);
 }
 
 section{
@@ -71,11 +77,11 @@ section{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1rem;
-    background-color: var(--purple);
+    background: linear-gradient(180deg, var(--primary), var(--accent));
 }
 
 ::-webkit-scrollbar-track{
-    background-color: var(--black);
+    background-color: var(--dark);
 }
 
 .swiper-pagination-bullet{
@@ -87,7 +93,7 @@ section{
 
 .swiper-pagination-bullet-active{
     width: 3rem;
-    background: var(--purple);
+    background: var(--primary);
 }
 
 /*--------------------- 0- Global CSS (End) ---------------------*/
@@ -102,25 +108,31 @@ section{
 .heading h2{
     text-align: center;
     padding-bottom: 2rem;
-    color:var(--purple);
+    color: var(--primary);
     font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
 }
 
 .heading h2 span{
     position: relative;
     z-index: 0;
     color: var(--white);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .heading h2 span::before{
     content: '';
     position: absolute;
-    bottom: -0.5rem; left: 0;
+    bottom: -0.6rem;
+    left: 0;
     z-index: -1;
-    background: var(--purple);
-    height: 0.2rem;
-    width: 80%;
-    margin-left: 10%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    height: 0.35rem;
+    width: 100%;
+    border-radius: 50rem;
 }
 
 /*--------------------- 1- Heading CSS (End) ---------------------*/
@@ -130,11 +142,15 @@ section{
 /*--------------------- 2- Button CSS (Start) ---------------------*/
 .btn{
     display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    color: var(--purple);
-    background-color: transparent;
-    border: 0.2rem solid var(--purple);
+    padding: 1.1rem 2.2rem;
+    font-size: 1.6rem;
+    color: var(--white);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border: 0.2rem solid transparent;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    box-shadow: 0 0.8rem 2rem rgba(73,183,216,0.18);
 }
 
 .btn i{
@@ -142,8 +158,9 @@ section{
 }
 
 .btn:hover{
-    color: var(--white);
-    background-color: var(--purple);
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
     cursor: pointer;
 }
 
@@ -158,152 +175,134 @@ header{
     left: 0;
     width: 100%;
     padding: 2rem 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background: transparent;
-    -webkit-transition: all 0.5s linear;
-       -moz-transition: all 0.5s linear;
-         -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+    transition: all 0.5s linear;
     z-index: 999;
 }
 
 header.sticky{
-    border-bottom: 0.1rem solid var(--grey);
-    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 0.1rem solid rgba(255,255,255,0.06);
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(10px);
 }
 
 header .logo h2{
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--purple);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.08rem;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+}
+
+header .logo h2 span{
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
 }
 
 header .navbar a{
     color: var(--white);
-    font-size: 1.8rem;
-    margin-left: 1rem;
+    font-size: 1.7rem;
+    margin-left: 1.4rem;
+    font-weight: 500;
 }
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 header #menu-btn{
     font-size: 3rem;
     color: var(--white);
     cursor: pointer;
-    -webkit-transition: all 0.5s linear;
-       -moz-transition: all 0.5s linear;
-         -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+    transition: all 0.5s linear;
     display: none;
 }
 
 header .fa-times{
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 header #menu-btn:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
-/*--------------------- 3- Header Area CSS (End) ---------------------*/
+/*--------------------- 3- Header Area (End) ---------------------*/
 
 
 
 /*--------------------- 4- Home Area CSS (Start) ---------------------*/
 .home{
     padding: 0rem 5%;
-    background-color: var(--black);
     min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(73,183,216,0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(90,75,214,0.18), transparent 35%),
+        var(--dark);
 }
 
 .home .box-container{
     min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 4rem;
 }
 
 .home .image {
-    width: 32rem;      /* match About’s container width */
+    width: 32rem;
     text-align: center;
 }
 
 .home .image img {
-    width: 100%;       /* fill that container */
-    height: auto;      /* keep its natural aspect ratio */
-    border: 1rem solid var(--purple);
-    /* remove any rounding so it stays a rectangle */
-    border-radius: 0;
+    width: 100%;
+    height: auto;
+    border: 0.2rem solid rgba(73,183,216,0.25);
+    border-radius: 1.8rem;
     object-fit: cover;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.25);
 }
 
 .home .content{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 40rem;
-        flex: 1 1 40rem;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
+    flex: 1 1 40rem;
     display: flex;
-
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-
     margin-top: 7rem;
 }
 
 .home .content h2{
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--purple);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--primary);
 }
 
 .home .content h1{
-    font-size: 4rem;
+    font-size: 4.8rem;
     color: var(--white);
     padding: 1rem 0;
-    text-transform: none;
+    line-height: 1.15;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 
 .home .content h1 span{
-    color: var(--purple);
-
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .home .content p{
     font-size: 1.7rem;
     font-weight: 400;
-    color: var(--white);
+    color: var(--grey);
     padding-bottom: 2rem;
-    line-height: 1.5;
+    line-height: 1.7;
+    max-width: 60rem;
 }
 /*--------------------- 4- Home Area CSS (End) ---------------------*/
 
@@ -312,30 +311,30 @@ header #menu-btn:hover{
 /*--------------------- 5- About Area CSS (Start) ---------------------*/
 .about .box-container {
     display: flex;
-    justify-content: space-between;   /* push .content to left, .counting to right */
-    align-items: flex-start;           /* align both items at the top */
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem 0;
 }
 
-/* remove the image entirely—no .about .image rules needed */
-
 .about .content {
-    flex: 1 1 55rem;                   /* roughly 55rem wide, but will shrink if needed */
-    order: 1;                          /* ensure this always comes first */
+    flex: 1 1 55rem;
+    order: 1;
 }
 
 .about .content h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: var(--white);
     padding-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .about .content > p {
     font-size: 1.6rem;
     color: var(--grey);
-    line-height: 1.6;
+    line-height: 1.8;
     padding-bottom: 1rem;
 }
 
@@ -372,49 +371,49 @@ header #menu-btn:hover{
     order: 2;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;    /* <-- changed from center */
+    align-items: stretch;
     justify-content: center;
     gap: 1rem;
 }
 
 .counting .box {
     flex: 1 1 18rem;
-    display: flex;           /* make each box a flex-container */
-    flex-direction: column;  /* stack its children vertically */
-    justify-content: center; /* center the number and label vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    background-color: #222;
+    background: linear-gradient(180deg, rgba(19,32,58,0.95), rgba(18,27,46,0.95));
     padding: 2rem;
+    border: 0.1rem solid var(--border);
+    border-radius: 1.2rem;
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.18);
 }
 
-/* the rest stays the same */
 .counting .box .count {
     font-size: 3.5rem;
-    color: var(--purple);
+    color: var(--primary);
     padding-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 
 .counting .box h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--white);
+    line-height: 1.5;
 }
-/*--------------------- 5- About Area CSS (End) ---------------------*/
+
 .skill-container{
     padding: 2rem 0;
 }
 
 .skills{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .skill-item{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 30rem;
-        flex: 1 1 30rem;
+    flex: 1 1 30rem;
     margin-right: 1.5rem;
 }
 
@@ -422,12 +421,8 @@ header #menu-btn:hover{
     padding:1rem 0;
 }
 
- .skill-item .box h3{
-    display: -webkit-box;
-    display: -ms-flexbox;
+.skill-item .box h3{
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
     justify-content: space-between;
     padding:.7rem 0;
     font-size: 1.7rem;
@@ -435,42 +430,42 @@ header #menu-btn:hover{
     font-weight: 400;
 }
 
- .skill-item .box .progress-bar{
+.skill-item .box .progress-bar{
     width:100%;
-    background:#222;
+    background: rgba(255,255,255,0.08);
     overflow:hidden;
     height:1rem;
     border-radius: 50rem;
 }
 
- .skill-item .box .progress-bar span{
+.skill-item .box .progress-bar span{
     display:block;
     height:100%;
-    background: var(--purple);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
- .skill-item.item1 .box:nth-child(1) .progress-bar span{
+.skill-item.item1 .box:nth-child(1) .progress-bar span{
     width:95%;
 }
 
- .skill-item.item1 .box:nth-child(2) .progress-bar span{
+.skill-item.item1 .box:nth-child(2) .progress-bar span{
     width:90%;
 }
 
- .skill-item.item1 .box:nth-child(3) .progress-bar span{
+.skill-item.item1 .box:nth-child(3) .progress-bar span{
     width:85%;
 }
 
 .skill-item.item2 .box:nth-child(1) .progress-bar span{
+    width:80%;
+}
+
+.skill-item.item2 .box:nth-child(2) .progress-bar span{
     width:75%;
 }
 
- .skill-item.item2 .box:nth-child(2) .progress-bar span{
-    width:65%;
-}
-
- .skill-item.item2 .box:nth-child(3) .progress-bar span{
-    width:60%;
+.skill-item.item2 .box:nth-child(3) .progress-bar span{
+    width:70%;
 }
 
 /*--------------------- 5- About Area CSS (End) ---------------------*/
@@ -479,39 +474,28 @@ header #menu-btn:hover{
 
 /*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
 .qualification .box-container{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 4rem;
 }
 
 .education, .experience{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 40rem;
-        flex: 1 1 40rem;
+    flex: 1 1 40rem;
 }
 
 .experience-item{
     position: relative;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 40rem;
-        flex: 1 1 40rem;
+    flex: 1 1 40rem;
     padding: 0 3rem 2rem 3rem;
-    border-left: 0.2rem solid var(--purple);
+    border-left: 0.2rem solid var(--primary);
     margin-left: 2rem;
 }
 
 .experience-item i{
     position: absolute;
-    top: 0; 
+    top: 0;
     left: -2.5rem;
     height:5rem;
     width: 5rem;
@@ -519,28 +503,32 @@ header #menu-btn:hover{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color:var(--white);
-    background:var(--purple);
+    color: var(--white);
+    background: linear-gradient(180deg, var(--primary), var(--accent));
 }
 
 .experience-item .content{
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    padding: 1.8rem 2rem;
     border-left: 2rem;
+    background-color: var(--dark-light);
+    border: 0.1rem solid var(--border);
 }
 
 .experience-item span{
-    background: #222;
-    color: var(--white);
+    background: rgba(73,183,216,0.12);
+    color: var(--primary);
     padding: 0.5rem 1.5rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border-radius: 50rem;
+    font-weight: 600;
 }
 
 .experience-item h3{
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: var(--white);
-    padding: 2rem 0;
+    padding: 1.6rem 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .experience-item p{
@@ -553,14 +541,14 @@ header #menu-btn:hover{
     list-style-type: disc;
     margin: 1rem 0 1rem 2rem;
     padding: 0;
-  }
-  
-  .experience-list li {
+}
+
+.experience-list li {
     margin-bottom: 0.5rem;
     font-size: 1.6rem;
     line-height: 2.5rem;
-    color: var(--white);    /* ← add this */
-  }
+    color: var(--white);
+}
 
 /*--------------------- 6- Qualification Area CSS (End) ---------------------*/
 
@@ -568,41 +556,31 @@ header #menu-btn:hover{
 
 /*--------------------- 7- Services Area CSS (Start) ---------------------*/
 .service .box-container{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
 .service-item{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 33rem;
-        flex: 1 1 33rem;
-    background-color: var(--black);
+    flex: 1 1 33rem;
+    background: linear-gradient(180deg, rgba(19,32,58,0.94), rgba(18,27,46,0.94));
     padding: 4rem 3rem;
     text-align: center;
-    border: 0.1rem solid rgba(255,255, 255, 0.3);
-    border-radius: 0.5rem;
-    -webkit-transition: all 0.5s linear;
-       -moz-transition: all 0.5s linear;
-         -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+    border: 0.1rem solid var(--border);
+    border-radius: 1.2rem;
+    transition: all 0.35s linear;
 }
 
 .service-item:hover{
-    background-color: var(--purple);
+    transform: translateY(-0.5rem);
+    border-color: rgba(73,183,216,0.45);
+    box-shadow: 0 1rem 2.5rem rgba(73,183,216,0.12);
 }
 
 .service-item i{
-    color: var(--white);
+    color: var(--primary);
     font-size: 4rem;
 }
 
@@ -610,12 +588,13 @@ header #menu-btn:hover{
     font-size: 2rem;
     color: var(--white);
     padding: 1.5rem 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .service-item p{
     font-size: 1.6rem;
     color: var(--grey);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .service-item:hover p{
@@ -628,16 +607,9 @@ header #menu-btn:hover{
 
 /*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
 .controls{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style-type: none;
     margin-top: 2rem;
@@ -649,24 +621,23 @@ header #menu-btn:hover{
 }
 
 .controls .button.active{
-    cursor: pointer;
-    background-color: var(--purple);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
     color: var(--white);
 }
 
 .portfolio .box-container{
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
-    gap: 0.5rem;
-    padding: 2rem 0; 
+    gap: 1rem;
+    padding: 2rem 0;
 }
 
 .portfolio-item{
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     height: 25rem;
     overflow: hidden;
     position: relative;
+    border: 0.1rem solid rgba(255,255,255,0.05);
 }
 
 .portfolio-item img{
@@ -682,138 +653,104 @@ header #menu-btn:hover{
     left: 10%;
     height: 80%;
     width: 80%;
-    border-radius: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: -webkit-box;
-    display: -ms-flexbox;
+    border-radius: 0.8rem;
+    background: linear-gradient(180deg, rgba(15,23,42,0.92), rgba(23,63,115,0.88));
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    flex-direction: column;
+    transform: scale(0);
+    padding: 1.5rem;
+    text-align: center;
+    border: 0.1rem solid rgba(73,183,216,0.18);
 }
 
 .portfolio-item .content h4{
     font-size: 2rem;
     font-weight: bold;
-    color: var(--purple);
+    color: var(--primary);
     transform-origin: top;
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    transform: translateY(-10rem);
     opacity: 0;
     padding-bottom: 1rem;
-    -webkit-transition: all 0.4s linear;
-       -moz-transition: all 0.4s linear;
-         -o-transition: all 0.4s linear;
-            transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .portfolio-item .content p{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: var(--white);
     transform-origin: top;
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    transform: translateY(-10rem);
     opacity: 0;
-    -webkit-transition: all 0.4s linear;
-       -moz-transition: all 0.4s linear;
-         -o-transition: all 0.4s linear;
-            transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    line-height: 1.6;
 }
 
 .portfolio-item .content .view-btn{
     font-size: 2rem;
-    color: var(--purple);
+    color: var(--primary);
     transform-origin: top;
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    transform: translateY(-10rem);
     opacity: 0;
-    -webkit-transition: all 0.4s linear;
-       -moz-transition: all 0.4s linear;
-         -o-transition: all 0.4s linear;
-            transition: all 0.4s linear;
+    transition: all 0.4s linear;
     border-radius: 5rem;
     margin-top: 1.5rem;
 }
 
 .demo-details {
     color: #f1f1f1;
-  }
+}
 
 .portfolio-item:hover .content{
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
 }
 
 .portfolio-item:hover .content h4{
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .portfolio-item:hover .content p{
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .portfolio-item:hover .content .view-btn{
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .portfolio-item:hover img{
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.15);
 }
 
-/*CSS3 Animation Effects for Magnific Popup*/
-
-/* start state */
 .mfp-newspaper  .mfp-with-anim {
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out; 
-            transition: all 0.2s ease-in-out; 
-
-    -webkit-transform: scale(0) rotate(500deg);
-            transform: scale(0) rotate(500deg);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0) rotate(500deg);
 }
 .mfp-newspaper.mfp-bg {
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out; 
-            transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
 }
-  
-/* animate in */
+
 .mfp-newspaper.mfp-ready .mfp-with-anim {
     opacity: 1;
-    -webkit-transform: scale(1) rotate(0deg);
-            transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
 }
 .mfp-newspaper.mfp-ready.mfp-bg {
     opacity: 0.8;
 }
-  
-/* animate out */
+
 .mfp-newspaper.mfp-removing .mfp-with-anim {
-    -webkit-transform: scale(0) rotate(500deg);
-            transform: scale(0) rotate(500deg);
+    transform: scale(0) rotate(500deg);
     opacity: 0;
 }
 .mfp-newspaper.mfp-removing.mfp-bg {
     opacity: 0;
 }
-
 
 /*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
 
@@ -828,13 +765,14 @@ header #menu-btn:hover{
 
 .testi-item{
     text-align: center;
-    border: 0.1rem solid var(--grey);
-    border-radius: 0.5rem;
+    border: 0.1rem solid var(--border);
+    border-radius: 0.8rem;
     padding: 4rem 2rem;
+    background: var(--dark-light);
 }
 
 .testi-item:hover{
-    border-color: var(--purple);
+    border-color: var(--primary);
 }
 
 .testi-item img{
@@ -854,7 +792,7 @@ header #menu-btn:hover{
 .testi-item p{
     color: var(--grey);
     font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .testi-item .intro{
@@ -868,7 +806,7 @@ header #menu-btn:hover{
 }
 
 .testi-item .intro h5{
-    color: var(--purple);
+    color: var(--primary);
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -885,9 +823,9 @@ header #menu-btn:hover{
 }
 
 .blog-item{
-    background-color: #222;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
+    background-color: var(--dark-light);
+    border: 0.1rem solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.8rem;
     overflow: hidden;
 }
 
@@ -897,8 +835,7 @@ header #menu-btn:hover{
 }
 
 .blog-item:hover .image img{
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.12);
 }
 
 .blog-item .image img{
@@ -912,13 +849,9 @@ header #menu-btn:hover{
 }
 
 .blog-item .content .intro{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 0.2rem solid var(--grey);
+    border-bottom: 0.2rem solid rgba(255,255,255,0.08);
     padding: 1rem 0;
     margin-bottom: 1.5rem;
 }
@@ -928,7 +861,7 @@ header #menu-btn:hover{
 }
 
 .blog-item .content .intro h5 i{
-    color: var(--purple);
+    color: var(--primary);
     padding-right: 0.5rem;
 }
 
@@ -959,41 +892,34 @@ header #menu-btn:hover{
 /*--------------------- 11- Contact Area CSS (Start) ---------------------*/
 .contact .alert{
     font-size: 2rem;
-    color: var(--purple);
+    color: var(--primary);
     border-radius: 0.5rem;
     padding-left: 1rem;
 }
 
 .contact .box-container{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 .contact-info{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 42rem;
-        flex: 1 1 42rem;
+    flex: 1 1 42rem;
 }
 
 .contact-info h3{
     font-size: 3rem;
     color: var(--white);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contact-info > p{
     font-size: 1.6rem;
     color: var(--grey);
     padding: 0.5rem 0;
+    line-height: 1.8;
 }
 
 .contact-info .info-item{
@@ -1012,26 +938,16 @@ header #menu-btn:hover{
 }
 
 .contact-info .info-item .detail{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab{
     border-radius: 50%;
-    color: var(--purple);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    color: var(--primary);
+    display: flex;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     font-size: 1.5rem;
 }
@@ -1043,34 +959,33 @@ header #menu-btn:hover{
     padding-left: 1rem;
 }
 
-/* make all links in the contact info match your grey text */
 .contact-info .detail a {
     color: var(--grey);
     text-decoration: none;
-  }
-  .contact-info .detail a:hover {
+}
+.contact-info .detail a:hover {
     color: var(--white);
-  }
+}
 
 .contact-form{
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 42rem;
-        flex: 1 1 42rem;
+    flex: 1 1 42rem;
 }
 
 .contact-form .box{
     width: 100%;
     text-transform: none;
-    color: var(--grey);
+    color: var(--white);
     font-size: 1.6rem;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(73,183,216,0.16);
     padding: 1.5rem;
     margin: 0.5rem 0;
-    background-color: #222;
+    background-color: var(--dark-light);
+    border-radius: 0.8rem;
 }
 
 .contact-form .box:focus{
-    border-color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.15rem rgba(73,183,216,0.18);
 }
 
 .contact-form .box::placeholder{
@@ -1092,61 +1007,36 @@ header #menu-btn:hover{
 
 /*--------------------- 12- Footer Area CSS (Start) ---------------------*/
 footer{
-    background-color: var(--purple);
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
     padding: 2rem 0;
     text-align: center;
 }
 
 footer .social{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 2rem 0;
 }
 
-footer .social .fab{
-    background-color: var(--black);
+footer .social .fab,
+footer .social .fas,
+footer .social .social-link i{
+    background-color: rgba(255,255,255,0.08);
     border-radius: 50%;
     height: 4rem;
     width: 4rem;
     color: var(--white);
     font-size: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0 0.5rem;
 }
 
-footer .social .fas{
-    background-color: var(--black);
-    border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
-    color: var(--white);
-    font-size: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 0.5rem;
-}
-
-footer .social .fab:hover{
-    color: var(--black);
+footer .social .fab:hover,
+footer .social .fas:hover,
+footer .social .social-link i:hover{
+    color: var(--dark);
     background-color: var(--white);
 }
 
@@ -1156,7 +1046,7 @@ footer .content p{
 }
 
 footer .content p span{
-    color: var(--black);
+    color: var(--dark);
 }
 
 /*--------------------- 12- Footer Area CSS (End) ---------------------*/
@@ -1172,41 +1062,28 @@ footer .content p span{
     width: 5rem;
     font-size: 3rem;
     font-weight:lighter;
-    background: var(--black);
+    background: linear-gradient(180deg, var(--primary), var(--accent));
     color: var(--white);
-    border: 0.2rem solid var(--white);
+    border: 0.2rem solid rgba(255,255,255,0.25);
     border-radius: 50%;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 999;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-  }
+}
 
-  .scroll-top:hover{
+.scroll-top:hover{
     background: var(--white);
-    color:var(--black);
-  }
+    color: var(--dark);
+}
 
-  
 /*--------------------- 13- Scroll-Top (End) ---------------------*/
-/*------------------------------------------------------------------*/
-/* 1-line typing header on mobile: no wrapping, fluid font size     */
-/*------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
     .home .content h1 {
-      /* allow the font to scale down, but never below 2.5rem or above 4rem */
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      white-space: nowrap;      /* absolutely no wrapping */
-      overflow-x: auto;         /* allow horizontal scroll if it *does* overflow */
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      white-space: nowrap;
+      overflow-x: auto;
     }
-  }
+}

@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700&display=swap');
 
 :root{
-    --primary: #49B7D8;
-    --secondary: #173F73;
-    --accent: #5A4BD6;
-    --dark: #081224;
-    --dark-light: #0E1A30;
-    --panel: #101D36;
-    --panel-2: #132542;
-    --white: #F8FBFD;
-    --grey: #A9B7CC;
-    --soft: #DCE8F5;
+    --primary: #1F7BFF;
+    --secondary: #4353FF;
+    --accent: #31D7FF;
+    --dark: #070B14;
+    --dark-light: #0D1424;
+    --panel: #111A2D;
+    --panel-2: #16223A;
+    --white: #F7FAFF;
+    --grey: #95A4BD;
+    --soft: #D9E5F6;
     --border: rgba(255,255,255,0.08);
 }
 
@@ -28,7 +28,7 @@
 
 *::selection{
     color: var(--white);
-    background-color: var(--accent);
+    background-color: var(--secondary);
 }
 
 html{
@@ -44,7 +44,7 @@ body{
 }
 
 section{
-    padding: 7rem 5%;
+    padding: 8rem 5%;
 }
 
 ::-webkit-scrollbar{
@@ -53,7 +53,7 @@ section{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1rem;
-    background: linear-gradient(180deg, var(--primary), var(--accent));
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
 }
 
 ::-webkit-scrollbar-track{
@@ -76,35 +76,34 @@ section{
 
 /*--------------------- Heading ---------------------*/
 .heading{
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .heading h2{
     text-align: center;
     padding-bottom: 2rem;
     color: var(--primary);
-    font-size: 4.6rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.03rem;
+    font-size: 4.2rem;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .heading h2 span{
     position: relative;
     z-index: 0;
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sora', sans-serif;
 }
 
 .heading h2 span::before{
     content: '';
     position: absolute;
-    bottom: -0.7rem;
+    bottom: -0.8rem;
     left: 0;
     z-index: -1;
-    background: var(--primary);
-    height: 0.25rem;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    height: 0.26rem;
     width: 100%;
     border-radius: 50rem;
 }
@@ -114,14 +113,14 @@ section{
 /*--------------------- Buttons ---------------------*/
 .btn{
     display: inline-block;
-    padding: 1.3rem 2.6rem;
-    font-size: 1.6rem;
-    color: #081224;
-    background: var(--primary);
-    border: 0.2rem solid var(--primary);
+    padding: 1.35rem 2.6rem;
+    font-size: 1.55rem;
+    color: var(--white);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border: 0.2rem solid transparent;
     border-radius: 999px;
     font-weight: 700;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.02rem;
 }
 
 .btn i{
@@ -129,21 +128,22 @@ section{
 }
 
 .btn:hover{
-    color: var(--primary);
+    color: var(--white);
     background: transparent;
+    border-color: var(--primary);
     cursor: pointer;
 }
 
 .btn-outline{
     background: transparent;
-    color: var(--white);
-    border-color: rgba(255,255,255,0.18);
+    color: var(--soft);
+    border-color: rgba(255,255,255,0.16);
 }
 
 .btn-outline:hover{
-    color: var(--dark);
-    background: var(--white);
-    border-color: var(--white);
+    color: var(--white);
+    border-color: var(--primary);
+    background: rgba(31,123,255,0.08);
 }
 
 
@@ -154,18 +154,18 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.8rem 5%;
+    padding: 1.7rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(8, 18, 36, 0.82);
-    backdrop-filter: blur(10px);
+    background: rgba(7, 11, 20, 0.78);
+    backdrop-filter: blur(12px);
     border-bottom: 0.1rem solid rgba(255,255,255,0.05);
     z-index: 999;
 }
 
 header.sticky{
-    background: rgba(8, 18, 36, 0.92);
+    background: rgba(7, 11, 20, 0.92);
 }
 
 header .logo{
@@ -182,13 +182,13 @@ header .logo .logo-img{
 header .navbar a{
     color: var(--soft);
     font-size: 1.7rem;
-    margin-left: 2rem;
+    margin-left: 2.2rem;
     font-weight: 500;
 }
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--primary);
+    color: var(--accent);
 }
 
 header #menu-btn{
@@ -204,14 +204,14 @@ header .fa-times{
 
 
 
-/*--------------------- Home ---------------------*/
+/*--------------------- Hero ---------------------*/
 .home{
     min-height: 100vh;
     padding: 0 5%;
     background:
-        linear-gradient(180deg, rgba(8,18,36,0.96), rgba(8,18,36,0.98)),
-        radial-gradient(circle at top right, rgba(73,183,216,0.12), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(90,75,214,0.10), transparent 24%);
+        radial-gradient(circle at top right, rgba(49,215,255,0.10), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(67,83,255,0.12), transparent 24%),
+        linear-gradient(180deg, #070B14 0%, #0A1020 100%);
 }
 
 .home .box-container{
@@ -220,39 +220,40 @@ header .fa-times{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6rem;
+    gap: 7rem;
 }
 
 .home .content{
-    flex: 1 1 48rem;
+    flex: 1 1 52rem;
     margin-top: 5rem;
 }
 
-.home .content h2{
-    font-size: 1.8rem;
-    letter-spacing: 0.18rem;
+.home .content .eyebrow{
+    font-size: 1.55rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
-    color: var(--primary);
+    color: var(--accent);
     font-weight: 700;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
 }
 
 .home .content h1{
-    font-size: 5.8rem;
+    font-size: 6.2rem;
     color: var(--white);
-    line-height: 1.05;
-    max-width: 72rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    line-height: 1.02;
+    max-width: 78rem;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
 .home .content p{
     font-size: 1.9rem;
     font-weight: 400;
     color: var(--grey);
-    padding: 2rem 0 2.4rem 0;
+    padding: 2.2rem 0 2.6rem 0;
     line-height: 1.8;
-    max-width: 62rem;
+    max-width: 63rem;
 }
 
 .hero-buttons{
@@ -261,8 +262,24 @@ header .fa-times{
     flex-wrap: wrap;
 }
 
+.hero-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.4rem;
+}
+
+.hero-tags span{
+    font-size: 1.35rem;
+    color: var(--soft);
+    padding: 0.8rem 1.3rem;
+    border: 0.1rem solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.03);
+}
+
 .home .image{
-    width: 42rem;
+    width: 43rem;
     text-align: center;
 }
 
@@ -294,8 +311,8 @@ header .fa-times{
     font-size: 3.8rem;
     color: var(--white);
     padding-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
+    font-family: 'Sora', sans-serif;
+    line-height: 1.15;
 }
 
 .about .content > p{
@@ -303,7 +320,7 @@ header .fa-times{
     color: var(--grey);
     line-height: 1.9;
     padding-bottom: 1rem;
-    max-width: 90rem;
+    max-width: 92rem;
 }
 
 .about .content .about-info{
@@ -318,15 +335,15 @@ header .fa-times{
     flex: 1 1 34rem;
     background: var(--panel);
     border: 0.1rem solid var(--border);
-    border-radius: 1.6rem;
-    padding: 2.4rem;
+    border-radius: 1.8rem;
+    padding: 2.6rem;
 }
 
 .about .content .about-info .info h4{
     font-size: 1.6rem;
     color: var(--white);
     padding-bottom: 1rem;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .about .content .about-info .info span{
@@ -355,24 +372,24 @@ header .fa-times{
     justify-content: center;
     text-align: center;
     background: var(--panel);
-    padding: 2.6rem 2rem;
+    padding: 2.8rem 2rem;
     border: 0.1rem solid var(--border);
-    border-radius: 1.6rem;
+    border-radius: 1.8rem;
     min-height: 18rem;
 }
 
 .counting .box .count{
     font-size: 4rem;
-    color: var(--white);
-    padding-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    color: var(--accent);
+    padding-bottom: 0.6rem;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
 }
 
 .counting .box h3{
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     color: var(--grey);
-    line-height: 1.6;
+    line-height: 1.65;
     max-width: 24rem;
     margin: 0 auto;
 }
@@ -398,12 +415,13 @@ header .fa-times{
 }
 
 .service-item:hover{
-    transform: translateY(-0.4rem);
-    border-color: rgba(73,183,216,0.35);
+    transform: translateY(-0.5rem);
+    border-color: rgba(49,215,255,0.34);
+    box-shadow: 0 1.2rem 3rem rgba(0,0,0,0.18);
 }
 
 .service-item i{
-    color: var(--primary);
+    color: var(--accent);
     font-size: 3.2rem;
     margin-bottom: 1.2rem;
 }
@@ -412,10 +430,47 @@ header .fa-times{
     font-size: 2.2rem;
     color: var(--white);
     padding: 0 0 1rem 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sora', sans-serif;
 }
 
 .service-item p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 1.8;
+}
+
+
+
+/*--------------------- Process ---------------------*/
+.process-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.process-card{
+    background: var(--panel);
+    border: 0.1rem solid var(--border);
+    border-radius: 1.8rem;
+    padding: 3rem;
+}
+
+.step-number{
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: 0.16rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+.process-card h3{
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-family: 'Sora', sans-serif;
+}
+
+.process-card p{
     font-size: 1.6rem;
     color: var(--grey);
     line-height: 1.8;
@@ -442,9 +497,9 @@ header .fa-times{
 }
 
 .controls .button.active{
-    background: var(--primary);
-    color: #081224;
-    border-color: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--white);
+    border-color: transparent;
 }
 
 .portfolio .box-container{
@@ -460,6 +515,7 @@ header .fa-times{
     overflow: hidden;
     position: relative;
     border: 0.1rem solid var(--border);
+    background: var(--panel);
 }
 
 .portfolio-item img{
@@ -473,9 +529,9 @@ header .fa-times{
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 45%;
+    min-height: 46%;
     border-radius: 0;
-    background: linear-gradient(180deg, rgba(8,18,36,0) 0%, rgba(8,18,36,0.92) 55%, rgba(8,18,36,0.98) 100%);
+    background: linear-gradient(180deg, rgba(7,11,20,0) 0%, rgba(7,11,20,0.92) 56%, rgba(7,11,20,0.98) 100%);
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -486,10 +542,10 @@ header .fa-times{
 
 .portfolio-item .content h4{
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--white);
     padding-bottom: 0.7rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sora', sans-serif;
 }
 
 .portfolio-item .content p{
@@ -546,7 +602,7 @@ header .fa-times{
 /*--------------------- Contact ---------------------*/
 .contact .alert{
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--accent);
     border-radius: 0.5rem;
     padding-left: 1rem;
 }
@@ -571,7 +627,7 @@ header .fa-times{
 .contact-info h3{
     font-size: 3.2rem;
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sora', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -605,7 +661,7 @@ header .fa-times{
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab{
     border-radius: 50%;
-    color: var(--primary);
+    color: var(--accent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,13 +691,13 @@ header .fa-times{
     border: 0.1rem solid rgba(255,255,255,0.08);
     padding: 1.6rem;
     margin: 0.5rem 0;
-    background-color: #0B1630;
+    background-color: #0A1324;
     border-radius: 1.2rem;
 }
 
 .contact-form .box:focus{
     border-color: var(--primary);
-    box-shadow: 0 0 0 0.15rem rgba(73,183,216,0.18);
+    box-shadow: 0 0 0 0.15rem rgba(31,123,255,0.18);
 }
 
 .contact-form .box::placeholder{
@@ -692,8 +748,8 @@ footer .social .social-link i{
 footer .social .fab:hover,
 footer .social .fas:hover,
 footer .social .social-link i:hover{
-    background: var(--primary);
-    color: #081224;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--white);
 }
 
 
@@ -706,8 +762,8 @@ footer .social .social-link i:hover{
     height: 5rem;
     width: 5rem;
     font-size: 3rem;
-    background: var(--primary);
-    color: #081224;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    color: var(--white);
     border-radius: 50%;
     z-index: 999;
     display: flex;

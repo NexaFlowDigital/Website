@@ -134,6 +134,18 @@ section{
     cursor: pointer;
 }
 
+.btn-outline{
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.btn-outline:hover{
+    color: var(--dark);
+    background: var(--white);
+    border-color: var(--white);
+}
+
 
 
 /*--------------------- Header ---------------------*/
@@ -162,7 +174,7 @@ header .logo{
 }
 
 header .logo .logo-img{
-    height: 6.8rem;
+    height: 7rem;
     width: auto;
     display: block;
 }
@@ -226,7 +238,7 @@ header .fa-times{
 }
 
 .home .content h1{
-    font-size: 6rem;
+    font-size: 5.8rem;
     color: var(--white);
     line-height: 1.05;
     max-width: 72rem;
@@ -241,6 +253,12 @@ header .fa-times{
     padding: 2rem 0 2.4rem 0;
     line-height: 1.8;
     max-width: 62rem;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .home .image{
@@ -357,96 +375,6 @@ header .fa-times{
     line-height: 1.6;
     max-width: 24rem;
     margin: 0 auto;
-}
-
-.skill-container{
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-.skills{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skill-item{
-    flex: 1 1 30rem;
-    margin-right: 1.5rem;
-}
-
-.skill-item .box{
-    padding:1rem 0;
-}
-
-.skill-item .box h3{
-    display: flex;
-    justify-content: space-between;
-    padding:.7rem 0;
-    font-size: 1.6rem;
-    color: var(--soft);
-    font-weight: 400;
-}
-
-.skill-item .box .progress-bar{
-    width:100%;
-    background: rgba(255,255,255,0.08);
-    overflow:hidden;
-    height:0.8rem;
-    border-radius: 50rem;
-}
-
-.skill-item .box .progress-bar span{
-    display:block;
-    height:100%;
-    background: linear-gradient(90deg, var(--primary), #6AD7F0);
-}
-
-.skill-item.item1 .box:nth-child(1) .progress-bar span{ width:95%; }
-.skill-item.item1 .box:nth-child(2) .progress-bar span{ width:90%; }
-.skill-item.item1 .box:nth-child(3) .progress-bar span{ width:85%; }
-.skill-item.item2 .box:nth-child(1) .progress-bar span{ width:80%; }
-.skill-item.item2 .box:nth-child(2) .progress-bar span{ width:75%; }
-.skill-item.item2 .box:nth-child(3) .progress-bar span{ width:70%; }
-
-
-
-/*--------------------- Proof Strip ---------------------*/
-.proof-strip{
-    padding-top: 2rem;
-}
-
-.proof-grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-}
-
-.proof-card{
-    background: var(--panel);
-    border: 0.1rem solid var(--border);
-    border-radius: 1.8rem;
-    padding: 3rem 2.5rem;
-}
-
-.proof-number{
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: 0.18rem;
-    margin-bottom: 1.2rem;
-}
-
-.proof-card h3{
-    font-size: 2.3rem;
-    color: var(--white);
-    margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.proof-card p{
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: var(--grey);
 }
 
 
@@ -774,7 +702,7 @@ footer .social .social-link i:hover{
 .scroll-top{
     position: fixed;
     bottom: 1rem;
-    right:1rem;
+    right: 1rem;
     height: 5rem;
     width: 5rem;
     font-size: 3rem;

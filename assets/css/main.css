@@ -361,12 +361,15 @@ header .fa-times{
     line-height: 1.08;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
+    min-height: 13rem; /* reserves space so typed words do not shift layout */
 }
 
 .home .content h1 span{
-    color: var(--interaction-color); /* #32D7E2 */
+    color: var(--interaction-color);
     font-family: 'Cormorant Garamond', serif;
-    text-shadow: 0 0 1.6rem rgba(234, 253, 255, 0.12);
+    text-shadow: 0 0 1.6rem rgba(50, 215, 226, 0.12);
+    display: inline-block;
+    min-width: 34rem; /* reserves width for longer phrases */
 }
 
 .home .hero-copy{

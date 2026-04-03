@@ -19,23 +19,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root{
-    --primary: #0D5C91;
-    --primary-dark: #08466F;
-    --secondary: #18A8B7;
-    --secondary-bright: #32D7E2;
-    --pop-accent: #E11D74;
+    /* 1 dominant base color */
+    --base-color: #0D5C91;
 
-    --frame-bg: #0D5C91;
+    /* 1 supporting color */
+    --support-color: #08466F;
+
+    /* 1 interaction color */
+    --interaction-color: #32D7E2;
+
+    /* 1 accent pop */
+    --accent-pop: #E11D74;
+
+    /* subtle neutrals */
     --page-bg: #F4F8FB;
     --card-bg: #FFFFFF;
-    --card-alt: #F8FBFD;
-
+    --card-bg-soft: #F8FBFD;
     --text-dark: #17384F;
     --text-light: #61788A;
     --white: #FFFFFF;
-
-    --border: rgba(13, 92, 145, 0.16);
     --line: #D7E4EE;
+    --border: rgba(13, 92, 145, 0.14);
+
     --shadow: 0 1rem 3rem rgba(23, 56, 79, 0.08);
     --shadow-strong: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.16);
 }
@@ -54,7 +59,7 @@
 
 *::selection{
     color: var(--white);
-    background-color: var(--secondary);
+    background-color: var(--interaction-color);
 }
 
 html{
@@ -65,7 +70,7 @@ html{
 }
 
 body{
-    background-color: var(--frame-bg);
+    background-color: var(--base-color);
     color: var(--text-dark);
 }
 
@@ -79,7 +84,7 @@ section{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1rem;
-    background: linear-gradient(var(--primary), var(--pop-accent));
+    background: linear-gradient(var(--base-color), var(--accent-pop));
 }
 
 ::-webkit-scrollbar-track{
@@ -95,7 +100,7 @@ section{
 
 .swiper-pagination-bullet-active{
     width: 3rem;
-    background: var(--secondary);
+    background: var(--interaction-color);
 }
 
 #header-wrapper{
@@ -106,13 +111,13 @@ section{
     width: 1200px;
     max-width: 100%;
     z-index: 1001;
-    background-color: rgba(244,248,251,0.90);
+    background-color: rgba(244,248,251,0.92);
     border-bottom: 0.1rem solid rgba(13,92,145,0.08);
     backdrop-filter: blur(10px);
 }
 
 #header-wrapper.scrolled{
-    background-color: var(--frame-bg);
+    background-color: var(--base-color);
 }
 
 #page-wrapper{
@@ -127,7 +132,7 @@ section{
 .section-divider,
 hr.section-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(225, 29, 116, 0.52), transparent);
+    background: linear-gradient(90deg, transparent, rgba(225, 29, 116, 0.48), transparent);
     border: none;
     margin: 0;
 }
@@ -143,7 +148,7 @@ hr.section-divider{
 .heading h2{
     text-align: center;
     padding-bottom: 1rem;
-    color: var(--primary);
+    color: var(--base-color);
     font-size: 4.4rem;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
@@ -164,7 +169,7 @@ hr.section-divider{
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    background: rgba(24,168,183,0.14);
+    background: rgba(50, 215, 226, 0.12);
     height: 1rem;
     width: 96%;
     border-radius: 5rem;
@@ -180,9 +185,9 @@ hr.section-divider{
     font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: 0.08rem;
-    color: var(--primary);
+    color: var(--base-color);
     background: var(--white);
-    border: 0.2rem solid var(--primary);
+    border: 0.2rem solid var(--base-color);
     border-radius: 5rem;
     text-transform: uppercase;
     position: relative;
@@ -201,7 +206,7 @@ hr.section-divider{
     left: 20%;
     width: 0%;
     height: 0.2rem;
-    background: var(--pop-accent);
+    background: var(--accent-pop);
     transition: 0.3s ease;
 }
 
@@ -211,8 +216,8 @@ hr.section-divider{
 
 .btn:hover{
     color: var(--white);
-    background-color: var(--secondary-bright);
-    border-color: var(--secondary-bright);
+    background-color: var(--interaction-color);
+    border-color: var(--interaction-color);
     cursor: pointer;
     box-shadow: 0 1rem 2.4rem rgba(50, 215, 226, 0.18);
 }
@@ -226,8 +231,8 @@ hr.section-divider{
 
 .btn-secondary:hover{
     color: var(--white);
-    background: var(--secondary-bright);
-    border-color: var(--secondary-bright);
+    background: var(--interaction-color);
+    border-color: var(--interaction-color);
 }
 /*--------------------- 2- Button CSS (End) ---------------------*/
 
@@ -262,7 +267,7 @@ header .navbar a{
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--pop-accent);
+    color: var(--accent-pop);
 }
 
 #header-wrapper.scrolled .navbar a{
@@ -296,9 +301,9 @@ header .fa-times{
 .home{
     padding: 3rem 5% 5rem 5%;
     background:
-        radial-gradient(circle at top right, rgba(50, 215, 226, 0.18), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.09), transparent 24%),
-        linear-gradient(135deg, #0A446A 0%, #0D5C91 55%, #0B6B83 100%);
+        radial-gradient(circle at top right, rgba(50, 215, 226, 0.16), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.08), transparent 24%),
+        linear-gradient(135deg, var(--support-color) 0%, var(--base-color) 58%, #0B6A89 100%);
     border-radius: 2.4rem;
     overflow: hidden;
     margin-bottom: 4rem;
@@ -342,7 +347,7 @@ header .fa-times{
 .home .content .eyebrow{
     font-size: 1.45rem;
     font-weight: 700;
-    color: var(--pop-accent);
+    color: var(--accent-pop);
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -358,9 +363,9 @@ header .fa-times{
 }
 
 .home .content h1 span{
-    color: #18A8B7;
+    color: #EAFDFF;
     font-family: 'Cormorant Garamond', serif;
-    text-shadow: 0 0 1.6rem rgba(223, 251, 255, 0.12);
+    text-shadow: 0 0 1.6rem rgba(234, 253, 255, 0.12);
 }
 
 .home .hero-copy{
@@ -441,7 +446,7 @@ header .fa-times{
 .counting .box .count,
 .counting .box h1{
     font-size: 3.9rem;
-    color: var(--secondary);
+    color: var(--interaction-color);
     padding-bottom: 0.7rem;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
@@ -482,18 +487,18 @@ header .fa-times{
 
 .service-item:hover{
     transform: translateY(-0.4rem);
-    border-color: rgba(24,168,183,0.32);
-    background: var(--card-alt);
+    border-color: rgba(50,215,226,0.34);
+    background: var(--card-bg-soft);
     box-shadow: 0 10px 30px rgba(225, 29, 116, 0.08);
 }
 
 .service-item i{
-    color: var(--secondary);
+    color: var(--base-color);
     font-size: 3.2rem;
 }
 
 .service-item:hover i{
-    color: var(--pop-accent);
+    color: var(--accent-pop);
 }
 
 .service-item h3{
@@ -521,7 +526,7 @@ header .fa-times{
 }
 
 .process-card{
-    background: linear-gradient(180deg, var(--primary-dark), var(--primary));
+    background: linear-gradient(180deg, var(--support-color), var(--base-color));
     border-radius: 1.8rem;
     padding: 3rem;
     color: var(--white);
@@ -530,7 +535,7 @@ header .fa-times{
 
 .step-number{
     font-size: 1.3rem;
-    color: #c9fbff;
+    color: rgba(255,255,255,0.82);
     letter-spacing: 0.16rem;
     font-weight: 700;
     margin-bottom: 1.2rem;
@@ -616,7 +621,7 @@ header .fa-times{
 /*--------------------- 9- Contact Area CSS (Start) ---------------------*/
 .contact .alert{
     font-size: 1.7rem;
-    color: var(--primary);
+    color: var(--base-color);
     border-radius: 0.5rem;
     padding-left: 0;
     display: block;
@@ -672,7 +677,7 @@ header .fa-times{
 
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab{
-    color: var(--secondary);
+    color: var(--base-color);
     font-size: 1.7rem;
     min-width: 2rem;
     margin-top: 0.2rem;
@@ -691,7 +696,7 @@ header .fa-times{
 }
 
 .contact-info .detail a:hover{
-    color: var(--primary);
+    color: var(--accent-pop);
 }
 
 .contact-form{
@@ -715,9 +720,9 @@ header .fa-times{
 }
 
 .contact-form .box:focus{
-    border-color: var(--secondary);
+    border-color: var(--interaction-color);
     background: var(--white);
-    box-shadow: 0 0 0 0.3rem rgba(24, 168, 183, 0.08);
+    box-shadow: 0 0 0 0.3rem rgba(50, 215, 226, 0.10);
 }
 
 .contact-form .box::placeholder{
@@ -745,7 +750,7 @@ footer{
 
 .footer-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(24,168,183,0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(225, 29, 116, 0.42), transparent);
     margin: 2rem 0;
 }
 
@@ -760,11 +765,11 @@ footer .social{
 footer .social .fab,
 footer .social .fas{
     background: var(--white);
-    border: 0.2rem solid var(--primary);
+    border: 0.2rem solid var(--base-color);
     border-radius: 50%;
     height: 4.4rem;
     width: 4.4rem;
-    color: var(--primary);
+    color: var(--base-color);
     font-size: 1.9rem;
     display: flex;
     justify-content: center;
@@ -775,8 +780,8 @@ footer .social .fas{
 footer .social .fab:hover,
 footer .social .fas:hover{
     color: var(--white);
-    background: var(--secondary-bright);
-    border-color: var(--secondary-bright);
+    background: var(--interaction-color);
+    border-color: var(--interaction-color);
 }
 
 .footer-copy{
@@ -797,8 +802,8 @@ footer .social .fas:hover{
     width: 5rem;
     font-size: 2.3rem;
     background: var(--white);
-    color: var(--primary);
-    border: 0.2rem solid var(--primary);
+    color: var(--base-color);
+    border: 0.2rem solid var(--base-color);
     border-radius: 50%;
     z-index: 999;
     display: flex;
@@ -808,8 +813,8 @@ footer .social .fas:hover{
 }
 
 .scroll-top:hover{
-    background: var(--secondary-bright);
+    background: var(--interaction-color);
     color: var(--white);
-    border-color: var(--secondary-bright);
+    border-color: var(--interaction-color);
 }
 /*--------------------- 11- Scroll-Top (End) ---------------------*/

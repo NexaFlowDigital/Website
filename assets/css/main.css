@@ -37,6 +37,7 @@
     --border: rgba(13, 92, 145, 0.16);
     --line: #D7E4EE;
     --shadow: 0 1rem 3rem rgba(23, 56, 79, 0.08);
+    --shadow-strong: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.16);
 }
 
 *{
@@ -48,7 +49,7 @@
     text-transform: none;
     border: none;
     outline: none;
-    transition: all 0.2s linear;
+    transition: all 0.22s ease;
 }
 
 *::selection{
@@ -186,6 +187,7 @@ hr.section-divider{
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0.6rem 1.6rem rgba(8,70,111,0.06);
 }
 
 .btn i{
@@ -212,12 +214,14 @@ hr.section-divider{
     background-color: var(--secondary-bright);
     border-color: var(--secondary-bright);
     cursor: pointer;
+    box-shadow: 0 1rem 2.4rem rgba(50, 215, 226, 0.18);
 }
 
 .btn-secondary{
     color: var(--white);
     background: transparent;
     border: 0.2rem solid rgba(255,255,255,0.35);
+    box-shadow: none;
 }
 
 .btn-secondary:hover{
@@ -291,7 +295,10 @@ header .fa-times{
 /*--------------------- 4- Home Area CSS (Start) ---------------------*/
 .home{
     padding: 3rem 5% 5rem 5%;
-    background: linear-gradient(135deg, rgba(13,92,145,0.95), rgba(24,168,183,0.9));
+    background:
+        radial-gradient(circle at top right, rgba(50, 215, 226, 0.18), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.09), transparent 24%),
+        linear-gradient(135deg, #0A446A 0%, #0D5C91 55%, #0B6B83 100%);
     border-radius: 2.4rem;
     overflow: hidden;
     margin-bottom: 4rem;
@@ -314,10 +321,10 @@ header .fa-times{
 .home .image img{
     width: 100%;
     height: auto;
-    border: 0.1rem solid rgba(255,255,255,0.18);
+    border: 0.1rem solid rgba(255,255,255,0.24);
     border-radius: 2rem;
     object-fit: cover;
-    box-shadow: 0 1.5rem 4rem rgba(8,70,111,0.28);
+    box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
 }
 
 .home .content{
@@ -335,7 +342,7 @@ header .fa-times{
 .home .content .eyebrow{
     font-size: 1.45rem;
     font-weight: 700;
-    color: rgba(255,255,255,0.82);
+    color: var(--pop-accent);
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -351,8 +358,9 @@ header .fa-times{
 }
 
 .home .content h1 span{
-    color: #e8ffff;
+    color: #DFFBFF;
     font-family: 'Cormorant Garamond', serif;
+    text-shadow: 0 0 1.6rem rgba(223, 251, 255, 0.12);
 }
 
 .home .hero-copy{
@@ -709,6 +717,7 @@ header .fa-times{
 .contact-form .box:focus{
     border-color: var(--secondary);
     background: var(--white);
+    box-shadow: 0 0 0 0.3rem rgba(24, 168, 183, 0.08);
 }
 
 .contact-form .box::placeholder{

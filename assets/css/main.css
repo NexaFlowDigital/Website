@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root{
-    --primary: #1F7BFF;
-    --secondary: #4157FF;
-    --accent: #1CC8D7;
-    --ink: #0F172A;
-    --ink-soft: #1E293B;
-    --text: #0F172A;
-    --text-soft: #475569;
+    --primary: #0F4C81;
+    --secondary: #0FA3B1;
+    --accent: #12B886;
+    --dark: #0D1B2A;
+    --dark-soft: #1B263B;
     --white: #FFFFFF;
-    --bg: #F6F8FC;
+    --bg: #F7FAFC;
     --surface: #FFFFFF;
-    --line: #E2E8F0;
-    --shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.08);
+    --surface-alt: #EEF4F8;
+    --line: #DCE6ED;
+    --text: #102A43;
+    --text-soft: #52667A;
+    --shadow: 0 1.5rem 4rem rgba(13, 27, 42, 0.08);
 }
 
 *{
@@ -58,19 +59,19 @@ section{
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #E5ECF5;
+    background-color: #EAF0F4;
 }
 
 .swiper-pagination-bullet{
     height: 1rem;
     width: 1rem;
     border-radius: 50rem;
-    background-color: #CBD5E1;
+    background-color: #B9C8D3;
 }
 
 .swiper-pagination-bullet-active{
     width: 3rem;
-    background: var(--primary);
+    background: var(--secondary);
 }
 
 
@@ -85,16 +86,16 @@ section{
     padding-bottom: 2rem;
     color: var(--primary);
     font-size: 4.2rem;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
     letter-spacing: -0.02em;
 }
 
 .heading h2 span{
     position: relative;
     z-index: 0;
-    color: var(--ink);
-    font-family: 'Outfit', sans-serif;
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
 }
 
 .heading h2 span::before{
@@ -103,7 +104,7 @@ section{
     bottom: -0.8rem;
     left: 0;
     z-index: -1;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
     height: 0.28rem;
     width: 100%;
     border-radius: 50rem;
@@ -122,7 +123,7 @@ section{
     border-radius: 999px;
     font-weight: 700;
     letter-spacing: 0.02rem;
-    box-shadow: 0 1rem 2.5rem rgba(31,123,255,0.18);
+    box-shadow: 0 1rem 2.5rem rgba(15, 163, 177, 0.15);
 }
 
 .btn i{
@@ -139,15 +140,15 @@ section{
 
 .btn-secondary{
     background: transparent;
-    color: var(--ink);
+    color: var(--text);
     border: 0.2rem solid var(--line);
     box-shadow: none;
 }
 
 .btn-secondary:hover{
     color: var(--white);
-    background: var(--ink);
-    border-color: var(--ink);
+    background: var(--dark);
+    border-color: var(--dark);
 }
 
 
@@ -162,14 +163,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255,255,255,0.78);
+    background: rgba(255,255,255,0.82);
     backdrop-filter: blur(12px);
-    border-bottom: 0.1rem solid rgba(15,23,42,0.06);
+    border-bottom: 0.1rem solid rgba(16,42,67,0.06);
     z-index: 999;
 }
 
 header.sticky{
-    background: rgba(255,255,255,0.94);
+    background: rgba(255,255,255,0.95);
 }
 
 header .logo{
@@ -184,7 +185,7 @@ header .logo .logo-img{
 }
 
 header .navbar a{
-    color: var(--ink);
+    color: var(--text);
     font-size: 1.7rem;
     margin-left: 2.2rem;
     font-weight: 500;
@@ -192,12 +193,12 @@ header .navbar a{
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 header #menu-btn{
     font-size: 3rem;
-    color: var(--ink);
+    color: var(--text);
     cursor: pointer;
     display: none;
 }
@@ -213,9 +214,8 @@ header .fa-times{
     min-height: 100vh;
     padding: 0 5%;
     background:
-        radial-gradient(circle at top right, rgba(31,123,255,0.10), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(28,200,215,0.10), transparent 24%),
-        linear-gradient(180deg, #F8FAFD 0%, #EDF3FA 100%);
+        linear-gradient(135deg, rgba(15,76,129,0.92), rgba(15,163,177,0.88)),
+        radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 26%);
 }
 
 .home .box-container{
@@ -236,30 +236,30 @@ header .fa-times{
     font-size: 1.5rem;
     letter-spacing: 0.22rem;
     text-transform: uppercase;
-    color: var(--primary);
+    color: rgba(255,255,255,0.82);
     font-weight: 700;
     margin-bottom: 1.8rem;
 }
 
 .home .content h1{
     font-size: 6rem;
-    color: var(--ink);
+    color: var(--white);
     line-height: 1.02;
     max-width: 78rem;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
     letter-spacing: -0.03em;
 }
 
 .home .content h1 span{
-    color: var(--primary);
-    font-family: 'Outfit', sans-serif;
+    color: #D9FFFB;
+    font-family: 'Manrope', sans-serif;
 }
 
 .home .hero-copy{
     font-size: 1.9rem;
     font-weight: 400;
-    color: var(--text-soft);
+    color: rgba(255,255,255,0.86);
     padding: 2.2rem 0 2.6rem 0;
     line-height: 1.8;
     max-width: 63rem;
@@ -280,11 +280,11 @@ header .fa-times{
 
 .hero-tags span{
     font-size: 1.35rem;
-    color: var(--ink-soft);
+    color: var(--white);
     padding: 0.85rem 1.3rem;
-    border: 0.1rem solid var(--line);
+    border: 0.1rem solid rgba(255,255,255,0.20);
     border-radius: 999px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
 }
 
 .home .image{
@@ -296,8 +296,9 @@ header .fa-times{
     width: 100%;
     height: auto;
     border-radius: 2.2rem;
-    box-shadow: 0 2rem 6rem rgba(15, 23, 42, 0.14);
+    box-shadow: 0 2rem 6rem rgba(13, 27, 42, 0.18);
     object-fit: cover;
+    border: 0.1rem solid rgba(255,255,255,0.18);
 }
 
 
@@ -318,9 +319,9 @@ header .fa-times{
 
 .about .content h2{
     font-size: 3.8rem;
-    color: var(--ink);
+    color: var(--text);
     padding-bottom: 1rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
     line-height: 1.15;
 }
 
@@ -351,10 +352,10 @@ header .fa-times{
 
 .about .content .about-info .info h4{
     font-size: 1.7rem;
-    color: var(--ink);
+    color: var(--text);
     padding-bottom: 0.8rem;
     line-height: 1.5;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .about .content .about-info .info p{
@@ -393,10 +394,10 @@ header .fa-times{
 
 .counting .box .count{
     font-size: 4rem;
-    color: var(--primary);
+    color: var(--secondary);
     padding-bottom: 0.6rem;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
 }
 
 .counting .box h3{
@@ -410,6 +411,10 @@ header .fa-times{
 
 
 /*--------------------- Services ---------------------*/
+.service{
+    background: var(--surface-alt);
+}
+
 .service .box-container{
     display: flex;
     justify-content: center;
@@ -430,20 +435,20 @@ header .fa-times{
 
 .service-item:hover{
     transform: translateY(-0.5rem);
-    border-color: rgba(31,123,255,0.22);
+    border-color: rgba(15,163,177,0.25);
 }
 
 .service-item i{
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 3.2rem;
     margin-bottom: 1.2rem;
 }
 
 .service-item h3{
     font-size: 2.2rem;
-    color: var(--ink);
+    color: var(--text);
     padding: 0 0 1rem 0;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .service-item p{
@@ -462,11 +467,11 @@ header .fa-times{
 }
 
 .process-card{
-    background: linear-gradient(180deg, #101B30, #16213B);
+    background: linear-gradient(180deg, var(--dark), var(--dark-soft));
     border: 0.1rem solid rgba(255,255,255,0.06);
     border-radius: 2rem;
     padding: 3rem;
-    box-shadow: 0 2rem 5rem rgba(15,23,42,0.12);
+    box-shadow: 0 2rem 5rem rgba(13,27,42,0.12);
 }
 
 .step-number{
@@ -481,12 +486,12 @@ header .fa-times{
     font-size: 2.2rem;
     color: var(--white);
     margin-bottom: 1rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .process-card p{
     font-size: 1.6rem;
-    color: #C6D3E6;
+    color: #D4E2EA;
     line-height: 1.8;
 }
 
@@ -507,7 +512,7 @@ header .fa-times{
     margin: 0.5rem;
     background: transparent;
     border: 0.1rem solid var(--line);
-    color: var(--ink);
+    color: var(--text);
     box-shadow: none;
 }
 
@@ -547,7 +552,7 @@ header .fa-times{
     width: 100%;
     min-height: 46%;
     border-radius: 0;
-    background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.88) 56%, rgba(15,23,42,0.96) 100%);
+    background: linear-gradient(180deg, rgba(13,27,42,0) 0%, rgba(13,27,42,0.88) 56%, rgba(13,27,42,0.96) 100%);
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -558,16 +563,16 @@ header .fa-times{
 
 .portfolio-item .content h4{
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--white);
     padding-bottom: 0.7rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .portfolio-item .content p{
     font-size: 1.5rem;
     font-weight: 400;
-    color: #D7E3F1;
+    color: #D9E6EC;
     line-height: 1.7;
 }
 
@@ -578,7 +583,7 @@ header .fa-times{
 .demo-details{
     margin: 1rem 0;
     padding-left: 1.8rem;
-    color: #D7E3F1;
+    color: #D9E6EC;
     font-size: 1.4rem;
     line-height: 1.6;
 }
@@ -616,9 +621,13 @@ header .fa-times{
 
 
 /*--------------------- Contact ---------------------*/
+.contact{
+    background: var(--surface-alt);
+}
+
 .contact .alert{
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--secondary);
     border-radius: 0.5rem;
     padding-left: 1rem;
 }
@@ -643,8 +652,8 @@ header .fa-times{
 
 .contact-info h3{
     font-size: 3.2rem;
-    color: var(--ink);
-    font-family: 'Outfit', sans-serif;
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -661,7 +670,7 @@ header .fa-times{
 
 .contact-info .info-item h4{
     font-size: 1.8rem;
-    color: var(--ink);
+    color: var(--text);
 }
 
 .contact-info .info-item .detail{
@@ -671,7 +680,7 @@ header .fa-times{
 
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab{
-    color: var(--primary);
+    color: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -691,27 +700,27 @@ header .fa-times{
 }
 
 .contact-info .detail a:hover{
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .contact-form .box{
     width: 100%;
-    color: var(--ink);
+    color: var(--text);
     font-size: 1.6rem;
     border: 0.1rem solid var(--line);
     padding: 1.6rem;
     margin: 0.5rem 0;
-    background-color: #F8FBFF;
+    background-color: #FAFCFE;
     border-radius: 1.2rem;
 }
 
 .contact-form .box:focus{
-    border-color: var(--primary);
-    box-shadow: 0 0 0 0.15rem rgba(31,123,255,0.16);
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.15rem rgba(15,163,177,0.14);
 }
 
 .contact-form .box::placeholder{
-    color: #94A3B8;
+    color: #8AA0B2;
 }
 
 .contact-form textarea{
@@ -730,7 +739,7 @@ footer{
     background: transparent;
     padding: 2rem 0;
     text-align: center;
-    border-top: 0.1rem solid rgba(15,23,42,0.06);
+    border-top: 0.1rem solid rgba(16,42,67,0.06);
 }
 
 footer .social{
@@ -747,7 +756,7 @@ footer .social .social-link i{
     border-radius: 50%;
     height: 4rem;
     width: 4rem;
-    color: var(--ink);
+    color: var(--text);
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -781,10 +790,10 @@ footer .social .social-link i:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1rem 2.5rem rgba(31,123,255,0.22);
+    box-shadow: 0 1rem 2.5rem rgba(15,163,177,0.18);
 }
 
 .scroll-top:hover{
-    background: var(--ink);
+    background: var(--dark);
     color: var(--white);
 }

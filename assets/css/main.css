@@ -517,158 +517,62 @@ header .fa-times{
 
 
 
-/*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
-.controls{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    margin-top: 2rem;
-    gap: 0.8rem;
+/*--------------------- Partner Marquee Section ---------------------*/
+.partner-strip{
+    padding: 6rem 5%;
+    overflow: hidden;
 }
 
-.controls .button{
-    cursor: pointer;
-    margin: 0;
-    box-shadow: none;
-    background: var(--white);
-    color: var(--primary);
-    border: 0.2rem solid var(--line);
+.partner-note{
+    max-width: 78rem;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    font-size: 1.65rem;
+    color: var(--text-light);
+    line-height: 1.8;
 }
 
-.controls .button.active{
-    background: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
-}
-
-.controls .button:hover{
-    background: var(--secondary-bright);
-    color: var(--white);
-    border-color: var(--secondary-bright);
-}
-
-.portfolio .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.portfolio-item{
-    border-radius: 1.8rem;
-    height: 34rem;
+.partner-marquee{
+    width: 100%;
     overflow: hidden;
     position: relative;
-    box-shadow: var(--shadow);
-    border: 0.1rem solid var(--border);
-    background: var(--card-bg);
+    padding: 1rem 0;
 }
 
-.portfolio-item img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.portfolio-item .content{
-    position: absolute;
-    top: 8%;
-    left: 8%;
-    height: 84%;
-    width: 84%;
-    border-radius: 1.6rem;
-    background-color: rgba(23, 56, 79, 0.92);
-    padding: 2rem;
+.partner-track{
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
-    transform: scale(0);
+    gap: 2rem;
+    width: max-content;
+    animation: scrollPartners 28s linear infinite;
 }
 
-.portfolio-item .content h4{
-    font-size: 2.3rem;
+.partner-item{
+    flex: 0 0 auto;
+    background: linear-gradient(180deg, #ffffff, #f8fbfd);
+    border: 0.1rem solid rgba(13, 92, 145, 0.16);
+    border-radius: 5rem;
+    padding: 1.7rem 3rem;
+    font-size: 1.95rem;
     font-weight: 700;
-    color: var(--white);
-    transform-origin: top;
-    transform: translateY(-10rem);
-    opacity: 0;
-    padding-bottom: 1rem;
-    transition: all 0.4s linear;
+    color: var(--text-dark);
+    box-shadow: 0 0.8rem 2rem rgba(23, 56, 79, 0.08);
+    white-space: nowrap;
     font-family: 'Cormorant Garamond', serif;
-    line-height: 1.3;
+    letter-spacing: 0.02rem;
 }
 
-.portfolio-item .content p{
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #e0edf5;
-    line-height: 1.7;
-    transform-origin: top;
-    transform: translateY(-10rem);
-    opacity: 0;
-    transition: all 0.4s linear;
+.partner-marquee:hover .partner-track{
+    animation-play-state: paused;
 }
 
-.demo-details{
-    color: #e0edf5;
-    margin: 1rem 0;
-    padding-left: 1.8rem;
-    font-size: 1.35rem;
-    line-height: 1.6;
-    text-align: left;
-}
-
-.disclaimer{
-    margin-top: 1rem;
-    font-size: 1.25rem !important;
-    color: rgba(255,255,255,0.74) !important;
-}
-
-.portfolio-item:hover .content{
-    transform: scale(1);
-}
-
-.portfolio-item:hover .content h4{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.portfolio-item:hover .content p{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.portfolio-item:hover img{
-    transform: scale(1.08);
-}
-
-/* Magnific Popup */
-.mfp-newspaper  .mfp-with-anim {
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    transform: scale(0) rotate(500deg);
-}
-.mfp-newspaper.mfp-bg {
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
-.mfp-newspaper.mfp-ready .mfp-with-anim {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-}
-.mfp-newspaper.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-.mfp-newspaper.mfp-removing .mfp-with-anim {
-    transform: scale(0) rotate(500deg);
-    opacity: 0;
-}
-.mfp-newspaper.mfp-removing.mfp-bg {
-    opacity: 0;
+@keyframes scrollPartners{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
 }
 /*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
 

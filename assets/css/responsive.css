@@ -108,4 +108,10 @@
     .portfolio-item{
         height: 30rem;
     }
+    .home .content h1{
+    min-height: 10rem;
+}
+
+.home .content h1 span{
+    min-width: 24rem;
 }

@@ -361,15 +361,25 @@ header .fa-times{
     line-height: 1.08;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
-    min-height: 13rem; /* reserves space so typed words do not shift layout */
 }
 
-.home .content h1 span{
+.home .content .hero-static{
+    display: block;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.home .content .hero-typed-wrap{
+    display: block;
+    min-height: 7rem;   /* keeps layout from jumping */
+    margin-top: 0.4rem;
+}
+
+.home .content .typing-text{
+    display: inline-block;
     color: var(--interaction-color);
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 0 0 1.6rem rgba(50, 215, 226, 0.12);
-    display: inline-block;
-    min-width: 34rem; /* reserves width for longer phrases */
 }
 
 .home .hero-copy{

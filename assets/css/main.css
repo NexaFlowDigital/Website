@@ -8,7 +8,7 @@
 5- About Area CSS
 6- Services Area CSS
 7- Process / Divider CSS
-8- Portfolio Area CSS
+8- Partner Marquee CSS
 9- Contact Area CSS
 10- Footer Area CSS
 11- Scroll-Top Area CSS
@@ -19,19 +19,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root{
-    --primary: #0d5c91;
-    --primary-dark: #08466f;
-    --secondary: #18a8b7;
-    --secondary-bright: #32d7e2;
-    --frame-bg: #0d5c91;
-    --page-bg: #f4f8fb;
-    --card-bg: #ffffff;
-    --card-alt: #f8fbfd;
-    --text-dark: #17384f;
-    --text-light: #61788a;
-    --white: #ffffff;
+    --primary: #0D5C91;
+    --primary-dark: #08466F;
+    --secondary: #18A8B7;
+    --secondary-bright: #32D7E2;
+    --pop-accent: #E11D74;
+
+    --frame-bg: #0D5C91;
+    --page-bg: #F4F8FB;
+    --card-bg: #FFFFFF;
+    --card-alt: #F8FBFD;
+
+    --text-dark: #17384F;
+    --text-light: #61788A;
+    --white: #FFFFFF;
+
     --border: rgba(13, 92, 145, 0.16);
-    --line: #d7e4ee;
+    --line: #D7E4EE;
     --shadow: 0 1rem 3rem rgba(23, 56, 79, 0.08);
 }
 
@@ -74,7 +78,7 @@ section{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1rem;
-    background-color: var(--secondary);
+    background: linear-gradient(var(--primary), var(--pop-accent));
 }
 
 ::-webkit-scrollbar-track{
@@ -101,8 +105,9 @@ section{
     width: 1200px;
     max-width: 100%;
     z-index: 1001;
-    background-color: rgba(244,248,251,0.9);
+    background-color: rgba(244,248,251,0.90);
     border-bottom: 0.1rem solid rgba(13,92,145,0.08);
+    backdrop-filter: blur(10px);
 }
 
 #header-wrapper.scrolled{
@@ -121,7 +126,7 @@ section{
 .section-divider,
 hr.section-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(183, 24, 88, 0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(225, 29, 116, 0.52), transparent);
     border: none;
     margin: 0;
 }
@@ -179,10 +184,27 @@ hr.section-divider{
     border: 0.2rem solid var(--primary);
     border-radius: 5rem;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn i{
     padding-left: 1rem;
+}
+
+.btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0.6rem;
+    left: 20%;
+    width: 0%;
+    height: 0.2rem;
+    background: var(--pop-accent);
+    transition: 0.3s ease;
+}
+
+.btn:hover::after{
+    width: 60%;
 }
 
 .btn:hover{
@@ -236,7 +258,7 @@ header .navbar a{
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--secondary);
+    color: var(--pop-accent);
 }
 
 #header-wrapper.scrolled .navbar a{
@@ -454,11 +476,16 @@ header .fa-times{
     transform: translateY(-0.4rem);
     border-color: rgba(24,168,183,0.32);
     background: var(--card-alt);
+    box-shadow: 0 10px 30px rgba(225, 29, 116, 0.08);
 }
 
 .service-item i{
     color: var(--secondary);
     font-size: 3.2rem;
+}
+
+.service-item:hover i{
+    color: var(--pop-accent);
 }
 
 .service-item h3{
@@ -517,7 +544,7 @@ header .fa-times{
 
 
 
-/*--------------------- Partner Marquee Section ---------------------*/
+/*--------------------- 8- Partner Marquee CSS (Start) ---------------------*/
 .partner-strip{
     padding: 6rem 5%;
     overflow: hidden;
@@ -574,7 +601,7 @@ header .fa-times{
         transform: translateX(-50%);
     }
 }
-/*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
+/*--------------------- 8- Partner Marquee CSS (End) ---------------------*/
 
 
 
@@ -709,7 +736,7 @@ footer{
 
 .footer-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(183, 24, 88, 0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(24,168,183,0.45), transparent);
     margin: 2rem 0;
 }
 

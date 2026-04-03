@@ -16,17 +16,17 @@
         top: 100%;
         padding: 1rem 2rem 2rem 2rem;
         background: rgba(244,248,251,0.98);
-        border-left: 0.1rem solid rgba(13,79,139,0.08);
-        border-top: 0.1rem solid rgba(13,79,139,0.08);
+        border-left: 0.1rem solid rgba(13,92,145,0.08);
+        border-top: 0.1rem solid rgba(13,92,145,0.08);
         transition: 0.25s linear;
         transform: translateX(100%);
         height: calc(100vh - 7rem);
         overflow-y: auto;
-        box-shadow: 0 0.8rem 2rem rgba(18,50,74,0.12);
+        box-shadow: 0 0.8rem 2rem rgba(23,56,79,0.12);
     }
 
     #header-wrapper.scrolled .header .navbar{
-        background: var(--primary);
+        background: var(--frame-bg);
     }
 
     .header .navbar.active{
@@ -38,7 +38,7 @@
         padding: 1.4rem 0;
         margin: 0.4rem 0;
         font-size: 1.7rem;
-        border-bottom: 0.1rem solid rgba(13,79,139,0.08);
+        border-bottom: 0.1rem solid rgba(13,92,145,0.08);
     }
 
     #header-wrapper.scrolled .header .navbar a{

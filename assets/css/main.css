@@ -169,7 +169,8 @@ hr.section-divider{
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    background: rgba(50, 215, 226, 0.12);
+    background: linear-gradient(90deg, transparent, var(--accent-pop), transparent);
+    opacity: 0.5;
     height: 1rem;
     width: 96%;
     border-radius: 5rem;
@@ -363,7 +364,7 @@ header .fa-times{
 }
 
 .home .content h1 span{
-    color: #EAFDFF;
+    color: var(--interaction-color); /* #32D7E2 */
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 0 0 1.6rem rgba(234, 253, 255, 0.12);
 }

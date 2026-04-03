@@ -31,7 +31,7 @@
     --text-light: #61788a;
     --white: #ffffff;
     --border: rgba(13, 92, 145, 0.16);
-    --line: #b71858;
+    --line: #d7e4ee;
     --shadow: 0 1rem 3rem rgba(23, 56, 79, 0.08);
 }
 
@@ -121,7 +121,7 @@ section{
 .section-divider,
 hr.section-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(24,168,183,0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(183, 24, 88, 0.45), transparent);
     border: none;
     margin: 0;
 }
@@ -709,7 +709,7 @@ footer{
 
 .footer-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(24,168,183,0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(183, 24, 88, 0.45), transparent);
     margin: 2rem 0;
 }
 

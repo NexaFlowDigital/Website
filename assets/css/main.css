@@ -19,19 +19,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root{
-    /* 1 dominant base color */
     --base-color: #0D5C91;
-
-    /* 1 supporting color */
     --support-color: #08466F;
-
-    /* 1 interaction color */
     --interaction-color: #32D7E2;
-
-    /* 1 accent pop */
     --accent-pop: #E11D74;
 
-    /* subtle neutrals */
     --page-bg: #F4F8FB;
     --card-bg: #FFFFFF;
     --card-bg-soft: #F8FBFD;
@@ -255,10 +247,10 @@ header .logo{
 }
 
 .logo-img{
-    height: 5.4rem;          /* keeps header size locked */
+    height: 5.4rem;
     width: auto;
     display: block;
-    transform: scale(1.5);  /* increase visual size */
+    transform: scale(1.5);
     transform-origin: left center;
 }
 
@@ -268,9 +260,6 @@ header .navbar a{
     font-weight: 600;
     margin-left: 1.6rem;
     text-transform: lowercase;
-}
-
-header .navbar a{
     position: relative;
 }
 
@@ -393,7 +382,7 @@ header .fa-times{
 
 .home .content .hero-typed-wrap{
     display: block;
-    min-height: 7rem;   /* keeps layout from jumping */
+    min-height: 7rem;
     margin-top: 0.4rem;
 }
 
@@ -654,184 +643,238 @@ header .fa-times{
 
 
 
-/*================ CONTACT (PREMIUM SINGLE CARD) ================*/
+/*--------------------- 9- Contact Area CSS (Start) ---------------------*/
 .contact-premium{
     padding: 6rem 5%;
 }
 
-.contact-card{
-    max-width: 900px;
+.contact-panel{
+    max-width: 1120px;
     margin: 0 auto;
-    background: var(--card-bg);
-    border-radius: 2rem;
-    padding: 4rem;
-    box-shadow: var(--shadow-strong);
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    background: linear-gradient(180deg, #ffffff, #f8fbfd);
     border: 0.1rem solid var(--border);
+    border-radius: 2.4rem;
+    padding: 3.6rem;
+    box-shadow: var(--shadow-strong);
 }
 
-.contact-card h2{
-    font-size: 3.6rem;
-    font-family: 'Cormorant Garamond', serif;
+.contact-copy{
+    padding-right: 1rem;
+}
+
+.contact-kicker{
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--accent-pop);
     margin-bottom: 1rem;
-    color: var(--text-dark);
 }
 
-.contact-card p{
-    font-size: 1.6rem;
+.contact-copy h2{
+    font-size: 4.8rem;
+    line-height: 1.04;
+    color: var(--text-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.contact-lead{
+    font-size: 1.75rem;
+    line-height: 1.85;
     color: var(--text-light);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.4rem;
+    max-width: 52rem;
+}
+
+.contact-points{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-point{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.3rem 1.5rem;
+    background: #ffffff;
+    border: 0.1rem solid var(--border);
+    border-radius: 1.4rem;
+    box-shadow: 0 0.6rem 1.6rem rgba(8,70,111,0.04);
+}
+
+.contact-point i{
+    height: 4rem;
+    width: 4rem;
+    min-width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(50,215,226,0.12);
+    color: var(--base-color);
+    font-size: 1.6rem;
+}
+
+.contact-point span{
+    font-size: 1.55rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 .contact-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
+    background: #ffffff;
+    border: 0.1rem solid var(--border);
+    border-radius: 2rem;
+    padding: 2.2rem;
+    box-shadow: 0 0.8rem 2rem rgba(8,70,111,0.05);
+    display: block;
 }
 
-.contact-form .row{
-    display: flex;
-    gap: 1.4rem;
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
 }
 
-.contact-form input,
-.contact-form textarea{
+.form-grid .full{
+    grid-column: 1 / -1;
+}
+
+.contact-form .box{
     width: 100%;
-    padding: 1.6rem;
-    border-radius: 1.2rem;
+    color: var(--text-dark);
+    font-size: 1.55rem;
     border: 0.1rem solid var(--line);
-    font-size: 1.5rem;
-    background: #fbfdff;
+    padding: 1.7rem;
+    background-color: #fbfdff;
+    border-radius: 1.4rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus{
+.contact-form .box:focus{
     border-color: var(--interaction-color);
-    box-shadow: 0 0 0 0.25rem rgba(50,215,226,0.12);
     background: var(--white);
+    box-shadow: 0 0 0 0.3rem rgba(50, 215, 226, 0.10);
 }
 
-.contact-form textarea{
-    height: 16rem;
+.contact-form .box::placeholder{
+    color: #8aa0b2;
+}
+
+.contact-form textarea.box{
+    height: 19rem;
     resize: none;
 }
 
-.contact-form .btn{
-    align-self: flex-start;
-    margin-top: 1rem;
+.contact-bottom{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
 }
 
-/*================ FOOTER (PREMIUM GRID STYLE) ================*/
+.contact .alert{
+    font-size: 1.6rem;
+    color: var(--base-color);
+}
+/*--------------------- 9- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 10- Footer Area CSS (Start) ---------------------*/
 .footer-premium{
     background: var(--support-color);
+    margin-top: 6rem;
+    padding: 4.5rem 5% 2rem;
     color: var(--white);
-    padding: 5rem 5% 2rem;
-    margin-top: 5rem;
 }
 
-.footer-container{
-    max-width: 1200px;
+.footer-main{
+    max-width: 1120px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
 .footer-brand h3{
+    font-size: 3rem;
+    color: var(--white);
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .footer-brand p{
-    font-size: 1.5rem;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.7;
-}
-
-.footer-links h4{
     font-size: 1.6rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.footer-links a{
-    display: block;
-    font-size: 1.5rem;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 0.6rem;
-}
-
-.footer-links a:hover{
-    color: var(--accent-pop);
+    line-height: 1.8;
+    color: rgba(255,255,255,0.76);
+    max-width: 44rem;
 }
 
 .footer-social{
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 1.2rem;
+    margin-top: 2rem;
 }
 
 .footer-social a{
-    height: 4rem;
-    width: 4rem;
+    height: 4.6rem;
+    width: 4.6rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.15rem solid rgba(255,255,255,0.3);
+    border: 0.15rem solid rgba(255,255,255,0.28);
     color: var(--white);
+    font-size: 1.8rem;
 }
 
 .footer-social a:hover{
     background: var(--interaction-color);
     border-color: var(--interaction-color);
+    color: var(--white);
+}
+
+.footer-column h4{
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1.4rem;
+    font-weight: 700;
+}
+
+.footer-column a{
+    display: block;
+    font-size: 1.55rem;
+    color: rgba(255,255,255,0.76);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.footer-column a:hover{
+    color: var(--interaction-color);
 }
 
 .footer-bottom{
+    max-width: 1120px;
+    margin: 2.8rem auto 0 auto;
+    padding-top: 1.8rem;
+    border-top: 0.1rem solid rgba(255,255,255,0.12);
     text-align: center;
-    margin-top: 3rem;
-    font-size: 1.4rem;
-    color: rgba(255,255,255,0.6);
 }
 
-@media (max-width: 768px){
-    .contact-shell{
-        padding: 3rem 2rem;
-    }
-
-    .contact-intro h2{
-        font-size: 3.8rem;
-    }
-
-    .contact-form-premium .form-row{
-        grid-template-columns: 1fr;
-    }
-
-    .contact-actions{
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contact-actions .btn{
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-top{
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .footer-brand p{
-        margin: 0 auto;
-    }
-
-    .footer-nav,
-    .footer-connect{
-        align-items: center;
-    }
+.footer-bottom p{
+    font-size: 1.45rem;
+    color: rgba(255,255,255,0.64);
 }
+/*--------------------- 10- Footer Area CSS (End) ---------------------*/
 
 
 
@@ -860,3 +903,48 @@ header .fa-times{
     border-color: var(--interaction-color);
 }
 /*--------------------- 11- Scroll-Top (End) ---------------------*/
+
+
+/*--------------------- Responsive Additions ---------------------*/
+@media (max-width: 768px){
+    .contact-panel{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.4rem;
+    }
+
+    .contact-copy{
+        padding-right: 0;
+    }
+
+    .contact-copy h2{
+        font-size: 3.8rem;
+    }
+
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid .full{
+        grid-column: auto;
+    }
+
+    .contact-bottom{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-bottom .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-main{
+        grid-template-columns: 1fr;
+        gap: 2.6rem;
+    }
+
+    .footer-brand p{
+        max-width: 100%;
+    }
+}

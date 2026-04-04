@@ -255,9 +255,11 @@ header .logo{
 }
 
 .logo-img{
-    height: 5.4rem;
+    height: 5.4rem;          /* keeps header size locked */
     width: auto;
     display: block;
+    transform: scale(1.5);  /* increase visual size */
+    transform-origin: left center;
 }
 
 header .navbar a{

@@ -124,7 +124,7 @@ section{
     background-color: var(--page-bg);
     margin: 0 auto 2rem;
     max-width: 1200px;
-    padding: 7rem 2rem 2rem;
+    padding: 6.2rem 2rem 2rem;
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -242,7 +242,7 @@ hr.section-divider{
 /*--------------------- 3- Header Area CSS (Start) ---------------------*/
 header{
     width: 100%;
-    padding: .8rem 2.4rem;
+    padding: .3rem 2.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -255,7 +255,7 @@ header .logo{
 }
 
 .logo-img{
-    height: 5.8rem;
+    height: 5.4rem;
     width: auto;
     display: block;
 }

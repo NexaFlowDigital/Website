@@ -192,3 +192,42 @@
         padding: 1.3rem 2rem;
     }
 }
+@media (max-width: 991px){
+    .footer-main{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-links-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px){
+    .footer-premium{
+        padding: 4rem 5% 2rem;
+        border-radius: 1.8rem;
+    }
+
+    .footer-links-grid{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-logo{
+        width: 22rem;
+    }
+
+    .footer-card h3{
+        font-size: 2.5rem;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-legal{
+        gap: 1.2rem;
+    }
+}

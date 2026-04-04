@@ -789,64 +789,112 @@ header .fa-times{
 
 /*--------------------- 10- Footer Area CSS (Start) ---------------------*/
 .footer-premium{
-    background: var(--support-color);
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(50, 215, 226, 0.14), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.10), transparent 22%),
+        linear-gradient(135deg, #0A3F63 0%, #08466F 45%, #0D5C91 100%);
     margin-top: 6rem;
-    padding: 4.5rem 5% 2rem;
+    padding: 5.5rem 5% 2.2rem;
     color: var(--white);
+    border-radius: 2.4rem;
+}
+
+.footer-premium::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 26%);
+    pointer-events: none;
 }
 
 .footer-main{
+    position: relative;
+    z-index: 1;
     max-width: 1120px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.4fr 0.8fr 1fr;
+    grid-template-columns: 1.15fr 1fr 0.95fr;
     gap: 4rem;
     align-items: start;
 }
 
-.footer-brand h3{
-    font-size: 3rem;
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.footer-brand p{
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.76);
-    max-width: 44rem;
+.footer-logo-wrap{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.footer-logo{
+    width: 28rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-brand-copy{
+    font-size: 1.65rem;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.80);
+    max-width: 42rem;
 }
 
 .footer-social{
     display: flex;
     gap: 1.2rem;
-    margin-top: 2rem;
+    margin: 2.2rem 0 2.2rem 0;
 }
 
 .footer-social a{
-    height: 4.6rem;
-    width: 4.6rem;
+    height: 4.8rem;
+    width: 4.8rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.15rem solid rgba(255,255,255,0.28);
+    border: 0.15rem solid rgba(255,255,255,0.26);
     color: var(--white);
     font-size: 1.8rem;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
 }
 
 .footer-social a:hover{
+    transform: translateY(-0.2rem);
     background: var(--interaction-color);
     border-color: var(--interaction-color);
     color: var(--white);
 }
 
-.footer-column h4{
-    font-size: 1.8rem;
+.footer-cta-btn{
     color: var(--white);
-    margin-bottom: 1.4rem;
+    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
+    border: none;
+    box-shadow: 0 1rem 2.6rem rgba(50, 215, 226, 0.22);
+}
+
+.footer-cta-btn:hover{
+    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
+    color: var(--white);
+}
+
+.footer-links-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.8rem;
+}
+
+.footer-column h4{
+    font-size: 1.95rem;
+    color: var(--white);
+    margin-bottom: 1.6rem;
     font-weight: 700;
 }
 
@@ -854,26 +902,136 @@ header .fa-times{
     display: block;
     font-size: 1.55rem;
     color: rgba(255,255,255,0.76);
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
     line-height: 1.6;
 }
 
 .footer-column a:hover{
     color: var(--interaction-color);
+    transform: translateX(0.25rem);
+}
+
+.footer-card{
+    position: relative;
+    padding: 2.6rem 2.4rem;
+    border-radius: 2rem;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    border: 0.1rem solid rgba(255,255,255,0.12);
+    box-shadow: 0 1.8rem 4rem rgba(5, 29, 46, 0.24);
+    backdrop-filter: blur(10px);
+}
+
+.footer-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.6rem;
+    border-radius: 2rem 2rem 0 0;
+    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
+}
+
+.footer-card-kicker{
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 1.1rem;
+}
+
+.footer-card h3{
+    font-size: 3rem;
+    line-height: 1.15;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-card p{
+    font-size: 1.55rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.80);
+    margin-bottom: 1.8rem;
+}
+
+.footer-card-btn{
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.footer-card-btn:hover{
+    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
+    color: var(--white);
+}
+
+.footer-contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.footer-contact-list a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.6;
+}
+
+.footer-contact-list a i{
+    width: 1.8rem;
+    text-align: center;
+    color: rgba(255,255,255,0.92);
+}
+
+.footer-contact-list a:hover{
+    color: var(--interaction-color);
 }
 
 .footer-bottom{
+    position: relative;
+    z-index: 1;
     max-width: 1120px;
-    margin: 2.8rem auto 0 auto;
+    margin: 3.2rem auto 0 auto;
     padding-top: 1.8rem;
     border-top: 0.1rem solid rgba(255,255,255,0.12);
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .footer-bottom p{
     font-size: 1.45rem;
-    color: rgba(255,255,255,0.64);
+    color: rgba(255,255,255,0.66);
 }
+
+.footer-legal{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.footer-legal a{
+    font-size: 1.45rem;
+    color: rgba(255,255,255,0.72);
+}
+
+.footer-legal a:hover{
+    color: var(--interaction-color);
+}
+
 /*--------------------- 10- Footer Area CSS (End) ---------------------*/
 
 

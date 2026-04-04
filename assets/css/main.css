@@ -270,9 +270,27 @@ header .navbar a{
     text-transform: lowercase;
 }
 
-header .navbar a:hover,
-header .navbar a.active{
-    color: var(--accent-pop);
+header .navbar a{
+    position: relative;
+}
+
+header .navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 0%;
+    height: 0.2rem;
+    background: var(--accent-pop);
+    transition: width 0.3s ease;
+}
+
+header .navbar a:hover::after{
+    width: 100%;
+}
+
+header .navbar a.active::after{
+    width: 100%;
 }
 
 #header-wrapper.scrolled .navbar a{

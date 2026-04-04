@@ -251,11 +251,13 @@ header{
 header .logo{
     display:flex;
     align-items:center;
+    line-height: 1;
 }
 
 .logo-img{
     height: 5.8rem;
     width: auto;
+    display: block;
 }
 
 header .navbar a{

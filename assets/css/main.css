@@ -308,37 +308,37 @@ header .fa-times{
 /*--------------------- 3- Header Area CSS (End) ---------------------*/
 
 
-
 /*--------------------- 4- Home Area CSS (Start) ---------------------*/
 .home{
-    padding: 3rem 5% 5rem 5%;
+    padding: 2.2rem 4.5% 3.2rem;
     background:
-        radial-gradient(circle at top right, rgba(50, 215, 226, 0.16), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(50, 215, 226, 0.14), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.07), transparent 24%),
         linear-gradient(135deg, var(--support-color) 0%, var(--base-color) 58%, #0B6A89 100%);
     border-radius: 2.4rem;
     overflow: hidden;
     margin-bottom: 4rem;
+    box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.18);
 }
 
 .home .box-container{
-    min-height: 58rem;
+    min-height: 52rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 4.4rem;
 }
 
 .home .image{
-    width: 42rem;
+    width: 41rem;
     text-align: center;
 }
 
 .home .image img{
     width: 100%;
     height: auto;
-    border: 0.1rem solid rgba(255,255,255,0.24);
+    border: 0.1rem solid rgba(255,255,255,0.20);
     border-radius: 2rem;
     object-fit: cover;
     box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
@@ -349,7 +349,7 @@ header .fa-times{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 0;
 }
 
 .home .content .text{
@@ -357,21 +357,22 @@ header .fa-times{
 }
 
 .home .content .eyebrow{
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--accent-pop);
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.18rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
 .home .content h1{
-    font-size: 5.7rem;
+    font-size: 5.9rem;
     color: var(--white);
-    padding: 0.6rem 0 1.2rem 0;
-    line-height: 1.08;
+    line-height: 1.02;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
+    margin-bottom: 1.6rem;
+    max-width: 62rem;
 }
 
 .home .content .hero-static{
@@ -383,7 +384,7 @@ header .fa-times{
 .home .content .hero-typed-wrap{
     display: block;
     min-height: 7rem;
-    margin-top: 0.4rem;
+    margin-top: 0.2rem;
 }
 
 .home .content .typing-text{
@@ -394,12 +395,12 @@ header .fa-times{
 }
 
 .home .hero-copy{
-    font-size: 1.8rem;
+    font-size: 1.72rem;
     font-weight: 400;
-    color: rgba(255,255,255,0.88);
-    padding-bottom: 2.5rem;
-    line-height: 1.8;
-    max-width: 58rem;
+    color: rgba(255,255,255,0.86);
+    padding-bottom: 2.2rem;
+    line-height: 1.82;
+    max-width: 56rem;
 }
 
 .hero-buttons{
@@ -1176,6 +1177,85 @@ header .fa-times{
     border-color: var(--interaction-color);
 }
 /*--------------------- 11- Scroll-Top (End) ---------------------*/
+
+
+@media (max-width: 991px){
+    .home{
+        padding: 2rem 3.8% 2.8rem;
+    }
+
+    .home .box-container{
+        min-height: auto;
+        gap: 3rem;
+    }
+
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .home .content .hero-typed-wrap{
+        min-height: 5.9rem;
+    }
+
+    .home .image{
+        width: 35rem;
+    }
+}
+
+@media (max-width: 768px){
+    .home{
+        padding: 1.8rem 1.6rem 2.3rem;
+        border-radius: 1.8rem;
+    }
+
+    .home .box-container{
+        gap: 2.2rem;
+    }
+
+    .home .content .text{
+        max-width: 100%;
+    }
+
+    .home .content h1{
+        font-size: 4rem;
+        line-height: 1.05;
+        margin-bottom: 1.4rem;
+    }
+
+    .home .content .hero-typed-wrap{
+        min-height: 4.8rem;
+    }
+
+    .home .hero-copy{
+        font-size: 1.5rem;
+        line-height: 1.72;
+        padding-bottom: 1.8rem;
+    }
+
+    .hero-buttons .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .home .image{
+        width: 100%;
+        max-width: 33rem;
+    }
+}
+
+@media (max-width: 480px){
+    .home .content h1{
+        font-size: 3.4rem;
+    }
+
+    .home .content .hero-typed-wrap{
+        min-height: 4.1rem;
+    }
+
+    .home .hero-copy{
+        font-size: 1.4rem;
+    }
+}
 
 
 /*--------------------- Responsive Additions ---------------------*/

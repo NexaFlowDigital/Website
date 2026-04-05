@@ -368,30 +368,36 @@ header .fa-times{
 .home .content h1{
     font-size: 5.9rem;
     color: var(--white);
-    line-height: 1.02;
+    line-height: 1.08;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
-    margin-bottom: 1.6rem;
+    margin-bottom: 0;
     max-width: 62rem;
-}
-
-.home .content .hero-static{
-    display: block;
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.home .content .hero-typed-wrap{
-    display: block;
-    min-height: 7rem;
-    margin-top: 0.2rem;
+    min-height: 13.2rem;
 }
 
 .home .content .typing-text{
-    display: inline-block;
+    display: inline;
     color: var(--interaction-color);
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 0 0 1.6rem rgba(50, 215, 226, 0.12);
+    white-space: normal;
+}
+
+.home .content .typed-cursor{
+    display: inline;
+    white-space: normal;
+    color: var(--interaction-color);
+}
+
+.home .hero-copy{
+    font-size: 1.72rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.86);
+    padding-bottom: 2.2rem;
+    line-height: 1.82;
+    max-width: 56rem;
+    margin-top: 0.8rem;
 }
 
 .home .hero-copy{

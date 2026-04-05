@@ -784,7 +784,119 @@ header .fa-times{
     color: var(--base-color);
 }
 /*--------------------- 9- Contact Area CSS (End) ---------------------*/
+/* CONTACT MOBILE FIX */
+@media (max-width: 768px){
 
+    .contact-premium{
+        padding: 3rem 4%;
+    }
+
+    .contact-panel{
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+        padding: 1.6rem;
+        border-radius: 1.6rem;
+    }
+
+    .contact-copy{
+        padding-right: 0;
+    }
+
+    .contact-copy h2{
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .contact-lead{
+        font-size: 1.5rem;
+        line-height: 1.7;
+        margin-bottom: 1.4rem;
+    }
+
+    .contact-points{
+        gap: 0.9rem;
+    }
+
+    .contact-point{
+        padding: 1rem 1.1rem;
+        border-radius: 1.2rem;
+        align-items: flex-start;
+    }
+
+    .contact-point i{
+        height: 3.2rem;
+        width: 3.2rem;
+        min-width: 3.2rem;
+        font-size: 1.3rem;
+    }
+
+    .contact-point span{
+        font-size: 1.35rem;
+    }
+
+    .contact-form{
+        padding: 1.4rem;
+        border-radius: 1.4rem;
+    }
+
+    .form-grid{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-form .box{
+        font-size: 1.4rem;
+        padding: 1.3rem;
+    }
+
+    .contact-form textarea.box{
+        height: 13rem;
+    }
+
+    .contact-bottom{
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+    }
+
+    .contact-bottom .btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .alert{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px){
+
+    .contact-copy h2{
+        font-size: 2.5rem;
+    }
+
+    .contact-lead{
+        font-size: 1.35rem;
+    }
+
+    .contact-point span{
+        font-size: 1.3rem;
+    }
+
+    .contact-form textarea.box{
+        height: 12rem;
+    }
+
+    /* OPTIONAL: cleaner look */
+    .contact-points{
+        display: none;
+    }
+}
 
 
 /*--------------------- 10- Footer Area CSS (Start) ---------------------*/

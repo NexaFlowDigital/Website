@@ -36,6 +36,11 @@
     .home .image{
         width: 35rem;
     }
+    .home .image video {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
 }
 
 @media (max-width: 768px){

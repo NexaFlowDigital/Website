@@ -33,15 +33,8 @@
         min-height: 5.9rem;
     }
 
-    .home .image{
-        width: 35rem;
-    }
    .home .image video{
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 2rem;
-    object-fit: cover;
+        width: 35rem;
     }
 }
 

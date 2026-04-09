@@ -924,7 +924,7 @@ header .fa-times{
         radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.10), transparent 22%),
         linear-gradient(135deg, #0A3F63 0%, #08466F 45%, #0D5C91 100%);
     margin-top: 4rem;
-    padding: 3.2rem 4% 1.6rem;
+    padding: 3rem 4% 1.5rem;
     color: var(--white);
     border-radius: 2rem;
 }
@@ -943,8 +943,8 @@ header .fa-times{
     max-width: 1120px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.05fr 1fr 0.75fr;
-    gap: 2.4rem;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 0.95fr;
+    gap: 2.2rem;
     align-items: start;
 }
 
@@ -969,16 +969,38 @@ header .fa-times{
 
 .footer-brand-copy{
     font-size: 1.45rem;
-    line-height: 1.75;
+    line-height: 1.7;
     color: rgba(255,255,255,0.80);
-    max-width: 34rem;
-    margin-bottom: 0;
+    max-width: 30rem;
+    margin-bottom: 1.4rem;
 }
 
-.footer-links-grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+.footer-social{
+    display: flex;
+    gap: 0.9rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.footer-social a{
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.15rem solid rgba(255,255,255,0.24);
+    color: var(--white);
+    font-size: 1.6rem;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
+}
+
+.footer-social a:hover{
+    transform: translateY(-0.2rem);
+    background: var(--interaction-color);
+    border-color: var(--interaction-color);
+    color: var(--white);
 }
 
 .footer-column h4,
@@ -1020,39 +1042,12 @@ header .fa-times{
     color: var(--white);
     background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
     border: none;
-    padding: 1.15rem 1.8rem;
-    font-size: 1.3rem;
+    padding: 1.05rem 1.7rem;
+    font-size: 1.25rem;
 }
 
 .footer-card-btn:hover{
     background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
-    color: var(--white);
-}
-
-.footer-social{
-    display: flex;
-    gap: 0.9rem;
-    margin: 0;
-}
-
-.footer-social a{
-    height: 4.2rem;
-    width: 4.2rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.15rem solid rgba(255,255,255,0.24);
-    color: var(--white);
-    font-size: 1.6rem;
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(6px);
-}
-
-.footer-social a:hover{
-    transform: translateY(-0.2rem);
-    background: var(--interaction-color);
-    border-color: var(--interaction-color);
     color: var(--white);
 }
 
@@ -1061,12 +1056,13 @@ header .fa-times{
     z-index: 1;
     max-width: 1120px;
     margin: 2rem auto 0 auto;
-    padding-top: 1.4rem;
+    padding-top: 1.3rem;
     border-top: 0.1rem solid rgba(255,255,255,0.12);
-    display: grid;
-    grid-template-columns: 1fr auto auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1.4rem;
+    flex-wrap: wrap;
 }
 
 .footer-bottom p{

@@ -924,7 +924,7 @@ header .fa-times{
         radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.10), transparent 22%),
         linear-gradient(135deg, #0A3F63 0%, #08466F 45%, #0D5C91 100%);
     margin-top: 4rem;
-    padding: 3.4rem 4% 1.6rem;
+    padding: 3.2rem 4% 1.6rem;
     color: var(--white);
     border-radius: 2rem;
 }
@@ -943,8 +943,8 @@ header .fa-times{
     max-width: 1120px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.05fr 1fr 0.88fr;
-    gap: 2.6rem;
+    grid-template-columns: 1.05fr 1fr 0.75fr;
+    gap: 2.4rem;
     align-items: start;
 }
 
@@ -957,7 +957,7 @@ header .fa-times{
 .footer-logo-wrap{
     display: inline-flex;
     align-items: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .footer-logo{
@@ -972,13 +972,67 @@ header .fa-times{
     line-height: 1.75;
     color: rgba(255,255,255,0.80);
     max-width: 34rem;
+    margin-bottom: 0;
+}
+
+.footer-links-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h4,
+.footer-contact-compact h4{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.footer-column a{
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.76);
+    margin-bottom: 0.85rem;
+    line-height: 1.5;
+}
+
+.footer-column a:hover{
+    color: var(--interaction-color);
+    transform: translateX(0.2rem);
+}
+
+.footer-contact-compact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-contact-compact p{
+    font-size: 1.4rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.80);
     margin-bottom: 1.4rem;
+    max-width: 24rem;
+}
+
+.footer-card-btn{
+    color: var(--white);
+    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
+    border: none;
+    padding: 1.15rem 1.8rem;
+    font-size: 1.3rem;
+}
+
+.footer-card-btn:hover{
+    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
+    color: var(--white);
 }
 
 .footer-social{
     display: flex;
     gap: 0.9rem;
-    margin: 0 0 1.6rem 0;
+    margin: 0;
 }
 
 .footer-social a{
@@ -1002,133 +1056,6 @@ header .fa-times{
     color: var(--white);
 }
 
-.footer-cta-btn{
-    color: var(--white);
-    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
-    border: none;
-    box-shadow: 0 1rem 2rem rgba(50, 215, 226, 0.18);
-    padding: 1.15rem 2rem;
-    font-size: 1.32rem;
-}
-
-.footer-cta-btn:hover{
-    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
-    color: var(--white);
-}
-
-.footer-links-grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.2rem;
-}
-
-.footer-column h4{
-    font-size: 1.7rem;
-    color: var(--white);
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-}
-
-.footer-column a{
-    display: block;
-    font-size: 1.4rem;
-    color: rgba(255,255,255,0.76);
-    margin-bottom: 0.85rem;
-    line-height: 1.5;
-}
-
-.footer-column a:hover{
-    color: var(--interaction-color);
-    transform: translateX(0.2rem);
-}
-
-.footer-card{
-    position: relative;
-    padding: 2rem 1.8rem;
-    border-radius: 1.7rem;
-    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-    border: 0.1rem solid rgba(255,255,255,0.12);
-    box-shadow: 0 1.4rem 3rem rgba(5, 29, 46, 0.20);
-    backdrop-filter: blur(10px);
-}
-
-.footer-card::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0.5rem;
-    border-radius: 1.7rem 1.7rem 0 0;
-    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
-}
-
-.footer-card-kicker{
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.12rem;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.72);
-    margin-bottom: 0.9rem;
-}
-
-.footer-card h3{
-    font-size: 2.2rem;
-    line-height: 1.18;
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-}
-
-.footer-card p{
-    font-size: 1.4rem;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.80);
-    margin-bottom: 1.4rem;
-}
-
-.footer-card-btn{
-    width: 100%;
-    text-align: center;
-    color: var(--white);
-    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
-    border: none;
-    margin-bottom: 1.5rem;
-    padding: 1.15rem 1.8rem;
-    font-size: 1.3rem;
-}
-
-.footer-card-btn:hover{
-    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
-    color: var(--white);
-}
-
-.footer-contact-list{
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-}
-
-.footer-contact-list a{
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    font-size: 1.4rem;
-    color: rgba(255,255,255,0.82);
-    line-height: 1.5;
-}
-
-.footer-contact-list a i{
-    width: 1.6rem;
-    text-align: center;
-    color: rgba(255,255,255,0.92);
-}
-
-.footer-contact-list a:hover{
-    color: var(--interaction-color);
-}
-
 .footer-bottom{
     position: relative;
     z-index: 1;
@@ -1136,11 +1063,10 @@ header .fa-times{
     margin: 2rem auto 0 auto;
     padding-top: 1.4rem;
     border-top: 0.1rem solid rgba(255,255,255,0.12);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
     gap: 1.4rem;
-    flex-wrap: wrap;
 }
 
 .footer-bottom p{

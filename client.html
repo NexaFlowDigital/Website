@@ -71,11 +71,10 @@
 
 <script>
 const PORTAL_ENDPOINT = 'https://script.google.com/macros/s/AKfycbySL5i36W_H71tf5B3J2Hzyawa0rRtNtMhcd-qYOeBznpke3GYlgK1jCQZlK_CcyWAG/exec';
-const TICKET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxIDDs9s0M9kRFLLpRnnr0XfdpazL251z-gTitUR2XmZBRRSDyUPZ6wJsYxRTlBPV8wYA/exec';
+const TICKET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwxjnlJaYCNCDM-CJ1GRuqTM6JmdeXrnXODVCG7EwJu2-JM2B_2Cobwc4S1vk5yMO9R/exec';
 
 let currentUser = null;
 
-// SEND LOGIN LINK
 function sendLink(){
     const email = document.getElementById('email').value.trim();
     const msg = document.getElementById('msg');
@@ -89,6 +88,7 @@ function sendLink(){
 
     fetch(PORTAL_ENDPOINT, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             action: 'send_link',
             email: email
@@ -103,22 +103,17 @@ function sendLink(){
     });
 }
 
-// AUTO LOGIN
 const params = new URLSearchParams(window.location.search);
 const token = params.get('token');
 
-if(token){
-
-    // 🔥 SHOW DASHBOARD IMMEDIATELY (no delay)
+if (token) {
     document.getElementById('login').style.display = 'none';
-    document.getElementById('dashboard').style.display = 'block';
-
-    // Optional: show loading state
+    document.getElementById('dashboard').style.display = 'grid';
     document.getElementById('name').textContent = 'Loading...';
 
-    // THEN verify in background
-    fetch(ENDPOINT, {
+    fetch(PORTAL_ENDPOINT, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             action: 'verify_token',
             token: token
@@ -126,25 +121,33 @@ if(token){
     })
     .then(res => res.json())
     .then(data => {
-        if(data.success){
-
-            document.getElementById('name').textContent = data.name;
-            document.getElementById('business').textContent = data.business;
-
-            let list = document.getElementById('services');
-            list.innerHTML = '';
-
-            data.services.split(',').forEach(s => {
-                let li = document.createElement('li');
-                li.textContent = s.trim();
-                list.appendChild(li);
-            });
-
-        } else {
-            // fallback if token invalid
-            document.getElementById('dashboard').style.display = 'none';
-            document.getElementById('login').style.display = 'block';
+        if (!data.success) {
+            throw new Error('Invalid token');
         }
+
+        currentUser = data;
+
+        document.getElementById('name').textContent = data.name;
+        document.getElementById('business').textContent = data.business || '';
+
+        const servicesWrap = document.getElementById('services');
+        servicesWrap.innerHTML = '';
+
+        (data.services || '').split(',').forEach(service => {
+            if (service.trim()) {
+                const item = document.createElement('div');
+                item.className = 'contact-point';
+                item.innerHTML = '<i class="fas fa-check"></i><span>' + service.trim() + '</span>';
+                servicesWrap.appendChild(item);
+            }
+        });
+
+        window.history.replaceState({}, document.title, window.location.pathname);
+    })
+    .catch(() => {
+        document.getElementById('dashboard').style.display = 'none';
+        document.getElementById('login').style.display = 'grid';
+        document.getElementById('msg').textContent = 'Login link expired or invalid. Request a new link.';
     });
 }
 
@@ -166,6 +169,7 @@ function submitTicket(){
 
     fetch(TICKET_ENDPOINT, {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             name: currentUser.name,
             email: currentUser.email,

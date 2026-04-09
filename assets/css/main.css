@@ -331,7 +331,8 @@ header .fa-times{
 }
 
 .home .image{
-    width: 41rem;
+    flex: 1 1 40rem;
+    max-width: 42rem;
     text-align: center;
 }
 
@@ -344,15 +345,13 @@ header .fa-times{
     box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
 }
 .home .image video{
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     border: 0.1rem solid rgba(255,255,255,0.20);
     border-radius: 2rem;
     object-fit: cover;
     box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
 }
-
 .home .content{
     flex: 1 1 46rem;
     display: flex;

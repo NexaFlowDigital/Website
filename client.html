@@ -1,33 +1,101 @@
-<div id="login">
-    <h2>Client Portal</h2>
-    <input type="email" id="email" placeholder="Enter your email" class="box">
-    <button onclick="sendLink()" class="btn">Send Login Link</button>
-    <p id="msg"></p>
-</div>
+<section class="contact-premium">
+    <div id="login" class="contact-panel">
+        <div class="contact-copy">
+            <p class="contact-kicker">Client Portal</p>
+            <h2>Access your account.</h2>
+            <p class="contact-lead">
+                Enter your email and we’ll send you a secure login link to view your services and submit support requests.
+            </p>
+        </div>
 
-<div id="dashboard" style="display:none;">
-    <h2>Welcome, <span id="name"></span></h2>
-    <p><b>Business:</b> <span id="business"></span></p>
+        <div class="contact-form contact-form-premium">
+            <div class="form-grid">
+                <input type="email" id="email" class="box full" placeholder="Enter your email" required />
+            </div>
 
-    <h3>Your Services:</h3>
-    <ul id="services"></ul>
-</div>
+            <div class="contact-bottom">
+                <button type="button" onclick="sendLink()" class="btn">Send Login Link</button>
+                <span id="msg" class="alert"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="contact-panel" style="display:none;">
+        <div class="contact-copy">
+            <p class="contact-kicker">Welcome Back</p>
+            <h2><span id="name"></span></h2>
+            <p class="contact-lead">
+                <strong>Business:</strong> <span id="business"></span>
+            </p>
+
+            <div class="contact-points" id="services"></div>
+        </div>
+
+        <div class="contact-form contact-form-premium">
+            <p class="contact-kicker">Support</p>
+            <h2 style="font-size:3.2rem; margin-bottom:1rem;">Need help?</h2>
+            <p class="contact-lead" style="margin-bottom:1.6rem;">
+                Submit a request and it will be tied to your account details automatically.
+            </p>
+
+            <div class="contact-bottom" style="margin-top:0;">
+                <button type="button" class="btn" onclick="showTicketForm()">Submit Support Ticket</button>
+            </div>
+
+            <form id="ticketForm" style="display:none; margin-top:2rem;">
+                <div class="form-grid">
+                    <select id="requestType" class="box full" required>
+                        <option value="" disabled selected>Select Request Type</option>
+                        <option>Content Update</option>
+                        <option>Design Update</option>
+                        <option>New Feature</option>
+                        <option>Technical Issue</option>
+                        <option>Other</option>
+                    </select>
+
+                    <textarea id="ticketMessage" class="box full" placeholder="Provide details of your request here..." required></textarea>
+                </div>
+
+                <div class="contact-bottom">
+                    <button type="button" class="btn" onclick="submitTicket()">Submit Request</button>
+                    <span id="ticketMsg" class="alert"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 <script>
-const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxxHt1twZJWg2zgOd8ATzKu0M4D336vJELqjmF7VSj4ekpMTdP9GNwNBZXl-X-v7rU6/exec';
+const PORTAL_ENDPOINT = 'https://script.google.com/macros/s/AKfycbySL5i36W_H71tf5B3J2Hzyawa0rRtNtMhcd-qYOeBznpke3GYlgK1jCQZlK_CcyWAG/exec';
+const TICKET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwxjnlJaYCNCDM-CJ1GRuqTM6JmdeXrnXODVCG7EwJu2-JM2B_2Cobwc4S1vk5yMO9R/exec';
 
-// SEND LINK
+let currentUser = null;
+
+// SEND LOGIN LINK
 function sendLink(){
-    fetch(ENDPOINT, {
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('msg');
+
+    if(!email){
+        msg.textContent = 'Enter your email.';
+        return;
+    }
+
+    msg.textContent = 'Please wait...';
+
+    fetch(PORTAL_ENDPOINT, {
         method: 'POST',
         body: JSON.stringify({
             action: 'send_link',
-            email: document.getElementById('email').value
+            email: email
         })
     })
     .then(res => res.json())
     .then(() => {
-        document.getElementById('msg').textContent = 'Check your email';
+        msg.textContent = 'Check your email for your login link.';
+    })
+    .catch(() => {
+        msg.textContent = 'Something went wrong.';
     });
 }
 
@@ -36,7 +104,7 @@ const params = new URLSearchParams(window.location.search);
 const token = params.get('token');
 
 if(token){
-    fetch(ENDPOINT, {
+    fetch(PORTAL_ENDPOINT, {
         method: 'POST',
         body: JSON.stringify({
             action: 'verify_token',
@@ -46,19 +114,61 @@ if(token){
     .then(res => res.json())
     .then(data => {
         if(data.success){
+            currentUser = data;
+
             document.getElementById('login').style.display = 'none';
-            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('dashboard').style.display = 'grid';
 
             document.getElementById('name').textContent = data.name;
             document.getElementById('business').textContent = data.business;
 
-            let list = document.getElementById('services');
-            data.services.split(',').forEach(s => {
-                let li = document.createElement('li');
-                li.textContent = s.trim();
-                list.appendChild(li);
+            const servicesWrap = document.getElementById('services');
+            servicesWrap.innerHTML = '';
+
+            data.services.split(',').forEach(service => {
+                const item = document.createElement('div');
+                item.className = 'contact-point';
+                item.innerHTML = '<i class="fas fa-check"></i><span>' + service.trim() + '</span>';
+                servicesWrap.appendChild(item);
             });
+
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
+    });
+}
+
+function showTicketForm(){
+    document.getElementById('ticketForm').style.display = 'block';
+}
+
+function submitTicket(){
+    const requestType = document.getElementById('requestType').value;
+    const ticketMessage = document.getElementById('ticketMessage').value.trim();
+    const ticketMsg = document.getElementById('ticketMsg');
+
+    if(!requestType || !ticketMessage){
+        ticketMsg.textContent = 'Complete all fields.';
+        return;
+    }
+
+    ticketMsg.textContent = 'Please wait...';
+
+    fetch(TICKET_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+            name: currentUser.name,
+            email: currentUser.email,
+            business: currentUser.business,
+            subject: requestType,
+            message: ticketMessage
+        })
+    })
+    .then(() => {
+        ticketMsg.textContent = 'Your request was submitted.';
+        document.getElementById('ticketForm').reset();
+    })
+    .catch(() => {
+        ticketMsg.textContent = 'Something went wrong.';
     });
 }
 </script>

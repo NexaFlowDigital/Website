@@ -108,7 +108,16 @@ const params = new URLSearchParams(window.location.search);
 const token = params.get('token');
 
 if(token){
-    fetch(PORTAL_ENDPOINT, {
+
+    // 🔥 SHOW DASHBOARD IMMEDIATELY (no delay)
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+
+    // Optional: show loading state
+    document.getElementById('name').textContent = 'Loading...';
+
+    // THEN verify in background
+    fetch(ENDPOINT, {
         method: 'POST',
         body: JSON.stringify({
             action: 'verify_token',
@@ -118,25 +127,23 @@ if(token){
     .then(res => res.json())
     .then(data => {
         if(data.success){
-            currentUser = data;
-
-            document.getElementById('login').style.display = 'none';
-            document.getElementById('dashboard').style.display = 'grid';
 
             document.getElementById('name').textContent = data.name;
             document.getElementById('business').textContent = data.business;
 
-            const servicesWrap = document.getElementById('services');
-            servicesWrap.innerHTML = '';
+            let list = document.getElementById('services');
+            list.innerHTML = '';
 
-            data.services.split(',').forEach(service => {
-                const item = document.createElement('div');
-                item.className = 'contact-point';
-                item.innerHTML = '<i class="fas fa-check"></i><span>' + service.trim() + '</span>';
-                servicesWrap.appendChild(item);
+            data.services.split(',').forEach(s => {
+                let li = document.createElement('li');
+                li.textContent = s.trim();
+                list.appendChild(li);
             });
 
-            window.history.replaceState({}, document.title, window.location.pathname);
+        } else {
+            // fallback if token invalid
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
         }
     });
 }

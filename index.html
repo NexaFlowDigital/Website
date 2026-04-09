@@ -350,19 +350,50 @@
                     </div>
                 </div>
 
-                <form id="contactUs-Form" class="contact-form contact-form-premium">
-                    <div class="form-grid">
-                        <input type="text" name="name" class="box" placeholder="Name" required />
-                        <input type="email" name="email" class="box" placeholder="Email" required />
-                        <input type="text" name="subject" class="box full" placeholder="Project Type" required />
-                        <textarea name="message" class="box full" placeholder="Tell us what you need built, improved, or automated" required></textarea>
-                    </div>
+<form id="contactUs-Form" class="contact-form contact-form-premium">
+    <div class="form-grid">
 
-                    <div class="contact-bottom">
-                        <button type="submit" id="submit" class="btn">send message</button>
-                        <span id="msg" class="alert"></span>
-                    </div>
-                </form>
+        <input type="text" name="name" class="box" placeholder="Name" required />
+
+        <input type="text" name="business" class="box" placeholder="Business Name" />
+
+        <input type="email" name="email" class="box" placeholder="Email" required />
+
+        <!-- PHONE (hidden initially) -->
+        <input type="tel" name="phone" id="phoneField" class="box" placeholder="Phone Number" style="display:none;" />
+
+        <!-- SERVICE -->
+        <select name="service" id="serviceSelect" class="box full" required>
+            <option value="" disabled selected>Select Service Needed</option>
+            <option>Custom Program</option>
+            <option>Automation Solution</option>
+            <option>Data & Reporting</option>
+            <option>Marketing Support</option>
+            <option>Graphic Design</option>
+            <option>Website</option>
+            <option value="other">Not Sure Yet</option>
+        </select>
+
+        <!-- OTHER DESCRIPTION (hidden initially) -->
+        <input type="text" id="otherService" class="box full" placeholder="Briefly describe what you're looking for" style="display:none;" />
+
+        <!-- CONTACT METHOD -->
+        <select name="contact_method" id="contactMethod" class="box full" required>
+            <option value="" disabled selected>Preferred Contact Method</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="text">Text</option>
+        </select>
+
+        <textarea name="message" class="box full" placeholder="Tell us what you need built, improved, or automated" required></textarea>
+
+    </div>
+
+    <div class="contact-bottom">
+        <button type="submit" id="submit" class="btn">Start Project</button>
+        <span id="msg" class="alert"></span>
+    </div>
+</form>
             </div>
         </section>
         <!-------------------- Contact Area (End) -------------------->
@@ -489,54 +520,100 @@
         });
     </script>
 
-    <!-- Contact Form Script -->
-    <script>
-      (function(){
-        const FORM_ID  = 'contactUs-Form';
-        const BTN_ID   = 'submit';
-        const MSG_ID   = 'msg';
-        const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwRyPTspwJO04w1ilpCChIvsKFwPDcAp-ZLJ5zvhSR61bN0c4x_HTdPiSxyXfz_8WL/exec';
+<!-- Contact Form Script -->
+<script>
+  (function(){
+    const FORM_ID  = 'contactUs-Form';
+    const BTN_ID   = 'submit';
+    const MSG_ID   = 'msg';
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwRyPTspwJO04w1ilpCChIvsKFwPDcAp-ZLJ5zvhSR61bN0c4x_HTdPiSxyXfz_8WL/exec';
 
-        const form   = document.getElementById(FORM_ID);
-        const submit = document.getElementById(BTN_ID);
-        const msg    = document.getElementById(MSG_ID);
+    const form          = document.getElementById(FORM_ID);
+    const submit        = document.getElementById(BTN_ID);
+    const msg           = document.getElementById(MSG_ID);
+    const contactMethod = document.getElementById('contactMethod');
+    const phoneField    = document.getElementById('phoneField');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const otherService  = document.getElementById('otherService');
 
-        if (!form || !submit || !msg) return;
+    if (!form || !submit || !msg) return;
 
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          submit.disabled     = true;
-          submit.textContent  = 'Please wait...';
-          msg.textContent     = '';
+    // Show/hide phone field based on preferred contact method
+    if (contactMethod && phoneField) {
+      contactMethod.addEventListener('change', function () {
+        if (this.value === 'phone' || this.value === 'text') {
+          phoneField.style.display = 'block';
+          phoneField.required = true;
+        } else {
+          phoneField.style.display = 'none';
+          phoneField.required = false;
+          phoneField.value = '';
+        }
+      });
+    }
 
-          const payload = {
-            name:    form.elements['name'].value.trim(),
-            email:   form.elements['email'].value.trim(),
-            subject: form.elements['subject'].value.trim(),
-            message: form.elements['message'].value.trim()
-          };
+    // Show/hide "not sure yet" description field
+    if (serviceSelect && otherService) {
+      serviceSelect.addEventListener('change', function () {
+        if (this.value === 'other') {
+          otherService.style.display = 'block';
+          otherService.required = true;
+        } else {
+          otherService.style.display = 'none';
+          otherService.required = false;
+          otherService.value = '';
+        }
+      });
+    }
 
-          fetch(ENDPOINT, {
-            method: 'POST',
-            mode:   'no-cors',
-            headers:{ 'Content-Type':'application/json' },
-            body:    JSON.stringify(payload)
-          })
-          .then(() => {
-            msg.textContent = 'Thanks! Your message has been sent.';
-            form.reset();
-          })
-          .catch(err => {
-            console.error(err);
-            msg.textContent = 'Oops, something went wrong.';
-          })
-          .finally(() => {
-            submit.disabled    = false;
-            submit.textContent = 'send message';
-          });
-        });
-      })();
-    </script>
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submit.disabled    = true;
+      submit.textContent = 'Please wait...';
+      msg.textContent    = '';
+
+      const payload = {
+        name:           form.elements['name']?.value.trim() || '',
+        business:       form.elements['business']?.value.trim() || '',
+        email:          form.elements['email']?.value.trim() || '',
+        phone:          form.elements['phone']?.value.trim() || '',
+        service:        form.elements['service']?.value.trim() || '',
+        other_service:  otherService ? otherService.value.trim() : '',
+        contact_method: form.elements['contact_method']?.value.trim() || '',
+        message:        form.elements['message']?.value.trim() || ''
+      };
+
+      fetch(ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        msg.textContent = 'Thanks! Your message has been sent.';
+        form.reset();
+
+        if (phoneField) {
+          phoneField.style.display = 'none';
+          phoneField.required = false;
+        }
+
+        if (otherService) {
+          otherService.style.display = 'none';
+          otherService.required = false;
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        msg.textContent = 'Oops, something went wrong.';
+      })
+      .finally(() => {
+        submit.disabled    = false;
+        submit.textContent = 'Start Project';
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

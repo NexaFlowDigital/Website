@@ -343,9 +343,14 @@ header .fa-times{
     object-fit: cover;
     box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
 }
-.home .image video {
+.home .image video{
+    display: block;
     width: 100%;
     height: auto;
+    border: 0.1rem solid rgba(255,255,255,0.20);
+    border-radius: 2rem;
+    object-fit: cover;
+    box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
 }
 
 .home .content{

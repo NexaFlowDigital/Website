@@ -1,6 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal | NexaFlow Digital</title>
     <link rel="stylesheet" href="https://nexaflowdigital.com/assets/css/main.css">
+    <link rel="stylesheet" href="https://nexaflowdigital.com/assets/vendors/font-awesome/css/all.min.css">
 </head>
+<body>
 
 <section class="contact-premium">
     <div id="login" class="contact-panel">
@@ -79,7 +86,7 @@ function sendLink(){
     const email = document.getElementById('email').value.trim();
     const msg = document.getElementById('msg');
 
-    if(!email){
+    if (!email) {
         msg.textContent = 'Enter your email.';
         return;
     }
@@ -94,11 +101,26 @@ function sendLink(){
             email: email
         })
     })
-    .then(res => res.json())
-    .then(() => {
-        msg.textContent = 'Check your email for your login link.';
+    .then(res => res.text())
+    .then(text => {
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            console.log(text);
+            throw new Error('Invalid response');
+        }
+
+        if (data.result === 'sent' || data.success === true) {
+            msg.textContent = 'Check your email for your login link.';
+        } else if (data.result === 'not_found') {
+            msg.textContent = 'That email was not found.';
+        } else {
+            msg.textContent = 'Something went wrong.';
+        }
     })
-    .catch(() => {
+    .catch(err => {
+        console.error(err);
         msg.textContent = 'Something went wrong.';
     });
 }
@@ -119,15 +141,23 @@ if (token) {
             token: token
         })
     })
-    .then(res => res.json())
-    .then(data => {
+    .then(res => res.text())
+    .then(text => {
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            console.log(text);
+            throw new Error('Invalid response');
+        }
+
         if (!data.success) {
             throw new Error('Invalid token');
         }
 
         currentUser = data;
 
-        document.getElementById('name').textContent = data.name;
+        document.getElementById('name').textContent = data.name || '';
         document.getElementById('business').textContent = data.business || '';
 
         const servicesWrap = document.getElementById('services');
@@ -144,7 +174,8 @@ if (token) {
 
         window.history.replaceState({}, document.title, window.location.pathname);
     })
-    .catch(() => {
+    .catch(err => {
+        console.error(err);
         document.getElementById('dashboard').style.display = 'none';
         document.getElementById('login').style.display = 'grid';
         document.getElementById('msg').textContent = 'Login link expired or invalid. Request a new link.';
@@ -160,7 +191,7 @@ function submitTicket(){
     const ticketMessage = document.getElementById('ticketMessage').value.trim();
     const ticketMsg = document.getElementById('ticketMsg');
 
-    if(!requestType || !ticketMessage){
+    if (!requestType || !ticketMessage) {
         ticketMsg.textContent = 'Complete all fields.';
         return;
     }
@@ -178,12 +209,17 @@ function submitTicket(){
             message: ticketMessage
         })
     })
+    .then(res => res.text())
     .then(() => {
         ticketMsg.textContent = 'Your request was submitted.';
         document.getElementById('ticketForm').reset();
     })
-    .catch(() => {
+    .catch(err => {
+        console.error(err);
         ticketMsg.textContent = 'Something went wrong.';
     });
 }
 </script>
+
+</body>
+</html>

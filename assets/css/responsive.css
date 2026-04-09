@@ -19,7 +19,6 @@
     .home .box-container{
         min-height: auto;
         gap: 3rem;
-        flex-wrap: wrap;
     }
 
     .home .content{
@@ -36,17 +35,9 @@
 
     .home .image{
         width: 35rem;
-        max-width: 42rem;
-        margin: 0;
-    }
-
-    .home .image video{
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 5;
-        object-fit: cover;
     }
 }
+
 
 @media (max-width: 768px){
     #menu-btn{

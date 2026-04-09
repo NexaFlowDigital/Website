@@ -359,7 +359,7 @@
 
         <input type="email" name="email" class="box" placeholder="Email" required />
 
-        <!-- PHONE (hidden initially) -->
+        <!-- PHONE (hidden until needed) -->
         <input type="tel" name="phone" id="phoneField" class="box" placeholder="Phone Number" style="display:none;" />
 
         <!-- SERVICE -->
@@ -374,7 +374,7 @@
             <option value="other">Not Sure Yet</option>
         </select>
 
-        <!-- OTHER DESCRIPTION (hidden initially) -->
+        <!-- OTHER DESCRIPTION -->
         <input type="text" id="otherService" class="box full" placeholder="Briefly describe what you're looking for" style="display:none;" />
 
         <!-- CONTACT METHOD -->
@@ -388,6 +388,9 @@
         <textarea name="message" class="box full" placeholder="Tell us what you need built, improved, or automated" required></textarea>
 
     </div>
+
+    <!-- CAPTCHA -->
+    <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
 
     <div class="contact-bottom">
         <button type="submit" id="submit" class="btn">Start Project</button>
@@ -614,6 +617,7 @@
     });
   })();
 </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </body>
 </html>

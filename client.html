@@ -1,0 +1,64 @@
+<div id="login">
+    <h2>Client Portal</h2>
+    <input type="email" id="email" placeholder="Enter your email" class="box">
+    <button onclick="sendLink()" class="btn">Send Login Link</button>
+    <p id="msg"></p>
+</div>
+
+<div id="dashboard" style="display:none;">
+    <h2>Welcome, <span id="name"></span></h2>
+    <p><b>Business:</b> <span id="business"></span></p>
+
+    <h3>Your Services:</h3>
+    <ul id="services"></ul>
+</div>
+
+<script>
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxxHt1twZJWg2zgOd8ATzKu0M4D336vJELqjmF7VSj4ekpMTdP9GNwNBZXl-X-v7rU6/exec';
+
+// SEND LINK
+function sendLink(){
+    fetch(ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+            action: 'send_link',
+            email: document.getElementById('email').value
+        })
+    })
+    .then(res => res.json())
+    .then(() => {
+        document.getElementById('msg').textContent = 'Check your email';
+    });
+}
+
+// AUTO LOGIN
+const params = new URLSearchParams(window.location.search);
+const token = params.get('token');
+
+if(token){
+    fetch(ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+            action: 'verify_token',
+            token: token
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.success){
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+
+            document.getElementById('name').textContent = data.name;
+            document.getElementById('business').textContent = data.business;
+
+            let list = document.getElementById('services');
+            data.services.split(',').forEach(s => {
+                let li = document.createElement('li');
+                li.textContent = s.trim();
+                list.appendChild(li);
+            });
+        }
+    });
+}
+</script>

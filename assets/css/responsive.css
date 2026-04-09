@@ -36,10 +36,12 @@
     .home .image{
         width: 35rem;
     }
-    .home .image video {
+   .home .image video{
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
+    border-radius: 2rem;
+    object-fit: cover;
     }
 }
 

@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NexaFlow Digital | Event Photo Booth Rental in Frisco, TX</title>
-    <meta name="description" content="NexaFlow Digital offers a custom event photo booth rental experience with branded photo delivery, digital sharing, and optional print ordering for events in Frisco, TX and the Dallas-Fort Worth area.">
-    <meta name="keywords" content="photo booth rental Frisco TX, event photo booth DFW, branded photo booth, digital photo booth rental, photo printing, NexaFlow Digital">
+    <title>NexaFlow Digital | Photo Booth App & Magic Mirror Rental in Frisco, TX</title>
+    <meta name="description" content="NexaFlow Digital offers a custom event photo booth app and Magic Mirror photo booth rental for private events, schools, brands, and community experiences in Frisco, TX and DFW. Guests can receive photos by email and order prints after the event.">
+    <meta name="keywords" content="photo booth rental Frisco TX, magic mirror photo booth DFW, custom event photo booth app, branded photo booth experience, photo booth prints, event photo booth rental">
     <meta name="robots" content="index, follow">
     <meta name="author" content="NexaFlow Digital">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <link rel="canonical" href="https://nexaflowdigital.com/photo-booth.html">
 
-    <meta property="og:title" content="NexaFlow Digital | Event Photo Booth Rental in Frisco, TX">
-    <meta property="og:description" content="A custom branded event photo booth with instant digital delivery and optional print ordering.">
+    <meta property="og:title" content="NexaFlow Digital | Photo Booth App & Magic Mirror Rental in Frisco, TX">
+    <meta property="og:description" content="Custom event photo booth app and Magic Mirror photo booth rental with branded overlays, digital delivery, and optional print ordering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexaflowdigital.com/photo-booth.html">
     <meta property="og:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
     <meta property="og:site_name" content="NexaFlow Digital">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NexaFlow Digital | Event Photo Booth Rental in Frisco, TX">
-    <meta name="twitter:description" content="Custom event photo booth rental with instant digital delivery and optional print ordering.">
+    <meta name="twitter:title" content="NexaFlow Digital | Photo Booth App & Magic Mirror Rental in Frisco, TX">
+    <meta name="twitter:description" content="Custom photo booth app and Magic Mirror rental for events with instant digital delivery and optional print ordering.">
     <meta name="twitter:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
 
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
@@ -36,7 +36,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Event Photo Booth Rental",
+      "name": "Photo Booth App and Magic Mirror Rental",
       "serviceType": "Photo Booth Rental",
       "provider": {
         "@type": "ProfessionalService",
@@ -47,277 +47,368 @@
         "@type": "AdministrativeArea",
         "name": "Dallas-Fort Worth"
       },
-      "description": "Custom event photo booth rental with digital photo delivery, branded overlays, and optional print ordering.",
+      "description": "Custom event photo booth app and Magic Mirror photo booth rental with digital photo delivery, branded overlays, and optional print ordering.",
       "url": "https://nexaflowdigital.com/photo-booth.html"
     }
     </script>
 
     <style>
-        .subpage-hero {
-            padding: 12rem 5% 6rem;
-            background: linear-gradient(180deg, rgba(13,92,145,0.08) 0%, rgba(255,255,255,1) 100%);
+        .photo-page-hero {
+            padding: 12rem 5% 7rem;
+            background:
+                radial-gradient(circle at top left, rgba(50,215,226,0.12), transparent 32%),
+                linear-gradient(180deg, rgba(13,92,145,0.07) 0%, rgba(255,255,255,1) 100%);
         }
 
-        .subpage-hero .subpage-wrap {
+        .photo-page-shell {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .photo-page-hero-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
             align-items: center;
         }
 
-        .subpage-kicker {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15rem;
+        .photo-kicker {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 99px;
+            background: rgba(13,92,145,0.09);
             color: var(--base-color);
+            font-size: 1.35rem;
             font-weight: 600;
-            margin-bottom: 1.2rem;
+            letter-spacing: 0.08rem;
+            text-transform: uppercase;
         }
 
-        .subpage-hero h1 {
-            font-size: 5rem;
-            line-height: 1.1;
-            color: var(--black);
+        .photo-page-hero h1 {
+            font-size: 5.2rem;
+            line-height: 1.08;
             margin-bottom: 1.8rem;
+            color: var(--black);
         }
 
-        .subpage-hero h1 span {
+        .photo-page-hero h1 span {
             color: var(--base-color);
         }
 
-        .subpage-hero p {
+        .photo-page-hero p {
             font-size: 1.7rem;
             line-height: 1.9;
             color: var(--grey);
-            margin-bottom: 2.4rem;
+            margin-bottom: 1.7rem;
             max-width: 72rem;
         }
 
-        .subpage-actions {
+        .photo-hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 1.2rem;
+            margin-top: 2.4rem;
         }
 
-        .subpage-card {
+        .photo-hero-actions .btn-secondary-visible {
+            background: #ffffff;
+            color: var(--base-color) !important;
+            border: 0.15rem solid rgba(13,92,145,0.25);
+            box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
+        }
+
+        .photo-hero-actions .btn-secondary-visible:hover {
+            background: var(--base-color);
+            color: #fff !important;
+            border-color: var(--base-color);
+        }
+
+        .hero-feature-panel {
+            background: #fff;
+            border: 1px solid rgba(13,92,145,0.10);
+            border-radius: 2.2rem;
+            padding: 3rem;
+            box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,0.06);
+        }
+
+        .hero-feature-panel h3 {
+            font-size: 2.3rem;
+            margin-bottom: 1.6rem;
+            color: var(--black);
+        }
+
+        .hero-feature-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.55rem;
+            line-height: 1.7;
+            color: var(--grey);
+        }
+
+        .hero-feature-item i {
+            color: var(--base-color);
+            margin-top: 0.3rem;
+        }
+
+        .photo-section {
+            padding: 7rem 5%;
+        }
+
+        .section-head-alt {
+            max-width: 80rem;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .section-head-alt h2 {
+            font-size: 4.2rem;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            color: var(--black);
+        }
+
+        .section-head-alt h2 span {
+            color: var(--base-color);
+        }
+
+        .section-head-alt p {
+            font-size: 1.7rem;
+            line-height: 1.9;
+            color: var(--grey);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.2rem;
+        }
+
+        .offer-card {
+            position: relative;
             background: #fff;
             border: 1px solid rgba(13,92,145,0.10);
             border-radius: 2rem;
             padding: 3rem;
-            box-shadow: 0 1rem 3rem rgba(0,0,0,0.06);
+            box-shadow: 0 1rem 2.8rem rgba(0,0,0,0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            overflow: hidden;
         }
 
-        .subpage-card h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--black);
+        .offer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 1.8rem 3.8rem rgba(0,0,0,0.08);
+            border-color: rgba(13,92,145,0.22);
         }
 
-        .subpage-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .offer-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 auto auto 0;
+            width: 100%;
+            height: 0.45rem;
+            background: linear-gradient(90deg, var(--base-color), var(--interaction-color));
         }
 
-        .subpage-card ul li {
-            font-size: 1.6rem;
-            color: var(--grey);
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(13,92,145,0.08);
-        }
-
-        .subpage-card ul li:last-child {
-            border-bottom: 0;
-        }
-
-        .subpage-card ul li i {
+        .offer-icon {
+            width: 6rem;
+            height: 6rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.4rem;
+            background: rgba(13,92,145,0.08);
             color: var(--base-color);
-            margin-right: 1rem;
+            font-size: 2.3rem;
+            margin-bottom: 1.8rem;
         }
 
-        .photo-overview {
-            padding: 7rem 5%;
-        }
-
-        .photo-overview .overview-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-        }
-
-        .overview-box {
-            background: #fff;
-            border-radius: 1.8rem;
-            padding: 3rem;
-            border: 1px solid rgba(13,92,145,0.10);
-            box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
-        }
-
-        .overview-box i {
-            font-size: 2.4rem;
-            color: var(--base-color);
-            margin-bottom: 1.4rem;
-        }
-
-        .overview-box h3 {
-            font-size: 2.2rem;
+        .offer-card h3 {
+            font-size: 2.5rem;
             margin-bottom: 1.2rem;
             color: var(--black);
         }
 
-        .overview-box p {
-            font-size: 1.6rem;
-            line-height: 1.8;
+        .offer-card p {
+            font-size: 1.62rem;
+            line-height: 1.85;
             color: var(--grey);
-        }
-
-        .how-it-works-alt,
-        .print-section,
-        .fit-section {
-            padding: 7rem 5%;
-        }
-
-        .section-shell {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-intro {
-            max-width: 78rem;
-            margin-bottom: 3rem;
-        }
-
-        .section-intro h2 {
-            font-size: 4rem;
-            margin-bottom: 1.4rem;
-            color: var(--black);
-        }
-
-        .section-intro h2 span {
-            color: var(--base-color);
-        }
-
-        .section-intro p {
-            font-size: 1.7rem;
-            line-height: 1.9;
-            color: var(--grey);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .step-box {
-            background: #fff;
-            border: 1px solid rgba(13,92,145,0.10);
-            border-radius: 1.8rem;
-            padding: 3rem;
-            box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
-        }
-
-        .step-box .step-num {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-            background: rgba(13,92,145,0.10);
-            color: var(--base-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
             margin-bottom: 1.8rem;
         }
 
-        .step-box h3 {
-            font-size: 2rem;
+        .offer-points {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .offer-points div {
+            font-size: 1.5rem;
+            line-height: 1.65;
+            color: var(--grey);
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+        }
+
+        .offer-points i {
+            color: var(--base-color);
+            margin-top: 0.25rem;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.8rem;
+        }
+
+        .workflow-card {
+            background: #fff;
+            border-radius: 1.8rem;
+            border: 1px solid rgba(13,92,145,0.10);
+            padding: 2.6rem;
+            box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .workflow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1.4rem 3.2rem rgba(0,0,0,0.07);
+        }
+
+        .workflow-step {
+            width: 4.6rem;
+            height: 4.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(13,92,145,0.10);
+            color: var(--base-color);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .workflow-card h3 {
+            font-size: 1.95rem;
             margin-bottom: 1rem;
             color: var(--black);
         }
 
-        .step-box p {
-            font-size: 1.6rem;
+        .workflow-card p {
+            font-size: 1.52rem;
             line-height: 1.8;
             color: var(--grey);
         }
 
-        .print-banner {
-            background: linear-gradient(135deg, rgba(13,92,145,0.08), rgba(50,215,226,0.08));
+        .print-panel {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2.2rem;
+            align-items: stretch;
+        }
+
+        .print-copy-box,
+        .print-steps-box {
+            background: #fff;
             border: 1px solid rgba(13,92,145,0.10);
             border-radius: 2rem;
             padding: 3rem;
+            box-shadow: 0 1rem 2.8rem rgba(0,0,0,0.05);
         }
 
-        .print-banner h3 {
+        .print-copy-box h3,
+        .print-steps-box h3 {
             font-size: 2.4rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
             color: var(--black);
         }
 
-        .print-banner p {
-            font-size: 1.65rem;
-            line-height: 1.9;
-            color: var(--grey);
-            margin-bottom: 1.5rem;
-        }
-
-        .print-note {
-            font-size: 1.45rem;
+        .print-copy-box p,
+        .print-steps-box p,
+        .print-steps-box li {
+            font-size: 1.58rem;
+            line-height: 1.85;
             color: var(--grey);
         }
 
-        .fit-grid {
+        .print-steps-box ol {
+            padding-left: 2rem;
+            margin: 1.4rem 0 0;
+        }
+
+        .print-steps-box li {
+            margin-bottom: 1rem;
+        }
+
+        .print-subtle-note {
+            margin-top: 1.8rem;
+            font-size: 1.35rem !important;
+            color: var(--grey);
+        }
+
+        .fit-grid-better {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .fit-card {
+        .fit-box-better {
             background: #fff;
             border: 1px solid rgba(13,92,145,0.10);
             border-radius: 1.8rem;
-            padding: 3rem;
+            padding: 2.8rem;
             box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .fit-card i {
+        .fit-box-better:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1.4rem 3.2rem rgba(0,0,0,0.07);
+        }
+
+        .fit-box-better i {
             font-size: 2.4rem;
             color: var(--base-color);
             margin-bottom: 1.3rem;
         }
 
-        .fit-card h3 {
+        .fit-box-better h3 {
             font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--black);
         }
 
-        .fit-card p {
-            font-size: 1.6rem;
+        .fit-box-better p {
+            font-size: 1.55rem;
             line-height: 1.8;
             color: var(--grey);
         }
 
         @media (max-width: 991px) {
-            .subpage-hero .subpage-wrap,
-            .photo-overview .overview-grid,
-            .steps-grid,
-            .fit-grid {
+            .photo-page-hero-grid,
+            .offer-grid,
+            .workflow-grid,
+            .print-panel,
+            .fit-grid-better {
                 grid-template-columns: 1fr;
             }
 
-            .subpage-hero h1,
-            .section-intro h2 {
-                font-size: 3.6rem;
+            .photo-page-hero h1 {
+                font-size: 3.9rem;
             }
 
-            .subpage-hero {
+            .section-head-alt h2 {
+                font-size: 3.3rem;
+            }
+
+            .photo-page-hero {
                 padding-top: 11rem;
             }
         }
@@ -352,87 +443,52 @@
 
     <div id="page-wrapper">
 
-        <section class="subpage-hero" id="home">
-            <div class="subpage-wrap">
-                <div class="subpage-copy">
-                    <p class="subpage-kicker">NexaFlow Digital | Event Experience</p>
-                    <h1>Custom <span>Photo Booth Rental</span> for Events</h1>
-                    <p>
-                        This photo booth is one example of the custom digital experiences we build at NexaFlow Digital.
-                        It is designed for private bookings, school functions, community events, and branded activations
-                        that want something more polished than a standard booth rental.
-                    </p>
-                    <p>
-                        Guests take photos on-site, receive their images by email, and can save, share, or order prints afterward.
-                    </p>
-
-                    <div class="subpage-actions">
-                        <a href="#contact" class="btn">book the booth <i class="fas fa-arrow-right"></i></a>
-                        <a href="#prints" class="btn btn-secondary">photo printing <i class="fas fa-print"></i></a>
-                    </div>
-                </div>
-
-                <div class="subpage-card">
-                    <h3>What’s Included</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Event-ready digital photo booth setup</li>
-                        <li><i class="fas fa-check-circle"></i> Branded overlays and visual customization</li>
-                        <li><i class="fas fa-check-circle"></i> Instant photo delivery by email</li>
-                        <li><i class="fas fa-check-circle"></i> Simple guest experience on-site</li>
-                        <li><i class="fas fa-check-circle"></i> Option for guests to print photos after delivery</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <section class="photo-overview">
-            <div class="section-shell">
-                <div class="section-intro">
-                    <h2>A smaller service that still reflects <span>what we build</span></h2>
-                    <p>
-                        NexaFlow Digital primarily focuses on custom programs, automation, reporting systems,
-                        websites, and digital business tools. This photo booth offering fits under that same umbrella
-                        because it combines software, branded design, and a clear user workflow into a real-world service.
-                    </p>
-                </div>
-
-                <div class="overview-grid">
-                    <div class="overview-box">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Custom Software Experience</h3>
+        <section class="photo-page-hero" id="home">
+            <div class="photo-page-shell">
+                <div class="photo-page-hero-grid">
+                    <div class="hero-copy-wrap">
+                        <span class="photo-kicker">NexaFlow Digital • Photo Booth Experience</span>
+                        <h1>Custom <span>Photo Booth App</span> and <span>Magic Mirror Rental</span></h1>
                         <p>
-                            The booth is powered by a custom-built web application designed to create a clean,
-                            guided experience for guests during the event.
+                            NexaFlow Digital offers a modern photo booth experience for events that want something cleaner,
+                            more branded, and more flexible than a standard rental setup.
                         </p>
+                        <p>
+                            Clients can choose a custom version of the photo booth app built around their event, or rent the
+                            Magic Mirror booth with the app already built in. Guests receive their photos by email and can
+                            save, share, or print them afterward.
+                        </p>
+
+                        <div class="photo-hero-actions">
+                            <a href="#contact" class="btn">book the booth <i class="fas fa-arrow-right"></i></a>
+                            <a href="#printing" class="btn btn-secondary-visible">how printing works <i class="fas fa-print"></i></a>
+                        </div>
                     </div>
 
-                    <div class="overview-box">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Branded Visual Output</h3>
-                        <p>
-                            Photo layouts and overlays can be styled to better match the event, organization,
-                            or overall look of the experience.
-                        </p>
-                    </div>
-
-                    <div class="overview-box">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Digital Delivery</h3>
-                        <p>
-                            After taking photos, guests receive their images by email, which makes the experience
-                            easy to continue after the event ends.
-                        </p>
-                    </div>
-
-                    <div class="overview-box">
-                        <i class="fas fa-link"></i>
-                        <h3>Print-Ready Workflow</h3>
-                        <p>
-                            Since guests already receive a digital copy, it is easy for them to move from email delivery
-                            to photo printing through a recommended provider.
-                        </p>
+                    <div class="hero-feature-panel">
+                        <h3>Built for real event use</h3>
+                        <div class="hero-feature-list">
+                            <div class="hero-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom event-branded booth experience</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Magic Mirror rental option with app included</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Guest photo delivery by email</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Designed for private events, schools, activations, and community experiences</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Easy path from digital delivery to photo printing after the event</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -440,38 +496,97 @@
 
         <hr class="section-divider">
 
-        <section class="how-it-works-alt">
-            <div class="section-shell">
-                <div class="section-intro">
-                    <h2>How the <span>experience works</span></h2>
+        <section class="photo-section" id="options">
+            <div class="photo-page-shell">
+                <div class="section-head-alt">
+                    <h2>Choose the setup that fits your <span>event best</span></h2>
                     <p>
-                        The setup is simple for guests and practical for hosts. The goal is to create a smooth event experience
-                        without adding confusion or unnecessary steps.
+                        The experience can be offered in two different ways depending on the kind of event,
+                        space, and setup you need.
                     </p>
                 </div>
 
-                <div class="steps-grid">
-                    <div class="step-box">
-                        <div class="step-num">01</div>
-                        <h3>Take Photos at the Event</h3>
+                <div class="offer-grid">
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Custom Event Photo Booth App</h3>
                         <p>
-                            Guests use the booth during the event to capture photos in a branded digital setup.
+                            A customized version of the photo booth app designed around the event itself.
+                            This is a good fit when the digital experience is the priority and the client wants
+                            something tailored to the look and feel of the event.
+                        </p>
+                        <div class="offer-points">
+                            <div><i class="fas fa-check"></i><span>Customized for the event or brand</span></div>
+                            <div><i class="fas fa-check"></i><span>Digital photo experience with guided guest flow</span></div>
+                            <div><i class="fas fa-check"></i><span>Branded overlays and event-specific presentation</span></div>
+                            <div><i class="fas fa-check"></i><span>Guests receive their images by email</span></div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <h3>Magic Mirror Photo Booth Rental</h3>
+                        <p>
+                            A physical booth rental that includes the app built directly into the Magic Mirror setup.
+                            This option works well for events that want the presence of a booth on-site along with the
+                            same polished digital delivery experience.
+                        </p>
+                        <div class="offer-points">
+                            <div><i class="fas fa-check"></i><span>Magic Mirror booth rental for on-site use</span></div>
+                            <div><i class="fas fa-check"></i><span>Photo booth app already integrated into the mirror</span></div>
+                            <div><i class="fas fa-check"></i><span>Interactive guest experience during the event</span></div>
+                            <div><i class="fas fa-check"></i><span>Digital photo delivery after use</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="photo-section" id="how-it-works">
+            <div class="photo-page-shell">
+                <div class="section-head-alt">
+                    <h2>How the <span>guest experience works</span></h2>
+                    <p>
+                        Whether the event uses the customized app or the Magic Mirror booth, the guest flow stays simple and easy to follow.
+                    </p>
+                </div>
+
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <div class="workflow-step">01</div>
+                        <h3>Step Up to the Booth</h3>
+                        <p>
+                            Guests use the experience on-site through the customized app or the Magic Mirror booth.
                         </p>
                     </div>
 
-                    <div class="step-box">
-                        <div class="step-num">02</div>
+                    <div class="workflow-card">
+                        <div class="workflow-step">02</div>
+                        <h3>Take Photos</h3>
+                        <p>
+                            The booth guides users through the capture flow in a clean, event-friendly experience.
+                        </p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-step">03</div>
                         <h3>Receive Photos by Email</h3>
                         <p>
-                            Images are delivered digitally so guests can access them from their phone or inbox shortly after use.
+                            After the session, guests receive their photo directly by email so they can access it later.
                         </p>
                     </div>
 
-                    <div class="step-box">
-                        <div class="step-num">03</div>
+                    <div class="workflow-card">
+                        <div class="workflow-step">04</div>
                         <h3>Save, Share, or Print</h3>
                         <p>
-                            Once delivered, guests can download their photo, share it digitally, or place a print order if they want a physical copy.
+                            Once delivered, the image can be downloaded, shared, or ordered as a print after the event.
                         </p>
                     </div>
                 </div>
@@ -480,63 +595,77 @@
 
         <hr class="section-divider">
 
-        <section class="print-section" id="prints">
-            <div class="section-shell">
-                <div class="section-intro">
-                    <h2>Photo <span>printing</span></h2>
+        <section class="photo-section" id="printing">
+            <div class="photo-page-shell">
+                <div class="section-head-alt">
+                    <h2>Photo <span>printing after the event</span></h2>
                     <p>
-                        Because guests receive their images digitally, printing is a natural next step for anyone who wants a physical copy after the event.
+                        Since guests receive their image by email, printing can happen afterward without slowing down the booth experience during the event.
                     </p>
                 </div>
 
-                <div class="print-banner">
-                    <h3>Print your photo after delivery</h3>
-                    <p>
-                        After your image is emailed to you, you can open it, save it, and order prints through a recommended photo printing provider for pickup or delivery.
-                    </p>
-                    <p>
-                        This keeps the booth experience digital at the event while still giving guests an easy path to printed photos afterward.
-                    </p>
-                    <p class="print-note">
-                        Some links on this page may be referral links. Full details are available in our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.
-                    </p>
+                <div class="print-panel">
+                    <div class="print-copy-box">
+                        <h3>Simple print-ready delivery</h3>
+                        <p>
+                            Each session is built around digital delivery first. That means guests leave the booth with their photo already on the way to their inbox,
+                            making it easy to come back later and order a print from a trusted photo provider.
+                        </p>
+                        <p>
+                            This setup works well for events because it keeps the booth moving while still giving guests a clear next step if they want a physical copy.
+                        </p>
+                        <p class="print-subtle-note">
+                            Full details about referral or affiliate links are available in our
+                            <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.
+                        </p>
+                    </div>
+
+                    <div class="print-steps-box">
+                        <h3>How guests print their photo</h3>
+                        <ol>
+                            <li>Open the email sent after the booth session.</li>
+                            <li>View or download the delivered image.</li>
+                            <li>Use the print link provided with the photo.</li>
+                            <li>Place a print order for pickup or delivery.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </section>
 
         <hr class="section-divider">
 
-        <section class="fit-section">
-            <div class="section-shell">
-                <div class="section-intro">
-                    <h2>Best fit <span>for</span></h2>
+        <section class="photo-section" id="best-fit">
+            <div class="photo-page-shell">
+                <div class="section-head-alt">
+                    <h2>Best fit for <span>these events</span></h2>
                     <p>
-                        This service works best for events that want a polished digital add-on without turning the booth into the entire focus of the event.
+                        This service is flexible enough for different types of events while still feeling polished and intentional.
                     </p>
                 </div>
 
-                <div class="fit-grid">
-                    <div class="fit-card">
+                <div class="fit-grid-better">
+                    <div class="fit-box-better">
                         <i class="fas fa-building"></i>
                         <h3>Business Events</h3>
                         <p>
-                            A good fit for launches, activations, employee events, and branded experiences.
+                            Great for launches, activations, staff events, networking experiences, and branded campaigns.
                         </p>
                     </div>
 
-                    <div class="fit-card">
+                    <div class="fit-box-better">
                         <i class="fas fa-school"></i>
                         <h3>School & Community Events</h3>
                         <p>
-                            Works well for school functions, fairs, fundraisers, and community gatherings.
+                            A strong fit for school functions, fairs, student events, fundraisers, and local gatherings.
                         </p>
                     </div>
 
-                    <div class="fit-card">
+                    <div class="fit-box-better">
                         <i class="fas fa-glass-cheers"></i>
                         <h3>Private Bookings</h3>
                         <p>
-                            Great for parties and smaller events that want a modern interactive photo option.
+                            Works well for parties and special events that want a modern interactive photo option with digital delivery.
                         </p>
                     </div>
                 </div>
@@ -551,21 +680,20 @@
                     <p class="contact-kicker">Contact</p>
                     <h2>Let’s build something better.</h2>
                     <p class="contact-lead">
-                        Whether you need a photo booth for an event or a larger custom solution for your business,
-                        NexaFlow Digital offers multiple services built around real needs.
+                        Book the photo booth, ask about a customized event setup, or reach out about one of our other services.
                     </p>
 
                     <div class="contact-points">
                         <div class="contact-point">
                             <i class="fas fa-camera"></i>
-                            <span>Photo booth rentals and branded event experiences</span>
+                            <span>Custom photo booth app and Magic Mirror rental</span>
                         </div>
                         <div class="contact-point">
                             <i class="fas fa-code"></i>
-                            <span>Custom tools, programs, and digital systems</span>
+                            <span>Custom tools, programs & digital systems</span>
                         </div>
                         <div class="contact-point">
-                            <i class="fas fa-bolt"></i>
+                            <i class="fas fa-chart-line"></i>
                             <span>Automation, reporting, design, and websites</span>
                         </div>
                     </div>
@@ -584,7 +712,8 @@
 
         <select name="service" id="serviceSelect" class="box full" required>
             <option value="" disabled selected>Select Service Needed</option>
-            <option>Photo Booth Rental</option>
+            <option>Photo Booth App</option>
+            <option>Magic Mirror Booth Rental</option>
             <option>Branded Event Experience</option>
             <option>Custom Program</option>
             <option>Automation Solution</option>

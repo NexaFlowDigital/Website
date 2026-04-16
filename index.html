@@ -754,31 +754,61 @@
         });
     </script>
 
-    <script>
-    new Swiper('.featured-builds-slider', {
-        loop: true,
-        spaceBetween: 24,
-        grabCursor: true,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.featured-builds-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            768: {
-                slidesPerView: 1.2
-            },
-            1200: {
-                slidesPerView: 2
-            }
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const groups = document.querySelectorAll('.featured-solutions-home .filter-slider');
+    const buttons = document.querySelectorAll('.featured-solutions-home .controls .button');
+
+    const sliderConfigs = [
+        { selector: '.all-slider', pagination: '.all-pagination' },
+        { selector: '.experience-slider', pagination: '.experience-pagination' },
+        { selector: '.automation-slider', pagination: '.automation-pagination' },
+        { selector: '.web-slider', pagination: '.web-pagination' }
+        
+    ];
+
+    sliderConfigs.forEach(function(item){
+        const el = document.querySelector(item.selector);
+        if(el){
+            new Swiper(item.selector, {
+                loop: false,
+                spaceBetween: 18,
+                grabCursor: true,
+                pagination: {
+                    el: item.pagination,
+                    clickable: true
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1
+                    },
+                    640: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    }
+                }
+            });
         }
     });
+
+    buttons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            const filter = this.getAttribute('data-filter');
+
+            buttons.forEach(function(b){ b.classList.remove('active'); });
+            this.classList.add('active');
+
+            groups.forEach(function(group){
+                group.classList.remove('active');
+                if(group.getAttribute('data-group') === filter){
+                    group.classList.add('active');
+                }
+            });
+        });
+    });
+});
 </script>
 
 <!-- Contact Form Script -->

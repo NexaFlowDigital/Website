@@ -365,6 +365,11 @@
 
                 <div class="swiper-pagination all-pagination"></div>
             </div>
+            <div class="swiper-pagination all-pagination"></div>
+            <div class="slider-nav-row">
+                <div class="slider-arrow all-prev"><i class="fas fa-arrow-left"></i></div>
+                <div class="slider-arrow all-next"><i class="fas fa-arrow-right"></i></div>
+            </div>
         </div>
 
        <!-- EXPERIENCE -->
@@ -389,6 +394,11 @@
 
                 <div class="swiper-pagination experience-pagination"></div>
             </div>
+            <div class="swiper-pagination experience-pagination"></div>
+                <div class="slider-nav-row">
+                    <div class="slider-arrow experience-prev"><i class="fas fa-arrow-left"></i></div>
+                    <div class="slider-arrow experience-next"><i class="fas fa-arrow-right"></i></div>
+                </div>
         </div>
 
        
@@ -440,6 +450,11 @@
 
                 <div class="swiper-pagination automation-pagination"></div>
             </div>
+            <div class="swiper-pagination automation-pagination"></div>
+                <div class="slider-nav-row">
+                    <div class="slider-arrow automation-prev"><i class="fas fa-arrow-left"></i></div>
+                    <div class="slider-arrow automation-next"><i class="fas fa-arrow-right"></i></div>
+                </div>
         </div>
         
         <!-- WEBSITES -->
@@ -477,6 +492,11 @@
 
                 <div class="swiper-pagination web-pagination"></div>
             </div>
+            <div class="swiper-pagination web-pagination"></div>
+                <div class="slider-nav-row">
+                    <div class="slider-arrow web-prev"><i class="fas fa-arrow-left"></i></div>
+                    <div class="slider-arrow web-next"><i class="fas fa-arrow-right"></i></div>
+                </div>
         </div>
 
     </div>
@@ -754,17 +774,36 @@
         });
     </script>
 
-   <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
     const groups = document.querySelectorAll('.featured-solutions-home .filter-slider');
     const buttons = document.querySelectorAll('.featured-solutions-home .controls .button');
 
     const sliderConfigs = [
-        { selector: '.all-slider', pagination: '.all-pagination' },
-        { selector: '.experience-slider', pagination: '.experience-pagination' },
-        { selector: '.automation-slider', pagination: '.automation-pagination' },
-        { selector: '.web-slider', pagination: '.web-pagination' }
-        
+        {
+            selector: '.all-slider',
+            pagination: '.all-pagination',
+            nextEl: '.all-next',
+            prevEl: '.all-prev'
+        },
+        {
+            selector: '.web-slider',
+            pagination: '.web-pagination',
+            nextEl: '.web-next',
+            prevEl: '.web-prev'
+        },
+        {
+            selector: '.automation-slider',
+            pagination: '.automation-pagination',
+            nextEl: '.automation-next',
+            prevEl: '.automation-prev'
+        },
+        {
+            selector: '.experience-slider',
+            pagination: '.experience-pagination',
+            nextEl: '.experience-next',
+            prevEl: '.experience-prev'
+        }
     ];
 
     sliderConfigs.forEach(function(item){
@@ -774,6 +813,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 loop: false,
                 spaceBetween: 18,
                 grabCursor: true,
+                navigation: {
+                    nextEl: item.nextEl,
+                    prevEl: item.prevEl
+                },
                 pagination: {
                     el: item.pagination,
                     clickable: true

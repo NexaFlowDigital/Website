@@ -258,6 +258,83 @@
 
         <hr class="section-divider">
 
+<!-------------------- Featured Builds Area (Start) -------------------->
+<section class="featured-builds" id="featured-builds">
+
+    <div class="heading">
+        <h2>custom solutions <span>in action</span></h2>
+    </div>
+
+    <p class="service-summary">
+        Beyond standard business support, NexaFlow Digital also builds custom digital experiences,
+        client-facing tools, and branded systems designed around specific real-world needs.
+    </p>
+
+    <div class="swiper featured-builds-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="build-card" style="background-image: url('assets/images/featured/photo-booth.jpg');">
+                    <div class="build-overlay">
+                        <span class="build-tag">Interactive Experience</span>
+                        <h3>Photo Booth Experience</h3>
+                        <p>
+                            Custom event photo booth app and Magic Mirror booth rental with branded delivery and print-ready workflow.
+                        </p>
+                        <a href="photo-booth.html" class="build-btn">view project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="build-card" style="background-image: url('assets/images/featured/client-portal.jpg');">
+                    <div class="build-overlay">
+                        <span class="build-tag">Client Tools</span>
+                        <h3>Client Access & Portal Tools</h3>
+                        <p>
+                            Secure client-facing pages, digital workflows, and custom access tools built for smoother communication.
+                        </p>
+                        <a href="#contact" class="build-btn">ask about custom tools <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="build-card" style="background-image: url('assets/images/featured/reporting-system.jpg');">
+                    <div class="build-overlay">
+                        <span class="build-tag">Operations</span>
+                        <h3>Reporting & Workflow Systems</h3>
+                        <p>
+                            Dashboards, automation, and custom internal systems that reduce manual work and improve visibility.
+                        </p>
+                        <a href="#contact" class="build-btn">start a project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="build-card" style="background-image: url('assets/images/featured/websites.jpg');">
+                    <div class="build-overlay">
+                        <span class="build-tag">Web Design</span>
+                        <h3>Websites We’ve Built</h3>
+                        <p>
+                            Custom websites designed to strengthen credibility, improve communication, and support business growth.
+                        </p>
+                        <a href="websites.html" class="build-btn">view websites <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="featured-builds-pagination"></div>
+    </div>
+
+</section>
+<!-------------------- Featured Builds Area (End) -------------------->
+
+        <hr class="section-divider">
+
         <!-------------------- Process Area (Start) -------------------->
         <section class="process" id="process">
 
@@ -525,6 +602,33 @@
             }
         });
     </script>
+
+    <script>
+    new Swiper('.featured-builds-slider', {
+        loop: true,
+        spaceBetween: 24,
+        grabCursor: true,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.featured-builds-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 1.2
+            },
+            1200: {
+                slidesPerView: 2
+            }
+        }
+    });
+</script>
 
 <!-- Contact Form Script -->
 <script>

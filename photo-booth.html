@@ -397,6 +397,7 @@
             .photo-demo-banner,
             .workflow-grid,
             .print-panel,
+            .photo-print-cta,
             .fit-grid-better {
                 grid-template-columns: 1fr;
             }
@@ -501,6 +502,104 @@
         }
 
         .photo-demo-points i {
+            color: var(--base-color);
+            margin-top: 0.25rem;
+        }
+                .photo-print-cta-section {
+            padding-top: 5rem;
+        }
+
+        .photo-print-cta {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2.2rem;
+            align-items: stretch;
+        }
+
+        .photo-print-cta-copy,
+        .photo-print-cta-card {
+            background: #fff;
+            border: 1px solid rgba(13,92,145,0.10);
+            border-radius: 2rem;
+            padding: 3rem;
+            box-shadow: 0 1rem 2.8rem rgba(0,0,0,0.05);
+        }
+
+        .photo-print-kicker {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+            padding: 0.7rem 1.2rem;
+            border-radius: 99px;
+            background: rgba(13,92,145,0.08);
+            color: var(--base-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.06rem;
+            text-transform: uppercase;
+        }
+
+        .photo-print-cta-copy h2,
+        .photo-print-cta-card h3 {
+            color: var(--black);
+        }
+
+        .photo-print-cta-copy h2 {
+            font-size: 3.3rem;
+            line-height: 1.15;
+            margin-bottom: 1.3rem;
+        }
+
+        .photo-print-cta-copy h2 span {
+            color: var(--base-color);
+        }
+
+        .photo-print-cta-copy p,
+        .photo-print-cta-card .photo-print-points div {
+            font-size: 1.58rem;
+            line-height: 1.85;
+            color: var(--grey);
+        }
+
+        .photo-print-actions {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-print-disclaimer {
+            font-size: 1.35rem !important;
+            color: var(--grey);
+        }
+
+        .photo-print-icon {
+            width: 6rem;
+            height: 6rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.4rem;
+            background: rgba(13,92,145,0.08);
+            color: var(--base-color);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-print-cta-card h3 {
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-print-points {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .photo-print-points div {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+        }
+
+        .photo-print-points i {
             color: var(--base-color);
             margin-top: 0.25rem;
         }

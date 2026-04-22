@@ -19,22 +19,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root{
-    --base-color: #0D5C91;
-    --support-color: #08466F;
-    --interaction-color: #32D7E2;
-    --accent-pop: #E11D74;
+    --base-color: #0067C8;
+    --support-color: #091734;
+    --interaction-color: #82D2FF;
+    --accent-pop: #C23784;
+    --accent-secondary: #8C3689;
 
-    --page-bg: #F4F8FB;
+    --page-bg: #F9FFFF;
     --card-bg: #FFFFFF;
-    --card-bg-soft: #F8FBFD;
-    --text-dark: #17384F;
-    --text-light: #61788A;
+    --card-bg-soft: #EAF1F3;
+    --text-dark: #091734;
+    --text-light: #5C6780;
     --white: #FFFFFF;
-    --line: #D7E4EE;
-    --border: rgba(13, 92, 145, 0.14);
+    --line: #DBE2E6;
+    --border: rgba(9, 23, 52, 0.10);
 
-    --shadow: 0 1rem 3rem rgba(23, 56, 79, 0.08);
-    --shadow-strong: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.16);
+    --shadow: 0 1rem 3rem rgba(9, 23, 52, 0.08);
+    --shadow-strong: 0 1.8rem 4.5rem rgba(9, 23, 52, 0.15);
 }
 
 *{
@@ -62,7 +63,7 @@ html{
 }
 
 body{
-    background-color: var(--base-color);
+    background-color: var(--support-color);
     color: var(--text-dark);
 }
 
@@ -80,7 +81,7 @@ section{
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #dce7f0;
+    background-color: #eaf1f3;
 }
 
 .swiper-pagination-bullet{
@@ -103,13 +104,13 @@ section{
     width: 1200px;
     max-width: 100%;
     z-index: 1001;
-    background-color: rgba(244,248,251,0.92);
-    border-bottom: 0.1rem solid rgba(13,92,145,0.08);
+    background-color: rgba(249,255,255,0.92);
+    border-bottom: 0.1rem solid rgba(9,23,52,0.08);
     backdrop-filter: blur(10px);
 }
 
 #header-wrapper.scrolled{
-    background-color: var(--base-color);
+    background-color: var(--support-color);
 }
 
 #page-wrapper{
@@ -124,7 +125,7 @@ section{
 .section-divider,
 hr.section-divider{
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, rgba(225, 29, 116, 0.48), transparent);
+    background: linear-gradient(90deg, transparent, rgba(194, 55, 132, 0.48), transparent);
     border: none;
     margin: 0;
 }
@@ -185,7 +186,7 @@ hr.section-divider{
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0.6rem 1.6rem rgba(8,70,111,0.06);
+    box-shadow: 0 0.6rem 1.6rem rgba(9,23,52,0.06);
 }
 
 .btn i{
@@ -212,7 +213,7 @@ hr.section-divider{
     background-color: var(--interaction-color);
     border-color: var(--interaction-color);
     cursor: pointer;
-    box-shadow: 0 1rem 2.4rem rgba(50, 215, 226, 0.18);
+    box-shadow: 0 1rem 2.4rem rgba(130, 210, 255, 0.22);
 }
 
 .btn-secondary{
@@ -312,13 +313,13 @@ header .fa-times{
 .home{
     padding: 2.2rem 4.5% 3.2rem;
     background:
-        radial-gradient(circle at top right, rgba(50, 215, 226, 0.14), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.07), transparent 24%),
-        linear-gradient(135deg, var(--support-color) 0%, var(--base-color) 58%, #0B6A89 100%);
+        radial-gradient(circle at top right, rgba(130, 210, 255, 0.20), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(194, 55, 132, 0.12), transparent 24%),
+        linear-gradient(135deg, var(--support-color) 0%, var(--base-color) 58%, #008FD5 100%);
     border-radius: 2.4rem;
     overflow: hidden;
     margin-bottom: 4rem;
-    box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.18);
+    box-shadow: 0 1.8rem 4.5rem rgba(9, 23, 52, 0.18);
 }
 
 .home .box-container{
@@ -342,7 +343,7 @@ header .fa-times{
     border: 0.1rem solid rgba(255,255,255,0.20);
     border-radius: 2rem;
     object-fit: cover;
-    box-shadow: 0 1.8rem 4.5rem rgba(6, 41, 66, 0.30);
+    box-shadow: 0 1.8rem 4.5rem rgba(9, 23, 52, 0.30);
     display: block;
 }
 
@@ -382,7 +383,7 @@ header .fa-times{
     display: inline;
     color: var(--interaction-color);
     font-family: 'Cormorant Garamond', serif;
-    text-shadow: 0 0 1.6rem rgba(50, 215, 226, 0.12);
+    text-shadow: 0 0 1.6rem rgba(130, 210, 255, 0.14);
     white-space: normal;
 }
 
@@ -521,9 +522,9 @@ header .fa-times{
 
 .service-item:hover{
     transform: translateY(-0.4rem);
-    border-color: rgba(50,215,226,0.34);
+    border-color: rgba(130,210,255,0.34);
     background: var(--card-bg-soft);
-    box-shadow: 0 10px 30px rgba(225, 29, 116, 0.08);
+    box-shadow: 0 10px 30px rgba(194, 55, 132, 0.08);
 }
 
 .service-item i{
@@ -549,13 +550,13 @@ header .fa-times{
     line-height: 1.8;
 }
 
-.service-summary {
+.service-summary{
     text-align: center;
     max-width: 800px;
     margin: 0 auto 40px auto;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text-light);
 }
 /*--------------------- 6- Services Area CSS (End) ---------------------*/
 
@@ -573,7 +574,7 @@ header .fa-times{
     border-radius: 1.8rem;
     padding: 3rem;
     color: var(--white);
-    box-shadow: 0 1.5rem 3rem rgba(13,92,145,0.16);
+    box-shadow: 0 1.5rem 3rem rgba(9,23,52,0.16);
 }
 
 .step-number{
@@ -633,13 +634,13 @@ header .fa-times{
 .partner-item{
     flex: 0 0 auto;
     background: linear-gradient(180deg, #ffffff, #f8fbfd);
-    border: 0.1rem solid rgba(13, 92, 145, 0.16);
+    border: 0.1rem solid rgba(9, 23, 52, 0.16);
     border-radius: 5rem;
     padding: 1.7rem 3rem;
     font-size: 1.95rem;
     font-weight: 700;
     color: var(--text-dark);
-    box-shadow: 0 0.8rem 2rem rgba(23, 56, 79, 0.08);
+    box-shadow: 0 0.8rem 2rem rgba(9, 23, 52, 0.08);
     white-space: nowrap;
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 0.02rem;
@@ -723,7 +724,7 @@ header .fa-times{
     background: #ffffff;
     border: 0.1rem solid var(--border);
     border-radius: 1.4rem;
-    box-shadow: 0 0.6rem 1.6rem rgba(8,70,111,0.04);
+    box-shadow: 0 0.6rem 1.6rem rgba(9,23,52,0.04);
 }
 
 .contact-point i{
@@ -734,7 +735,7 @@ header .fa-times{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(50,215,226,0.12);
+    background: rgba(130,210,255,0.18);
     color: var(--base-color);
     font-size: 1.6rem;
 }
@@ -751,7 +752,7 @@ header .fa-times{
     border: 0.1rem solid var(--border);
     border-radius: 2rem;
     padding: 2.2rem;
-    box-shadow: 0 0.8rem 2rem rgba(8,70,111,0.05);
+    box-shadow: 0 0.8rem 2rem rgba(9,23,52,0.05);
     display: block;
 }
 
@@ -778,7 +779,7 @@ header .fa-times{
 .contact-form .box:focus{
     border-color: var(--interaction-color);
     background: var(--white);
-    box-shadow: 0 0 0 0.3rem rgba(50, 215, 226, 0.10);
+    box-shadow: 0 0 0 0.3rem rgba(130, 210, 255, 0.14);
 }
 
 .contact-form .box::placeholder{
@@ -910,7 +911,6 @@ header .fa-times{
         height: 12rem;
     }
 
-    /* OPTIONAL: cleaner look */
     .contact-points{
         display: none;
     }
@@ -922,9 +922,9 @@ header .fa-times{
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at top right, rgba(50, 215, 226, 0.14), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(225, 29, 116, 0.10), transparent 22%),
-        linear-gradient(135deg, #0A3F63 0%, #08466F 45%, #0D5C91 100%);
+        radial-gradient(circle at top right, rgba(130, 210, 255, 0.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(194, 55, 132, 0.12), transparent 22%),
+        linear-gradient(135deg, #091734 0%, #0067C8 58%, #008FD5 100%);
     margin-top: 4rem;
     padding: 3rem 4% 1.5rem;
     color: var(--white);
@@ -1042,14 +1042,14 @@ header .fa-times{
 
 .footer-card-btn{
     color: var(--white);
-    background: linear-gradient(90deg, #2563eb 0%, #32D7E2 100%);
+    background: linear-gradient(90deg, #0067C8 0%, #82D2FF 100%);
     border: none;
     padding: 1.05rem 1.7rem;
     font-size: 1.25rem;
 }
 
 .footer-card-btn:hover{
-    background: linear-gradient(90deg, #1d4ed8 0%, #22c1dc 100%);
+    background: linear-gradient(90deg, #091734 0%, #008FD5 100%);
     color: var(--white);
 }
 
@@ -1150,26 +1150,26 @@ header .fa-times{
     padding: 1.05rem 1.9rem;
     border-radius: 99px;
     background: #ffffff;
-    border: 0.1rem solid rgba(13,92,145,0.16);
+    border: 0.1rem solid rgba(9,23,52,0.16);
     color: #6b7280;
     font-size: 1.45rem;
     font-weight: 600;
     line-height: 1;
     transition: all 0.25s ease;
-    box-shadow: 0 0.6rem 1.8rem rgba(15, 42, 63, 0.05);
+    box-shadow: 0 0.6rem 1.8rem rgba(9, 23, 52, 0.05);
 }
 
 .featured-solutions-home .controls .button:hover{
-    background: rgba(50,215,226,0.10);
-    border-color: rgba(50,215,226,0.32);
+    background: rgba(130,210,255,0.10);
+    border-color: rgba(130,210,255,0.32);
     color: var(--base-color);
 }
 
 .featured-solutions-home .controls .button.active{
-    background: linear-gradient(135deg, var(--base-color), var(--interaction-color));
+    background: linear-gradient(135deg, var(--base-color), var(--accent-secondary));
     border-color: transparent;
     color: var(--white);
-    box-shadow: 0 0.8rem 2rem rgba(13,92,145,0.28);
+    box-shadow: 0 0.8rem 2rem rgba(9,23,52,0.22);
 }
 
 /* GROUPED SLIDERS */
@@ -1343,7 +1343,7 @@ header .fa-times{
 
 .featured-solutions-home .swiper-pagination-bullet-active{
     background: var(--interaction-color);
-    box-shadow: 0 0 0.8rem rgba(50,215,226,0.4);
+    box-shadow: 0 0 0.8rem rgba(130,210,255,0.4);
 }
 
 /* CUSTOM NAV BUTTONS UNDER SLIDER */
@@ -1359,7 +1359,7 @@ header .fa-times{
     width: 4.2rem;
     height: 4.2rem;
     border-radius: 50%;
-    border: 0.1rem solid rgba(13,92,145,0.16);
+    border: 0.1rem solid rgba(9,23,52,0.16);
     background: #ffffff;
     color: var(--base-color);
     display: inline-flex;
@@ -1368,28 +1368,28 @@ header .fa-times{
     font-size: 1.45rem;
     transition: all 0.25s ease;
     cursor: pointer;
-    box-shadow: 0 0.6rem 1.8rem rgba(15, 42, 63, 0.05);
+    box-shadow: 0 0.6rem 1.8rem rgba(9, 23, 52, 0.05);
 }
 
 .featured-solutions-home .slider-arrow:hover{
-    background: linear-gradient(135deg, var(--base-color), var(--interaction-color));
+    background: linear-gradient(135deg, var(--base-color), var(--accent-secondary));
     border-color: transparent;
     color: var(--white);
-    box-shadow: 0 0.8rem 1.8rem rgba(13,92,145,0.24);
+    box-shadow: 0 0.8rem 1.8rem rgba(9,23,52,0.24);
 }
 
 .featured-solutions-home .slider-arrow.swiper-button-disabled{
     opacity: 1;
     cursor: default;
     background: #f3f4f6;
-    border: 0.1rem solid rgba(13,92,145,0.10);
+    border: 0.1rem solid rgba(9,23,52,0.10);
     color: #b8c0cc;
     box-shadow: none;
 }
 
 .featured-solutions-home .slider-arrow.swiper-button-disabled:hover{
     background: #f3f4f6;
-    border: 0.1rem solid rgba(13,92,145,0.10);
+    border: 0.1rem solid rgba(9,23,52,0.10);
     color: #b8c0cc;
     box-shadow: none;
 }

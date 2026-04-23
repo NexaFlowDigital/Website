@@ -20,7 +20,7 @@
 
 :root{
     --base-color: #0067C8;
-    --support-color: #0f2757;
+    --support-color: #008fd5;
     --interaction-color: #82D2FF;
     --accent-pop: #C23784;
     --accent-secondary: #8C3689;
@@ -28,7 +28,7 @@
     --page-bg: #F9FFFF;
     --card-bg: #FFFFFF;
     --card-bg-soft: #EAF1F3;
-    --text-dark: #0f2757;
+    --text-dark: #008fd5;
     --text-light: #5C6780;
     --white: #FFFFFF;
     --line: #DBE2E6;
@@ -924,7 +924,7 @@ header .fa-times{
     background:
         radial-gradient(circle at top right, rgba(130, 210, 255, 0.16), transparent 24%),
         radial-gradient(circle at bottom left, rgba(194, 55, 132, 0.12), transparent 22%),
-        linear-gradient(135deg, #0f2757 0%, #0067C8 58%, #008FD5 100%);
+        linear-gradient(135deg, #008fd5 0%, #0067C8 58%, #008FD5 100%);
     margin-top: 4rem;
     padding: 3rem 4% 1.5rem;
     color: var(--white);
@@ -1049,7 +1049,7 @@ header .fa-times{
 }
 
 .footer-card-btn:hover{
-    background: linear-gradient(90deg, #0f2757 0%, #008FD5 100%);
+    background: linear-gradient(90deg, #008fd5 0%, #008FD5 100%);
     color: var(--white);
 }
 

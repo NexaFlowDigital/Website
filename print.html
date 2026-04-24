@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q58F2MCK4P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q58F2MCK4P');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Print Your Photos | NexaFlow Digital</title>
+    <meta name="description" content="Print your digital photo through NexaFlow Digital's trusted print partner link. Download your photo, upload it to the print provider, and complete your order online.">
+    <meta name="keywords" content="print photos online, photo prints, event photo printing, NexaFlow Digital photo booth prints">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NexaFlow Digital">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <link rel="canonical" href="https://nexaflowdigital.com/print.html">
+
+    <meta property="og:title" content="Print Your Photos | NexaFlow Digital">
+    <meta property="og:description" content="Download your photo, upload it to the print provider, and complete your print order online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexaflowdigital.com/print.html">
+    <meta property="og:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
+    <meta property="og:site_name" content="NexaFlow Digital">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Print Your Photos | NexaFlow Digital">
+    <meta name="twitter:description" content="A simple next step for ordering prints from your digital photo.">
+    <meta name="twitter:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
+
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.css" />
+    <link rel="stylesheet" href="assets/vendors/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+        .print-hero{
+            padding: 5rem 4.5% 4rem;
+            background:
+                radial-gradient(circle at top right, rgba(194,55,132,0.12), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(130,210,255,0.18), transparent 30%),
+                linear-gradient(135deg, var(--support-color) 0%, var(--base-color) 58%, #008FD5 100%);
+            border-radius: 2.4rem;
+            color: var(--white);
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+
+        .print-hero-grid{
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .print-kicker{
+            display: inline-block;
+            margin-bottom: 1.4rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.86);
+            letter-spacing: 0.16rem;
+            text-transform: uppercase;
+        }
+
+        .print-hero h1{
+            font-size: 5.6rem;
+            line-height: 1.05;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            margin-bottom: 1.4rem;
+            color: var(--white);
+        }
+
+        .print-hero h1 span{
+            color: var(--interaction-color);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .print-hero p{
+            font-size: 1.7rem;
+            line-height: 1.85;
+            color: rgba(255,255,255,0.86);
+            max-width: 62rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .print-actions{
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-top: 2.4rem;
+        }
+
+        .print-actions .btn{
+            background: var(--white);
+            color: var(--base-color);
+            border-color: var(--white);
+        }
+
+        .print-actions .btn:hover{
+            background: var(--interaction-color);
+            color: var(--white);
+            border-color: var(--interaction-color);
+        }
+
+        .print-actions .btn-secondary{
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .print-card{
+            background: rgba(255,255,255,0.96);
+            border: 0.1rem solid rgba(255,255,255,0.3);
+            border-radius: 2rem;
+            padding: 3rem;
+            color: var(--text-dark);
+            box-shadow: 0 1.4rem 3.6rem rgba(9,23,52,0.18);
+        }
+
+        .print-card-icon{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 1.5rem;
+            background: rgba(0,103,200,0.10);
+            color: var(--base-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .print-card h3{
+            font-size: 2.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .print-card p{
+            color: var(--text-light);
+            font-size: 1.55rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .print-section{
+            padding: 5rem 5%;
+        }
+
+        .print-section .heading{
+            margin-bottom: 2.5rem;
+        }
+
+        .print-intro{
+            max-width: 82rem;
+            margin: -1rem auto 3rem;
+            text-align: center;
+            font-size: 1.65rem;
+            color: var(--text-light);
+            line-height: 1.85;
+        }
+
+        .print-steps-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .print-step-card{
+            background: var(--card-bg);
+            border: 0.1rem solid var(--border);
+            border-radius: 1.8rem;
+            padding: 2.8rem;
+            box-shadow: var(--shadow);
+        }
+
+        .print-step-number{
+            width: 4.6rem;
+            height: 4.6rem;
+            border-radius: 50%;
+            background: rgba(0,103,200,0.10);
+            color: var(--base-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .print-step-card h3{
+            font-size: 2.15rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .print-step-card p{
+            font-size: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .print-partner-panel{
+            max-width: 920px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #ffffff, #f8fbfd);
+            border: 0.1rem solid var(--border);
+            border-radius: 2.4rem;
+            padding: 3.4rem;
+            box-shadow: var(--shadow-strong);
+            text-align: center;
+        }
+
+        .print-partner-panel i{
+            font-size: 3.2rem;
+            color: var(--base-color);
+            margin-bottom: 1.4rem;
+        }
+
+        .print-partner-panel h2{
+            font-size: 4rem;
+            line-height: 1.1;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-dark);
+            margin-bottom: 1.2rem;
+        }
+
+        .print-partner-panel p{
+            font-size: 1.6rem;
+            color: var(--text-light);
+            line-height: 1.85;
+            max-width: 72rem;
+            margin: 0 auto 2rem;
+        }
+
+        .print-note{
+            margin-top: 1.8rem;
+            font-size: 1.28rem !important;
+            line-height: 1.75 !important;
+            color: var(--text-light) !important;
+        }
+
+        .print-note a{
+            color: var(--base-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px){
+            .print-hero-grid,
+            .print-steps-grid{
+                grid-template-columns: 1fr;
+            }
+
+            .print-hero h1{
+                font-size: 4.2rem;
+            }
+
+            .print-partner-panel h2{
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 640px){
+            .print-hero{
+                padding: 3.5rem 2rem;
+                border-radius: 1.8rem;
+            }
+
+            .print-hero h1{
+                font-size: 3.5rem;
+            }
+
+            .print-hero p,
+            .print-intro,
+            .print-partner-panel p{
+                font-size: 1.45rem;
+            }
+
+            .print-actions .btn{
+                width: 100%;
+                text-align: center;
+            }
+
+            .print-partner-panel{
+                padding: 2.4rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <div id="header-wrapper">
+        <header class="header">
+
+            <a class="logo" href="index.html#home">
+                <img src="assets/images/About/NexaFlow-Logo.png" alt="NexaFlow Digital Logo" class="logo-img">
+            </a>
+
+            <nav class="navbar">
+                <a href="index.html#home">home</a>
+                <a href="index.html#about">about</a>
+                <a href="index.html#service">services</a>
+                <a href="index.html#portfolio">work</a>
+                <a href="photo-booth.html">photo booth</a>
+                <a href="index.html#contact">contact</a>
+                <a href="client.html">Client Login</a>
+            </nav>
+
+            <div class="fas fa-bars" id="menu-btn"></div>
+
+        </header>
+    </div>
+
+    <div id="page-wrapper">
+
+        <section class="print-hero" id="home">
+            <div class="print-hero-grid">
+
+                <div>
+                    <span class="print-kicker">NexaFlow Digital • Print Your Photos</span>
+
+                    <h1>Ready to <span>print your photo?</span></h1>
+
+                    <p>
+                        If you received a photo from one of our digital experiences, you can download it first, then continue to our print partner to upload the image and complete your order.
+                    </p>
+
+                    <p>
+                        This keeps your photo in your control while giving you a simple next step for ordering prints, gifts, cards, canvas prints, and other photo products.
+                    </p>
+
+                    <div class="print-actions">
+                        <a href="https://fxo.co/1549027/PrintNow" class="btn" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                            continue to print partner <i class="fas fa-external-link-alt"></i>
+                        </a>
+
+                        <a href="photo-booth.html" class="btn btn-secondary">
+                            back to photo booth <i class="fas fa-camera"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="print-card">
+                    <div class="print-card-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+
+                    <h3>Before you continue</h3>
+
+                    <p>
+                        Make sure your image is saved to your device. The print provider will ask you to upload your photo before you choose your print size, product, pickup, or delivery option.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="print-section">
+            <div class="heading">
+                <h2>How it <span>works</span></h2>
+            </div>
+
+            <p class="print-intro">
+                The print link opens a trusted third-party photo ordering site. Your photo is not automatically transferred, so you will upload the image yourself after leaving NexaFlow Digital.
+            </p>
+
+            <div class="print-steps-grid">
+
+                <div class="print-step-card">
+                    <div class="print-step-number">01</div>
+                    <h3>Save Your Photo</h3>
+                    <p>
+                        Download the photo from your email, phone, or photo booth result screen before starting your print order.
+                    </p>
+                </div>
+
+                <div class="print-step-card">
+                    <div class="print-step-number">02</div>
+                    <h3>Open the Print Link</h3>
+                    <p>
+                        Continue to the print partner site using the button on this page. The link opens in a new tab.
+                    </p>
+                </div>
+
+                <div class="print-step-card">
+                    <div class="print-step-number">03</div>
+                    <h3>Upload and Order</h3>
+                    <p>
+                        Upload your image, choose the product you want, and complete your order directly with the print provider.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="print-section">
+            <div class="print-partner-panel">
+                <i class="fas fa-images"></i>
+
+                <h2>Continue to photo printing</h2>
+
+                <p>
+                    Use the button below when you are ready to upload your saved image and start your print order.
+                </p>
+
+                <a href="https://fxo.co/1549027/PrintNow" class="btn" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                    print your photo <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <p class="print-note">
+                    NexaFlow Digital may earn a commission if you use this print partner link. Purchases, uploads, pricing, pickup, delivery, and order support are handled directly by the print provider. See our
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer-premium">
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo-wrap" aria-label="NexaFlow Digital Home">
+                        <img src="assets/images/About/NexaFlow-Logo-Footer.png" alt="NexaFlow Digital Logo" class="footer-logo">
+                    </a>
+
+                    <p class="footer-brand-copy">
+                        Systems, automation, and digital support for businesses in Frisco and DFW.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:erika@nexaflowdigital.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:4698502644" aria-label="Call">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <a href="index.html#service">Programs</a>
+                    <a href="index.html#service">Automation</a>
+                    <a href="index.html#service">Data & Reporting</a>
+                    <a href="index.html#service">Marketing & Design</a>
+                    <a href="index.html#service">Websites</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#process">Process</a>
+                    <a href="index.html#portfolio">Work</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="client.html">Client Login</a>
+                </div>
+
+                <div class="footer-contact-compact">
+                    <h4>Start a Project</h4>
+                    <p>Tell us what needs to be built, booked, improved, or automated.</p>
+
+                    <a href="index.html#contact" class="btn footer-card-btn">
+                        get started <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexaFlow Digital. All Rights Reserved.</p>
+
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
+    <script src="assets/vendors/swiper/swiper.js"></script>
+    <script src="assets/vendors/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="assets/vendors/typed/typed.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scroll-spy.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/testi-slider.js"></script>
+    <script src="assets/js/blog-slider.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            var headerWrapper = document.getElementById('header-wrapper');
+            if(window.scrollY > 50){
+                headerWrapper.classList.add('scrolled');
+            } else {
+                headerWrapper.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

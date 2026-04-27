@@ -1,21 +1,40 @@
 // assets/js/counter-up.js
 document.addEventListener('DOMContentLoaded', function() {
-  const countingSection = document.querySelector('.counting');
-  const counters = countingSection.querySelectorAll('.count');
+  const countingSection = document.querySelector('.by-numbers');
+  if (!countingSection) return;
+
+  const counters = countingSection.querySelectorAll('.number-value[data-count]');
   let hasStarted = false;
 
   const runCount = () => {
-    counters.forEach($this => {
+    counters.forEach(function($this) {
       const countTo = +$this.getAttribute('data-count');
+      const suffix = $this.getAttribute('data-suffix') || '+';
+      const suffixEl = $this.querySelector('.number-plus');
+
+      // Hide suffix during animation
+      if (suffixEl) suffixEl.style.opacity = '0';
+
       $({ countNum: 0 }).animate(
         { countNum: countTo },
         {
-          duration: 5000,
-          step(now) {
-            $this.textContent = Math.floor(now);
+          duration: 2200,
+          easing: 'swing',
+          step: function(now) {
+            const val = Math.floor(now);
+            if (suffixEl) {
+              $this.childNodes[0].textContent = val;
+            } else {
+              $this.textContent = val;
+            }
           },
-          complete() {
-            $this.textContent = countTo + '+';
+          complete: function() {
+            if (suffixEl) {
+              $this.childNodes[0].textContent = countTo;
+              suffixEl.style.opacity = '1';
+            } else {
+              $this.textContent = countTo + suffix;
+            }
           }
         }
       );
@@ -23,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach(entry => {
+    function(entries, obs) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting && !hasStarted) {
           runCount();
           hasStarted = true;
@@ -32,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.2 }
   );
 
   observer.observe(countingSection);

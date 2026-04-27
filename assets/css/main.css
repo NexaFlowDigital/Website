@@ -1532,10 +1532,10 @@ header .fa-times{
 /*--------------------- 12- Testimonials Area CSS (Start) ---------------------*/
 .testimonials{
     padding: 6rem 5%;
-    overflow: hidden;
 }
 
 .testimonial-slider{
+    position: relative;
     overflow: hidden !important;
     padding-bottom: 4rem !important;
 }

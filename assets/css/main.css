@@ -478,44 +478,7 @@ header .fa-times{
     text-align: center;
 }
 
-.counting{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    gap: 1.8rem;
-    margin-top: 2rem;
-}
 
-.counting .box{
-    flex: 1 1 22rem;
-    max-width: 26rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: var(--card-bg);
-    border: 0.1rem solid var(--border);
-    border-radius: 1.8rem;
-    padding: 2.6rem 1.8rem;
-    box-shadow: var(--shadow);
-}
-
-.counting .box .count,
-.counting .box h1{
-    font-size: 3.9rem;
-    color: var(--interaction-color);
-    padding-bottom: 0.7rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-}
-
-.counting .box h3{
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    line-height: 1.6;
-    font-weight: 600;
-}
 /*--------------------- 5- About Area CSS (End) ---------------------*/
 
 

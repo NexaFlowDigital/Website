@@ -64,7 +64,7 @@ html{
 }
 
 body{
-    background-color: var(--page-bg);
+    background-color: #0B1628;
     color: var(--text-dark);
 }
 
@@ -1537,9 +1537,6 @@ header .fa-times{
 
 .testimonial-slider{
     overflow: hidden !important;
-}
-
-.testimonial-slider{
     padding-bottom: 4rem !important;
 }
 

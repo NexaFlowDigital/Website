@@ -1532,6 +1532,10 @@ header .fa-times{
 /*--------------------- 12- Testimonials Area CSS (Start) ---------------------*/
 .testimonials{
     padding: 6rem 5%;
+    background-color: var(--page-bg);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .testimonial-slider{

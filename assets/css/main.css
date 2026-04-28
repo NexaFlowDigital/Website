@@ -656,6 +656,23 @@ header .fa-times{ transform: rotate(180deg); }
     gap: 2rem;
 }
 
+/* 4-step process — force single row on desktop */
+.process-grid-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 991px){
+    .process-grid-4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .process-grid-4{
+        grid-template-columns: 1fr;
+    }
+}
+
 .process-card{
     background: linear-gradient(180deg, #112240, #0B1628);
     border-radius: 1.8rem;

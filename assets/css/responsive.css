@@ -1,249 +1,310 @@
+/* ============================================================
+   NexaFlow Digital — Responsive CSS
+   Updated: Midnight Command palette — all new components covered
+   Breakpoints: 991px (tablet) | 768px (mobile) | 450px (small)
+   ============================================================ */
+
+
+/* ── 991px — Tablet ─────────────────────────────────────────── */
 @media (max-width: 991px){
-    html{
-        font-size: 55%;
-    }
 
-    .footer-main{
+    html{ font-size: 55%; }
+
+    /* Hero */
+    .home{ padding: 2rem 3.8% 2.8rem; }
+    .home .box-container{ min-height: auto; gap: 3rem; flex-wrap: wrap; }
+    .home .content{ margin-top: 0; }
+    .home .content h1{ font-size: 5rem; }
+    .home .content .typed-line{ height: 7rem; }
+    .home .image{ width: 35rem; }
+
+    /* About — stack brand card above copy */
+    .about-inner{
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.8rem;
     }
+    .about-brand-card{ min-height: auto; }
+    .about-headline{ font-size: 3.4rem; }
 
-    .footer-links-grid{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    /* By the Numbers */
+    .numbers-grid{ grid-template-columns: repeat(2, 1fr); }
+    .numbers-heading h2{ font-size: 3.8rem; }
 
-    .home{
-        padding: 2rem 3.8% 2.8rem;
-    }
+    /* Services */
+    .service-grid{ grid-template-columns: repeat(2, 1fr); }
 
-    .home .box-container{
-        min-height: auto;
-        gap: 3rem;
-    }
+    /* Process */
+    .process-grid{ grid-template-columns: repeat(2, 1fr); }
 
-    .home .content{
-        margin-top: 0;
-    }
+    /* Testimonials */
+    .testimonial-slider .swiper-slide{ width: 100%; }
 
-    .home .content h1{
-        font-size: 5rem;
-    }
+    /* Featured solutions */
+    .featured-solutions-home{ padding: 4rem 5%; }
+    .featured-solutions-home .controls{ gap: 0.8rem; margin-bottom: 2rem; }
+    .featured-solutions-home .controls .button{ font-size: 1.3rem; padding: 0.9rem 1.4rem; }
+    .featured-solutions-home .portfolio-item{ height: 21rem; }
 
-    .home .content .hero-typed-wrap{
-        min-height: 5.9rem;
-    }
-
-    .home .image{
-        width: 35rem;
-    }
+    /* Footer */
+    .footer-main{ grid-template-columns: 1fr; gap: 2.2rem; }
+    .footer-logo{ width: 15rem; }
 }
 
 
+/* ── 768px — Mobile ─────────────────────────────────────────── */
 @media (max-width: 768px){
-    #menu-btn{
-        display: block;
-    }
 
-    .header{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    /* ── Nav ── */
+    #menu-btn{ display: block; }
 
+    .header{ padding-left: 2rem; padding-right: 2rem; }
+
+    /* Dark mobile nav — matches Midnight Command header */
     .header .navbar{
         width: 30rem;
         position: absolute;
         right: 0;
         top: 100%;
-        padding: 1rem 2rem 2rem 2rem;
-        background: rgba(244,248,251,0.98);
-        border-left: 0.1rem solid rgba(13,92,145,0.08);
-        border-top: 0.1rem solid rgba(13,92,145,0.08);
+        padding: 1.4rem 2rem 2.4rem;
+        background: #0B1628;
+        border-left: 0.1rem solid rgba(0,194,255,0.12);
+        border-top: 0.1rem solid rgba(0,194,255,0.10);
         transition: 0.25s linear;
         transform: translateX(100%);
         height: calc(100vh - 7rem);
         overflow-y: auto;
-        box-shadow: 0 0.8rem 2rem rgba(23,56,79,0.12);
+        box-shadow: -0.8rem 0.8rem 3rem rgba(0,0,0,0.35);
         z-index: 1002;
     }
 
-    #header-wrapper.scrolled .header .navbar{
-        background: var(--base-color);
-    }
-
-    .header .navbar.active{
-        transform: translateX(0);
-    }
+    .header .navbar.active{ transform: translateX(0); }
 
     .header .navbar a{
         display: block;
         padding: 1.4rem 0;
-        margin: 0.4rem 0;
+        margin: 0.2rem 0;
         font-size: 1.7rem;
-        border-bottom: 0.1rem solid rgba(13,92,145,0.08);
+        color: rgba(255,255,255,0.85);
+        border-bottom: 0.1rem solid rgba(0,194,255,0.10);
     }
 
+    .header .navbar a:hover,
+    .header .navbar a.active{
+        color: #00C2FF;
+    }
+
+    /* Scrolled header — keep dark nav consistent */
+    #header-wrapper.scrolled .header .navbar{
+        background: #0B1628;
+    }
     #header-wrapper.scrolled .header .navbar a{
-        color: rgba(255,255,255,0.9);
-        border-bottom: 0.1rem solid rgba(255,255,255,0.12);
+        color: rgba(255,255,255,0.85);
+        border-bottom: 0.1rem solid rgba(0,194,255,0.10);
     }
 
-    section{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    /* ── Global ── */
+    section{ padding-left: 2rem; padding-right: 2rem; }
+    #page-wrapper{ padding: 8.5rem 1.5rem 2rem; }
 
-    #page-wrapper{
-        padding: 8.5rem 1.5rem 2rem;
-    }
-
+    /* ── Hero ── */
     .home{
-        padding: 1.8rem 1.6rem 2.3rem;
+        padding: 2rem 1.8rem 2.4rem;
         border-radius: 1.8rem;
+        margin-bottom: 2rem;
     }
-
     .home .box-container{
-        gap: 2.2rem;
         flex-direction: column;
         align-items: flex-start;
+        gap: 2.4rem;
     }
-
-    .home .content{
-        margin-top: 0;
-        width: 100%;
-    }
-
-    .home .content .text{
-        width: 100%;
-        max-width: 100%;
-    }
-
-.home .content h1{
-    font-size: 3.4rem;
-    min-height: 7.6rem;
-}
-
-    .home .content .hero-static{
-        display: block;
-    }
-
-    .home .content .typing-text{
-        display: inline-block;
-        white-space: normal;
-    }
-
+    .home .content{ width: 100%; }
+    .home .content .text{ width: 100%; max-width: 100%; }
+    .home .content h1{ font-size: 3.8rem; }
+    .home .content .typed-line{ height: 6rem; margin-bottom: 0.8rem; }
     .home .hero-copy{
         font-size: 1.5rem;
         line-height: 1.72;
-        padding-bottom: 1.8rem;
         max-width: 100%;
     }
-
     .home .image{
         width: 100%;
-        max-width: 33rem;
+        max-width: 36rem;
         margin: 0 auto;
     }
-
-    .about .content h2{
-        font-size: 3.1rem;
-    }
-
-    .counting .box{
-        max-width: none;
-    }
-
+    .eyebrow{ font-size: 1.1rem; }
+    .hero-trust{ gap: 0.8rem; margin-bottom: 2rem; }
+    .hero-trust-item span{ font-size: 1.4rem; }
     .hero-buttons{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         width: 100%;
+        gap: 1rem;
     }
-
     .hero-buttons .btn{
         width: 100%;
         text-align: center;
+        justify-content: center;
+        display: flex;
     }
 
-    .logo-img{
-        height: 5rem;
+    /* ── About ── */
+    .about{ padding: 3rem 2rem; }
+    .about-inner{ grid-template-columns: 1fr; gap: 2.4rem; }
+    .about-headline{ font-size: 3rem; }
+    .about-lead{ font-size: 1.6rem; }
+    .about-brand-card{ padding: 2.8rem 2.4rem; min-height: auto; }
+    .abc-quote{ font-size: 2rem; }
+    .about-actions{ flex-direction: column; }
+    .about-actions .btn,
+    .about-actions .btn-outline-dark{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
-    .partner-item{
-        font-size: 1.7rem;
-        padding: 1.5rem 2.4rem;
+    /* ── By the Numbers ── */
+    .by-numbers{ padding: 3.5rem 5%; }
+    .numbers-grid{ grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+    .numbers-heading h2{ font-size: 3.4rem; }
+    .numbers-heading{ margin-bottom: 3rem; }
+    .number-value{ font-size: 5.5rem; }
+    .number-card{ padding: 2.4rem 1.8rem 2rem; }
+
+    /* ── Services ── */
+    .service{ padding: 3rem 2rem; }
+    .service-grid{ grid-template-columns: 1fr; gap: 1.6rem; }
+    .service-card-front{ padding: 2.4rem 2rem 2.2rem; }
+    /* Always show hover reveal on mobile — no hover state on touch */
+    .service-hover-reveal{
+        max-height: 24rem;
+        opacity: 1;
     }
 
-    .footer-premium{
-        padding: 4rem 5% 2rem;
+    /* ── Featured Solutions ── */
+    .featured-solutions-home{ padding: 3rem 2rem; }
+    .featured-solutions-home .controls{ gap: 0.7rem; margin-bottom: 1.8rem; }
+    .featured-solutions-home .controls .button{
+        font-size: 1.25rem;
+        padding: 0.85rem 1.2rem;
+    }
+    .featured-solutions-home .portfolio-item{ height: 22rem; }
+    .featured-solutions-home .portfolio-item .content{ padding: 1.4rem; }
+    .featured-solutions-home .portfolio-item .content h4{ font-size: 1.55rem; }
+    .featured-solutions-home .portfolio-item .content p{
+        font-size: 1.22rem;
+        display: none; /* hide description on small cards */
+    }
+
+    /* ── Process ── */
+    .process-grid{ grid-template-columns: 1fr; gap: 1.4rem; }
+    .process-card{ padding: 2.4rem 2rem; }
+
+    /* ── Testimonials ── */
+    .testimonials{ padding: 3rem 2rem; }
+    .testi-card{ padding: 2.4rem 2rem; }
+    .testi-quote{ font-size: 1.45rem; }
+
+    /* ── Partner Marquee ── */
+    .partner-item{ font-size: 1.7rem; padding: 1.4rem 2.2rem; }
+
+    /* ── Contact ── */
+    .contact-premium{ padding: 3rem 2rem; }
+    .contact-panel{
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+        padding: 2rem 1.8rem;
         border-radius: 1.8rem;
     }
-
-    .footer-links-grid{
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .contact-copy h2{ font-size: 3.2rem; }
+    .contact-lead{ font-size: 1.5rem; }
+    .form-grid{ grid-template-columns: 1fr; gap: 1rem; }
+    .contact-form .box{ font-size: 1.4rem; padding: 1.4rem; }
+    .contact-form textarea.box{ height: 14rem; }
+    .contact-bottom{
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.4rem;
     }
-
-    .footer-logo{
-        width: 22rem;
+    .contact-bottom .btn{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
+    .contact-points{ gap: 1rem; }
+    .contact-point{ align-items: flex-start; }
 
-    .footer-card h3{
-        font-size: 2.5rem;
+    /* ── Footer ── */
+    .footer-premium{
+        padding: 3rem 5% 2rem;
+        border-radius: 1.6rem;
+        margin-top: 1.5rem;
     }
-
+    .footer-main{ grid-template-columns: 1fr; gap: 2.2rem; }
+    .footer-logo{ width: 16rem; }
     .footer-bottom{
         flex-direction: column;
         align-items: flex-start;
+        gap: 1rem;
     }
+    .footer-legal{ gap: 1rem; flex-wrap: wrap; }
 
-    .footer-legal{
-        gap: 1.2rem;
-    }
+    /* ── Scroll top ── */
+    .logo-img{ height: 4.8rem; }
 }
 
+
+/* ── 450px — Small phones ───────────────────────────────────── */
 @media (max-width: 450px){
-    html{
-        font-size: 50%;
-    }
 
-    .header{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+    html{ font-size: 50%; }
 
-    .header .navbar{
-        width: 100%;
-    }
+    .header{ padding-left: 1.5rem; padding-right: 1.5rem; }
+    .header .navbar{ width: 100%; }
 
-    #page-wrapper{
-        padding: 8rem 1rem 1.5rem;
-    }
+    #page-wrapper{ padding: 8rem 1.2rem 1.5rem; }
 
-    .home{
-        padding: 2rem 1.5rem 3rem 1.5rem;
-    }
+    /* Hero */
+    .home{ padding: 2rem 1.5rem 2.5rem; }
+    .home .content h1{ font-size: 3.4rem; }
+    .home .content .typed-line{ height: 5.5rem; }
+    .home .hero-copy{ font-size: 1.4rem; }
 
-    .home .content{
-        margin-top: 0;
-    }
+    /* About */
+    .about-headline{ font-size: 2.8rem; }
+    .abc-quote{ font-size: 1.8rem; }
 
-    .home .content h1{
-        font-size: 3.4rem;
-    }
+    /* Numbers */
+    .numbers-grid{ grid-template-columns: 1fr; }
+    .number-value{ font-size: 6rem; }
+    .numbers-heading h2{ font-size: 3rem; }
 
-    .home .hero-copy{
-        font-size: 1.4rem;
-    }
+    /* Services */
+    .service-icon-wrap{ width: 4.8rem; height: 4.8rem; }
+    .service-icon-wrap i{ font-size: 2rem; }
 
-    .portfolio-item{
-        height: 30rem;
-    }
+    /* Featured solutions */
+    .featured-solutions-home .controls .button{ font-size: 1.15rem; padding: 0.8rem 1rem; }
+    .featured-solutions-home .portfolio-item{ height: 20rem; }
 
-    .heading h2{
-        font-size: 3.6rem;
-    }
+    /* Headings */
+    .heading h2{ font-size: 3.6rem; }
 
-    .partner-item{
-        font-size: 1.55rem;
-        padding: 1.3rem 2rem;
-    }
+    /* Partner */
+    .partner-item{ font-size: 1.55rem; padding: 1.3rem 2rem; }
+
+    /* Contact */
+    .contact-copy h2{ font-size: 2.8rem; }
+    .contact-points{ display: none; }
+    .contact-form textarea.box{ height: 12rem; }
+
+    /* Process */
+    .process-card h3{ font-size: 2rem; }
+    .step-number{ font-size: 1.2rem; }
+
+    /* Testimonials */
+    .testi-card{ padding: 2rem 1.6rem; }
+    .testi-quote{ font-size: 1.4rem; }
+    .testi-avatar{ width: 4rem; height: 4rem; min-width: 4rem; font-size: 1.3rem; }
 }

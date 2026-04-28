@@ -327,7 +327,7 @@ header .fa-times{
     min-height: 52rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 4.4rem;
 }
@@ -372,11 +372,13 @@ header .fa-times{
     max-width: 62rem;
 }
 
-/* Fixed-height typed line — never grows, just adds breathing room below */
+/* Fixed-height typed line — tall enough for 2 wrapped lines at h1 font size.
+   The hero NEVER grows. Overflow is hidden so copy below never gets pushed. */
 .home .content .typed-line{
     display: block;
-    height: 8rem;
-    margin-bottom: 1.2rem;
+    height: 14rem;
+    overflow: hidden;
+    margin-bottom: 2.4rem;
 }
 
 .home .content .typing-text{

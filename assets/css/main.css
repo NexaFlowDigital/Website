@@ -372,12 +372,11 @@ header .fa-times{
     max-width: 62rem;
 }
 
-/* Fixed-height container for the typed line —
-   reserves space so no string length ever reflows the hero */
+/* Fixed-height typed line — never grows, just adds breathing room below */
 .home .content .typed-line{
     display: block;
-    min-height: 7.5rem;
-    overflow: hidden;
+    height: 8rem;
+    margin-bottom: 1.2rem;
 }
 
 .home .content .typing-text{
@@ -385,12 +384,12 @@ header .fa-times{
     color: var(--base-color);
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 0 0 2rem rgba(0, 194, 255, 0.25);
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .home .content .typed-cursor{
     display: inline;
-    white-space: nowrap;
+    white-space: normal;
     color: var(--base-color);
 }
 

@@ -921,7 +921,7 @@ header .fa-times{ transform: rotate(180deg); }
         radial-gradient(circle at top right, rgba(0, 194, 255, 0.12), transparent 24%),
         radial-gradient(circle at bottom left, rgba(0, 229, 196, 0.08), transparent 22%),
         linear-gradient(135deg, #0B1628 0%, #112240 58%, #0B1628 100%);
-    margin-top: 2rem;
+    margin-top: 0;
     padding: 2.5rem 4% 1.5rem;
     color: var(--white);
     border-radius: 2rem;
@@ -1765,7 +1765,7 @@ header .fa-times{ transform: rotate(180deg); }
         radial-gradient(circle at top right, rgba(0,194,255,0.14), transparent 35%),
         radial-gradient(circle at bottom left, rgba(0,229,196,0.09), transparent 35%),
         linear-gradient(135deg, #0B1628 0%, #112240 55%, #0B1628 100%);
-    padding: 6rem 5%;
+    padding: 6rem 5% 4rem;
     position: relative;
     overflow: hidden;
 }

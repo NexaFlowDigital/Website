@@ -117,7 +117,7 @@ section{
 #page-wrapper{
     background-color: var(--page-bg);
     margin: 0 auto 2rem;
-    max-width: 1200px;
+    max-width: 900px;
     padding: 6.2rem 2rem 2rem;
     box-sizing: border-box;
     min-height: 100vh;
@@ -380,7 +380,7 @@ header .fa-times{
     width: 100%;
     height: 8rem;
     overflow: hidden;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .home .content .typing-text{
@@ -401,7 +401,7 @@ header .fa-times{
     font-size: 1.72rem;
     font-weight: 400;
     color: rgba(255,255,255,0.82);
-    padding-bottom: 1.6rem;
+    padding-bottom: 1rem;
     line-height: 1.85;
     max-width: 56rem;
     margin-top: 0.8rem;

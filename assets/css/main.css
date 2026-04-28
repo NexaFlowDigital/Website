@@ -370,7 +370,14 @@ header .fa-times{
     font-weight: 700;
     margin-bottom: 0;
     max-width: 62rem;
-    min-height: 13.2rem;
+}
+
+/* Fixed-height container for the typed line —
+   reserves space so no string length ever reflows the hero */
+.home .content .typed-line{
+    display: block;
+    min-height: 7.5rem;
+    overflow: hidden;
 }
 
 .home .content .typing-text{
@@ -378,12 +385,12 @@ header .fa-times{
     color: var(--base-color);
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 0 0 2rem rgba(0, 194, 255, 0.25);
-    white-space: normal;
+    white-space: nowrap;
 }
 
 .home .content .typed-cursor{
     display: inline;
-    white-space: normal;
+    white-space: nowrap;
     color: var(--base-color);
 }
 

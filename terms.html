@@ -1,243 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q58F2MCK4P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q58F2MCK4P');
-</script>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service | NexaFlow Digital</title>
-
-  <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q58F2MCK4P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q58F2MCK4P');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | NexaFlow Digital</title>
+    <meta name="description" content="Read the terms of service for NexaFlow Digital — the rules governing use of nexaflowdigital.com.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="canonical" href="https://nexaflowdigital.com/terms.html">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
   <style>
+    body { background-color: #0B1628; }
+
+    .legal-hero-band{
+        background: linear-gradient(135deg, #0B1628 0%, #112240 60%, #0B1628 100%);
+        padding: 10rem 5% 4rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .legal-hero-band::after{
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 0.2rem;
+        background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), rgba(0,229,196,0.5), transparent);
+    }
+
+    .legal-kicker{
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.22rem;
+        text-transform: uppercase;
+        color: #00E5C4;
+        margin-bottom: 1.2rem;
+    }
+
+    .legal-hero-band h1{
+        font-size: 4.8rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 700;
+        color: #FFFFFF;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .legal-hero-band .effective-date{
+        font-size: 1.45rem;
+        color: rgba(255,255,255,0.55);
+    }
+
     .legal-page{
-      padding: 12rem 5% 6rem;
-      min-height: 100vh;
+        padding: 4rem 5% 6rem;
+        min-height: 60vh;
+        background-color: #F4F0E8;
     }
 
     .legal-wrap{
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 1.5rem;
-      padding: 3rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        max-width: 900px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        border-radius: 2rem;
+        padding: 4rem;
+        box-shadow: 0 1rem 3rem rgba(11,22,40,0.08);
+        border: 0.1rem solid rgba(11,22,40,0.08);
     }
 
-    .legal-wrap h1{
-      font-size: 3.2rem;
-      margin-bottom: 1rem;
+    .legal-back{
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 2.4rem;
+        font-size: 1.45rem;
+        font-weight: 600;
+        color: #00C2FF;
+        transition: gap 0.2s ease, color 0.2s ease;
     }
 
-    .legal-wrap .effective-date{
-      font-size: 1.5rem;
-      margin-bottom: 2.5rem;
-      color: #666;
+    .legal-back:hover{
+        gap: 1.2rem;
+        color: #00E5C4;
     }
 
     .legal-wrap h2{
-      font-size: 2rem;
-      margin: 2.5rem 0 1rem;
+        font-size: 2rem;
+        margin: 2.8rem 0 1rem;
+        color: #0B1628;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 700;
     }
 
     .legal-wrap p,
     .legal-wrap li{
-      font-size: 1.6rem;
-      line-height: 1.8;
-      color: #333;
+        font-size: 1.6rem;
+        line-height: 1.85;
+        color: #5A7A96;
     }
+
+    .legal-wrap p strong{ color: #0B1628; }
 
     .legal-wrap ul{
-      padding-left: 2rem;
-      margin-top: 1rem;
-    }
-
-    .legal-back{
-      display: inline-flex;
-      align-items: center;
-      gap: .8rem;
-      margin-bottom: 2rem;
-      font-size: 1.5rem;
+        padding-left: 2rem;
+        margin-top: 1rem;
     }
 
     @media (max-width: 768px){
-      .legal-page{
-        padding: 10rem 1.5rem 4rem;
-      }
-
-      .legal-wrap{
-        padding: 2rem 1.5rem;
-      }
-
-      .legal-wrap h1{
-        font-size: 2.6rem;
-      }
-
-      .legal-wrap h2{
-        font-size: 1.8rem;
-      }
-
-      .legal-wrap p,
-      .legal-wrap li{
-        font-size: 1.5rem;
-      }
+        .legal-hero-band{ padding: 9rem 5% 3rem; }
+        .legal-hero-band h1{ font-size: 3.4rem; }
+        .legal-page{ padding: 3rem 4% 4rem; }
+        .legal-wrap{ padding: 2.4rem 2rem; border-radius: 1.4rem; }
+        .legal-wrap h2{ font-size: 1.8rem; }
+        .legal-wrap p, .legal-wrap li{ font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <section class="legal-page">
-    <div class="legal-wrap">
-      <a href="index.html" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <!-------------------- Scroll-Top Area (Start) -------------------->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-------------------- Scroll-Top Area (End) -------------------->
 
-      <h1>Terms of Service</h1>
-      <p class="effective-date"><strong>Effective Date:</strong> January 1, 2025</p>
-
-      <p>
-        These Terms of Service (“Terms”) govern your access to and use of <strong>nexaflowdigital.com</strong> and any related pages, content, features, functionality, communications, and services made available through the website (collectively, the “Site”).
-      </p>
-
-      <p>
-        By accessing or using the Site, you agree to be bound by these Terms.
-      </p>
-
-      <h2>1. Permitted Use</h2>
-      <p>You may use the Site only for lawful purposes and in accordance with these Terms.</p>
-
-      <p>You agree not to:</p>
-      <ul>
-        <li>use the Site in violation of any law or regulation</li>
-        <li>interfere with or disrupt the Site or its operation</li>
-        <li>attempt to gain unauthorized access to any portion of the Site, server, account, or connected system</li>
-        <li>misuse any contact form, communication feature, or submission process</li>
-        <li>copy, scrape, reproduce, republish, distribute, modify, mirror, frame, transmit, display, sell, license, or exploit any part of the Site except as expressly permitted in writing</li>
-      </ul>
-
-      <h2>2. Intellectual Property Rights</h2>
-      <p>
-        The Site and all content, materials, features, functionality, design elements, source code, object code, structure, layout, text, graphics, branding, names, logos, icons, images, audio, video, downloads, digital assets, concepts, compilations, and other materials made available on or through the Site are and shall remain the exclusive property of NexaFlow Digital and/or its licensors, and are protected by applicable copyright, trademark, trade dress, trade secret, unfair competition, and other intellectual property and proprietary rights laws.
-      </p>
-
-      <p>No right, title, or interest in or to the Site or any content is transferred to you. Any rights not expressly granted are reserved.</p>
-
-      <p>Without prior written permission, you may not:</p>
-      <ul>
-        <li>copy or reuse any Site content</li>
-        <li>adapt, edit, or create derivative works</li>
-        <li>reproduce design, branding, layout, wording, or visual elements</li>
-        <li>use any mark, logo, trade name, slogan, or brand asset</li>
-        <li>reverse engineer, decompile, disassemble, or attempt to extract source code or proprietary methods, except where prohibited by law</li>
-      </ul>
-
-      <h2>3. User Submissions</h2>
-      <p>
-        If you submit information, ideas, requests, messages, feedback, files, or other materials through the Site, you represent that you have the right to provide them. You remain responsible for the content you submit.
-      </p>
-
-      <p>
-        We may use submitted information as reasonably necessary to review inquiries, communicate with you, provide requested services, protect our interests, and operate our business.
-      </p>
-
-      <h2>4. No Offer; Separate Agreements Control</h2>
-      <p>
-        Content on the Site is provided for general informational and promotional purposes only. Nothing on the Site constitutes a binding offer, guarantee, or commitment to provide services. Any actual services, deliverables, timelines, pricing, obligations, ownership terms, or project scope will be governed solely by a separate written agreement, if any.
-      </p>
-
-      <h2>5. Disclaimer of Warranties</h2>
-      <p>
-        The Site and all content, information, and functionality are provided on an “as is” and “as available” basis, without warranties of any kind, express or implied, to the fullest extent permitted by law.
-      </p>
-
-      <p>
-        We disclaim all warranties, including any warranties of merchantability, fitness for a particular purpose, title, non-infringement, availability, accuracy, reliability, security, or uninterrupted access.
-      </p>
-
-      <p>
-        We do not warrant that the Site will be error-free, uninterrupted, secure, compatible with every device or network, or free of harmful code.
-      </p>
-
-      <h2>6. Limitation of Liability</h2>
-      <p>
-        To the fullest extent permitted by law, NexaFlow Digital and its owner, affiliates, licensors, contractors, service providers, and representatives shall not be liable for any direct, indirect, incidental, consequential, special, exemplary, or punitive damages, or for any loss of profits, revenue, business, data, goodwill, opportunity, or anticipated savings, arising out of or related to:
-      </p>
-
-      <ul>
-        <li>your access to or use of the Site</li>
-        <li>your inability to access or use the Site</li>
-        <li>errors, omissions, delays, interruptions, or inaccuracies</li>
-        <li>third-party content, services, tools, platforms, or links</li>
-        <li>unauthorized access to or alteration of transmissions or data</li>
-        <li>reliance on any content or information made available through the Site</li>
-      </ul>
-
-      <p>
-        If liability is imposed despite the foregoing, the maximum aggregate liability shall not exceed one hundred U.S. dollars ($100).
-      </p>
-
-      <h2>7. Indemnification</h2>
-      <p>
-        You agree to defend, indemnify, and hold harmless NexaFlow Digital and its owner, affiliates, licensors, contractors, service providers, and representatives from and against any claims, demands, actions, liabilities, damages, judgments, losses, costs, and expenses, including reasonable attorneys’ fees, arising out of or related to:
-      </p>
-
-      <ul>
-        <li>your use of the Site</li>
-        <li>your violation of these Terms</li>
-        <li>your infringement or misappropriation of any rights of another person or entity</li>
-        <li>any information or materials you submit through the Site</li>
-      </ul>
-
-      <h2>8. Third-Party Content and Services</h2>
-      <p>
-        The Site may reference, integrate with, or provide access to third-party content, services, software, websites, or tools. We do not control and are not responsible for third-party materials, availability, performance, policies, or practices. Accessing third-party resources is at your own risk.
-      </p>
-
-      <h2>9. Site Availability and Changes</h2>
-      <p>
-        We may update, modify, suspend, restrict, or discontinue any part of the Site at any time, with or without notice. We are not liable if any portion of the Site is unavailable at any time.
-      </p>
-
-      <h2>10. Termination</h2>
-      <p>
-        We reserve the right, in our sole discretion, to restrict, suspend, or terminate access to the Site at any time, without notice, for any reason or no reason, including suspected misuse or violation of these Terms.
-      </p>
-
-      <h2>11. Governing Law and Venue</h2>
-      <p>
-        These Terms are governed by the laws of the State of Texas, without regard to conflict of law principles. Any dispute arising out of or relating to the Site or these Terms shall be brought exclusively in the state or federal courts located in Texas, and you consent to their jurisdiction and venue.
-      </p>
-
-      <h2>12. Severability</h2>
-      <p>
-        If any provision of these Terms is held invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect.
-      </p>
-
-      <h2>13. No Waiver</h2>
-      <p>
-        Failure to enforce any provision of these Terms shall not be deemed a waiver of that provision or any other provision.
-      </p>
-
-      <h2>14. Entire Agreement</h2>
-      <p>
-        These Terms constitute the entire agreement between you and NexaFlow Digital regarding use of the Site and supersede any prior or contemporaneous understandings regarding the Site.
-      </p>
-
-      <h2>15. Contact</h2>
-      <p>
-        <strong>NexaFlow Digital</strong><br>
-        erika@nexaflowdigital.com
-      </p>
+    <!-------------------- Header Wrapper (Start) -------------------->
+    <div id="header-wrapper">
+        <header class="header">
+            <a class="logo" href="index.html">
+                <img src="assets/images/About/NexaFlow-Logo.png" alt="NexaFlow Digital Logo" class="logo-img">
+            </a>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="index.html#about">about</a>
+                <a href="index.html#service">services</a>
+                <a href="index.html#portfolio">work</a>
+                <a href="index.html#contact">contact</a>
+                <a href="client.html">Client Login</a>
+            </nav>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </header>
     </div>
-  </section>
+    <!-------------------- Header Wrapper (End) -------------------->
+
+    <!-- Legal Hero Band -->
+    <div class="legal-hero-band">
+        <p class="legal-kicker">Legal</p>
+        <h1>Terms of Service</h1>
+        <p class="effective-date">Effective Date: January 1, 2025</p>
+    </div>
+
+    <!-- Legal Content -->
+    <section class="legal-page">
+        <div class="legal-wrap">
+            <a href="index.html" class="legal-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+            <p>These Terms of Service ("Terms") govern your access to and use of <strong>nexaflowdigital.com</strong> and any related pages, content, features, functionality, communications, and services made available through the website (collectively, the "Site"). By accessing or using the Site, you agree to be bound by these Terms.</p>
+
+            <h2>1. Permitted Use</h2>
+            <p>You may use the Site only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+            <ul>
+                <li>use the Site in violation of any law or regulation</li>
+                <li>interfere with or disrupt the Site or its operation</li>
+                <li>attempt to gain unauthorized access to any portion of the Site, server, account, or connected system</li>
+                <li>misuse any contact form, communication feature, or submission process</li>
+                <li>copy, scrape, reproduce, republish, distribute, modify, or exploit any part of the Site except as expressly permitted in writing</li>
+            </ul>
+
+            <h2>2. Intellectual Property Rights</h2>
+            <p>The Site and all content, materials, design elements, branding, names, logos, and other materials are the exclusive property of NexaFlow Digital and/or its licensors, protected by applicable intellectual property laws. No right, title, or interest in the Site or any content is transferred to you. Any rights not expressly granted are reserved.</p>
+            <p>Without prior written permission, you may not:</p>
+            <ul>
+                <li>copy or reuse any Site content</li>
+                <li>adapt, edit, or create derivative works</li>
+                <li>reproduce design, branding, layout, or visual elements</li>
+                <li>use any mark, logo, trade name, or brand asset</li>
+                <li>reverse engineer, decompile, or extract source code or proprietary methods</li>
+            </ul>
+
+            <h2>3. User Submissions</h2>
+            <p>If you submit information, ideas, requests, messages, feedback, or other materials through the Site, you represent that you have the right to provide them. You remain responsible for the content you submit. We may use submitted information as reasonably necessary to review inquiries, communicate with you, and operate our business.</p>
+
+            <h2>4. No Offer; Separate Agreements Control</h2>
+            <p>Content on the Site is provided for general informational and promotional purposes only. Nothing on the Site constitutes a binding offer, guarantee, or commitment to provide services. Any actual services, deliverables, timelines, pricing, or project scope will be governed solely by a separate written agreement, if any.</p>
+
+            <h2>5. Disclaimer of Warranties</h2>
+            <p>The Site and all content, information, and functionality are provided on an "as is" and "as available" basis, without warranties of any kind, to the fullest extent permitted by law. We disclaim all warranties, including any warranties of merchantability, fitness for a particular purpose, title, non-infringement, accuracy, reliability, or uninterrupted access.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, NexaFlow Digital and its owner, affiliates, licensors, and representatives shall not be liable for any direct, indirect, incidental, consequential, special, or punitive damages arising out of or related to your use of or inability to use the Site. If liability is imposed despite the foregoing, the maximum aggregate liability shall not exceed one hundred U.S. dollars ($100).</p>
+
+            <h2>7. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless NexaFlow Digital and its owner, affiliates, licensors, and representatives from and against any claims, liabilities, damages, losses, costs, and expenses arising out of or related to your use of the Site, your violation of these Terms, or any materials you submit through the Site.</p>
+
+            <h2>8. Third-Party Content and Services</h2>
+            <p>The Site may reference or provide access to third-party content, services, or websites. We do not control and are not responsible for third-party materials, availability, performance, policies, or practices. Accessing third-party resources is at your own risk.</p>
+
+            <h2>9. Site Availability and Changes</h2>
+            <p>We may update, modify, suspend, or discontinue any part of the Site at any time, with or without notice. We are not liable if any portion of the Site is unavailable at any time.</p>
+
+            <h2>10. Termination</h2>
+            <p>We reserve the right, in our sole discretion, to restrict, suspend, or terminate access to the Site at any time, without notice, for any reason, including suspected misuse or violation of these Terms.</p>
+
+            <h2>11. Governing Law and Venue</h2>
+            <p>These Terms are governed by the laws of the State of Texas, without regard to conflict of law principles. Any dispute arising out of or relating to the Site or these Terms shall be brought exclusively in the state or federal courts located in Texas.</p>
+
+            <h2>12. Severability</h2>
+            <p>If any provision of these Terms is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+            <h2>13. No Waiver</h2>
+            <p>Failure to enforce any provision of these Terms shall not be deemed a waiver of that provision or any other provision.</p>
+
+            <h2>14. Entire Agreement</h2>
+            <p>These Terms constitute the entire agreement between you and NexaFlow Digital regarding use of the Site and supersede any prior understandings regarding the Site.</p>
+
+            <h2>15. Contact</h2>
+            <p><strong>NexaFlow Digital</strong><br>erika@nexaflowdigital.com</p>
+        </div>
+    </section>
+
+<!-------------------- Footer Area (Start) -------------------->
+<footer class="footer-premium">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo-wrap" aria-label="NexaFlow Digital Home">
+                <img src="assets/images/About/NexaFlow-Logo-Footer.png" alt="NexaFlow Digital Logo" class="footer-logo">
+            </a>
+            <p class="footer-brand-copy">
+                Systems, automation, and digital support for businesses in Frisco and DFW.
+            </p>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:erika@nexaflowdigital.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:4698502644" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>Services</h4>
+            <a href="index.html#service">Programs</a>
+            <a href="index.html#service">Automation</a>
+            <a href="index.html#service">Data & Reporting</a>
+            <a href="index.html#service">Marketing & Design</a>
+            <a href="index.html#service">Websites</a>
+        </div>
+        <div class="footer-column">
+            <h4>Company</h4>
+            <a href="index.html#about">About</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#portfolio">Work</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="client.html">Client Login</a>
+        </div>
+        <div class="footer-contact-compact">
+            <h4>Start a Project</h4>
+            <p>Tell us what needs to be built, booked, improved, or automated.</p>
+            <a href="index.html#contact" class="btn footer-card-btn">get started <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 NexaFlow Digital. All Rights Reserved.</p>
+        <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        </div>
+    </div>
+</footer>
+<!-------------------- Footer Area (End) -------------------->
+
+    <!-- jQuery -->
+    <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
+    <!-- Font Awesome already loaded via CSS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Header scroll effect -->
+    <script>
+        window.addEventListener('scroll', function(){
+            var hw = document.getElementById('header-wrapper');
+            if(window.scrollY > 50){ hw.classList.add('scrolled'); }
+            else { hw.classList.remove('scrolled'); }
+        });
+    </script>
 
 </body>
 </html>

@@ -369,6 +369,7 @@ header .fa-times{
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     margin-bottom: 0;
+    width: 100%;
     max-width: 62rem;
 }
 
@@ -376,6 +377,7 @@ header .fa-times{
    The hero NEVER grows. Overflow is hidden so copy below never gets pushed. */
 .home .content .typed-line{
     display: block;
+    width: 100%;
     height: 14rem;
     overflow: hidden;
     margin-bottom: 2.4rem;

@@ -1742,3 +1742,185 @@ header .fa-times{ transform: rotate(180deg); }
     font-weight: 400;
     line-height: 1.4;
 }
+/*--------------------- Pre-Footer CTA (Start) ---------------------*/
+.prefooter-cta{
+    background:
+        radial-gradient(circle at top right, rgba(0,194,255,0.14), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0,229,196,0.09), transparent 35%),
+        linear-gradient(135deg, #0B1628 0%, #112240 55%, #0B1628 100%);
+    padding: 6rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.prefooter-cta::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.2rem;
+    background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), rgba(0,229,196,0.5), transparent);
+}
+
+.prefooter-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.prefooter-kicker{
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #00E5C4;
+    margin-bottom: 1.2rem;
+}
+
+.prefooter-text h2{
+    font-size: 4.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.08;
+    margin-bottom: 1.2rem;
+}
+
+.prefooter-sub{
+    font-size: 1.65rem;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.75;
+    max-width: 52rem;
+}
+
+.prefooter-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.prefooter-btn{
+    font-size: 1.55rem;
+    padding: 1.4rem 2.8rem;
+    white-space: nowrap;
+}
+
+.prefooter-link{
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-left: 0.4rem;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.prefooter-link i{ font-size: 1.2rem; }
+
+.prefooter-link:hover{
+    color: #00C2FF;
+    gap: 1rem;
+}
+
+@media (max-width: 768px){
+    .prefooter-cta{ padding: 4rem 5%; }
+    .prefooter-inner{ flex-direction: column; gap: 2.8rem; align-items: flex-start; }
+    .prefooter-text h2{ font-size: 3.6rem; }
+    .prefooter-actions{ width: 100%; }
+    .prefooter-btn{ width: 100%; text-align: center; display: flex; justify-content: center; }
+}
+
+@media (max-width: 450px){
+    .prefooter-text h2{ font-size: 3rem; }
+}
+/*--------------------- Pre-Footer CTA (End) ---------------------*/
+
+/*--------------------- FAQ Section (Start) ---------------------*/
+.faq-section{ padding: 4rem 5%; }
+
+.faq-grid{
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.faq-item{
+    background: var(--card-bg);
+    border: 0.1rem solid var(--border);
+    border-radius: 1.4rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item.open{
+    border-color: rgba(0,194,255,0.30);
+    box-shadow: 0 0.8rem 2.4rem rgba(0,194,255,0.08);
+}
+
+.faq-question{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    padding: 2rem 2.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-question span{
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq-icon{
+    font-size: 1.4rem;
+    color: var(--base-color);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon{
+    transform: rotate(45deg);
+}
+
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    padding: 0 2.4rem;
+}
+
+.faq-item.open .faq-answer{
+    max-height: 20rem;
+    padding: 0 2.4rem 2rem;
+}
+
+.faq-answer p{
+    font-size: 1.55rem;
+    color: var(--text-light);
+    line-height: 1.85;
+    border-top: 0.1rem solid var(--border);
+    padding-top: 1.4rem;
+}
+
+@media (max-width: 768px){
+    .faq-question{ padding: 1.6rem 1.8rem; }
+    .faq-question span{ font-size: 1.5rem; }
+    .faq-item.open .faq-answer{ padding: 0 1.8rem 1.6rem; }
+}
+/*--------------------- FAQ Section (End) ---------------------*/

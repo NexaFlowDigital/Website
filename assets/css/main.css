@@ -117,7 +117,7 @@ section{
 #page-wrapper{
     background-color: var(--page-bg);
     margin: 0 auto 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     padding: 6.2rem 2rem 2rem;
     box-sizing: border-box;
     min-height: 100vh;

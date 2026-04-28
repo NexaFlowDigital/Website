@@ -1639,3 +1639,106 @@ header .fa-times{ transform: rotate(180deg); }
     .footer-bottom{ flex-direction: column; align-items: flex-start; }
     .footer-legal{ gap: 1rem; }
 }
+
+/* Brand statement card */
+.about-brand-card{
+    position: relative;
+    background: linear-gradient(145deg, #0B1628 0%, #112240 55%, #0D1F3C 100%);
+    border: 0.1rem solid rgba(0, 194, 255, 0.18);
+    border-radius: 2.4rem;
+    padding: 3.6rem 3.2rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    height: 100%;
+    min-height: 42rem;
+}
+
+/* Ambient glow */
+.abc-glow{
+    position: absolute;
+    top: -6rem;
+    right: -6rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,194,255,0.12), transparent 65%);
+    pointer-events: none;
+}
+
+.abc-top{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.abc-logo-mark{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+    background: rgba(0, 194, 255, 0.12);
+    border: 0.1rem solid rgba(0, 194, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.abc-logo-mark i{
+    font-size: 1.6rem;
+    color: var(--base-color);
+}
+
+.abc-company{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+}
+
+.abc-quote{
+    font-size: 2.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.45;
+    border: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.abc-divider{
+    height: 0.1rem;
+    background: linear-gradient(90deg, rgba(0,194,255,0.4), rgba(0,229,196,0.4), transparent);
+}
+
+.abc-pillars{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.abc-pillar{
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.abc-pillar i{
+    font-size: 1.3rem;
+    color: var(--interaction-color);
+    flex-shrink: 0;
+    width: 1.6rem;
+    text-align: center;
+}
+
+.abc-pillar span{
+    font-size: 1.45rem;
+    color: rgba(255,255,255,0.72);
+    font-weight: 400;
+    line-height: 1.4;
+}

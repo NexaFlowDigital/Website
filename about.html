@@ -81,7 +81,13 @@
         }
 
         /* ── Page body wrapper ── */
-        .ap-body { background: #F4F0E8; }
+        .ap-body {
+            background: #F4F0E8;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            box-sizing: border-box;
+            min-height: 60vh;
+        }
 
         /* ── Shared section shell ── */
         .ap-shell {
@@ -305,15 +311,17 @@
             object-fit: cover;
         }
         .ap-founder-photo-placeholder {
-            width: 16rem;
-            height: 16rem;
+            width: 18rem;
+            height: 18rem;
             border-radius: 50%;
-            border: 0.3rem solid rgba(0,194,255,0.25);
+            border: 0.5rem solid #00C2FF;
+            box-shadow: 0 0 0 0.4rem rgba(0,194,255,0.15), 0 1.2rem 3rem rgba(0,0,0,0.18);
             background: linear-gradient(135deg, #0B1628, #112240);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            overflow: hidden;
         }
         .ap-founder-photo-placeholder i {
             font-size: 5rem;
@@ -406,6 +414,81 @@
             .ap-founder { padding: 2.4rem; }
             .ap-cta h2 { font-size: 3.2rem; }
         }
+
+        /* ── Why cards (Fix 4) ── */
+        .ap-why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .ap-why-card {
+            background: #FFFFFF;
+            border: 0.1rem solid rgba(11,22,40,0.08);
+            border-radius: 1.8rem;
+            padding: 2.8rem 2.4rem;
+            box-shadow: 0 0.8rem 2.4rem rgba(11,22,40,0.06);
+            transition: all 0.25s ease;
+        }
+        .ap-why-card:hover {
+            transform: translateY(-0.3rem);
+            border-color: rgba(0,194,255,0.25);
+            box-shadow: 0 1.2rem 3rem rgba(0,194,255,0.08);
+        }
+        .ap-why-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1.2rem;
+            background: linear-gradient(135deg, #0B1628, #112240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.8rem;
+        }
+        .ap-why-icon i { font-size: 2rem; color: #00C2FF; }
+        .ap-why-card h3 {
+            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #0B1628;
+            margin-bottom: 1rem;
+        }
+        .ap-why-card p {
+            font-size: 1.5rem;
+            color: #5A7A96;
+            line-height: 1.8;
+        }
+
+        /* ── Founder focus items (Fix 5) ── */
+        .ap-founder-focus {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.8rem;
+            padding: 1.8rem 2rem;
+            background: rgba(0,194,255,0.04);
+            border: 0.1rem solid rgba(0,194,255,0.14);
+            border-radius: 1.2rem;
+        }
+        .ap-focus-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .ap-focus-item i {
+            font-size: 1.3rem;
+            color: #00C2FF;
+            flex-shrink: 0;
+        }
+        .ap-focus-item span {
+            font-size: 1.45rem;
+            color: #0B1628;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 768px) {
+            .ap-why-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -445,25 +528,39 @@
     <!-- ══ PAGE BODY ══ -->
     <div class="ap-body">
 
-        <!-- Origin Story -->
+        <!-- Origin Story — scannable 3-column why cards -->
         <div class="ap-shell">
-            <div class="ap-origin">
-                <div>
-                    <span class="ap-section-kicker">Why we exist</span>
-                    <h2 class="ap-origin-heading">Most businesses are held back by the same problems — and most of them are invisible.</h2>
-                    <p>There's a pattern that shows up across industries, team sizes, and business types. Data lives in five different places and nobody fully trusts any of them. Reports that should take minutes take hours — because someone has to pull it all together manually, every single time. There are tools in place, but they were chosen for convenience, not fit — and now the team works around them instead of with them.</p>
-                    <p>Decisions slow down. Mistakes compound. Good people spend their days on work a system should be handling. And because it's been this way for a while, it starts to feel normal.</p>
-                    <div class="ap-pull">"It doesn't have to be this way. Most of these problems aren't hard to solve — they just need someone who knows how to look at them."</div>
-                    <p>NexaFlow Digital was built by someone who spent years on the inside of these exact situations — not as a consultant passing through, but as the person who actually had to fix it. That hands-on operational experience shapes everything about how we work: the questions we ask, the systems we design, and the way we measure success.</p>
+            <div style="text-align:center; margin-bottom:3.5rem;">
+                <span class="ap-section-kicker">Why we exist</span>
+                <h2 style="font-size:4.4rem; font-family:'Cormorant Garamond',serif; font-weight:700; color:#0B1628; line-height:1.1; max-width:700px; margin:0 auto;">
+                    We built this because we've been inside the problem.
+                </h2>
+            </div>
+
+            <div class="ap-why-grid">
+
+                <div class="ap-why-card">
+                    <div class="ap-why-icon"><i class="fas fa-eye"></i></div>
+                    <h3>We saw it firsthand</h3>
+                    <p>Our founder spent over a decade embedded inside organizations — schools, districts, accounting departments, multi-site businesses — watching the same friction points show up again and again. Spreadsheets doing the job of software. Reports nobody trusted. Data nobody could agree on.</p>
                 </div>
-                <div>
-                    <span class="ap-section-kicker">What we saw</span>
-                    <h2 class="ap-origin-heading">The same broken patterns, across every kind of organization.</h2>
-                    <p>Before NexaFlow, our founder spent over a decade embedded inside organizations — schools, districts, accounting departments, multi-site businesses — watching the same friction points show up again and again.</p>
-                    <p><strong>Spreadsheets doing the job of software.</strong> Teams copying data between systems by hand every morning. Dashboards nobody trusted because the numbers were always slightly off. Reporting processes so manual that by the time the report was done, the moment to act on it had passed.</p>
-                    <p>The frustrating part wasn't that these problems existed — it was that they were solvable. Not with expensive enterprise software or a six-month implementation. Just with someone who understood the workflow, knew what to build, and actually followed through.</p>
-                    <p>That's the gap NexaFlow was built to fill — for businesses in Frisco, TX and across the Dallas-Fort Worth area that deserve better tools than what they've been making do with.</p>
+
+                <div class="ap-why-card">
+                    <div class="ap-why-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>We built the fix</h3>
+                    <p>The frustrating part wasn't that these problems existed — it was that they were solvable. Not with expensive enterprise software. Just with someone who understood the workflow, knew what to build, and actually followed through. That's exactly what NexaFlow does.</p>
                 </div>
+
+                <div class="ap-why-card">
+                    <div class="ap-why-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>We serve DFW businesses</h3>
+                    <p>NexaFlow was built to fill that gap — for businesses in Frisco, TX and across the Dallas-Fort Worth area that deserve better tools than what they've been making do with. Local, hands-on, and built around how your business actually works.</p>
+                </div>
+
+            </div>
+
+            <div class="ap-pull" style="margin-top:3rem;">
+                "It doesn't have to be this way. Most of these problems aren't hard to solve — they just need someone who knows how to look at them."
             </div>
         </div>
 
@@ -561,7 +658,7 @@
                     <div class="ap-founder-photo-placeholder" id="founderPhotoWrap">
                         <img src="assets/images/About/erika.png"
                              alt="Erika — Founder of NexaFlow Digital"
-                             style="width:100%; height:100%; object-fit:cover; border-radius:50%;"
+                             style="width:110%; height:110%; object-fit:cover; object-position:center top; border-radius:50%; margin:-5%;"
                              onerror="this.style.display='none'; document.getElementById('founderIcon').style.display='flex';">
                         <i class="fas fa-user" id="founderIcon" style="display:none; font-size:5rem; color:rgba(0,194,255,0.3);"></i>
                     </div>
@@ -576,15 +673,25 @@
                             Her background spans systems programming, data analysis, financial accounting, and instructional technology — which means she approaches every project from both a technical and a business perspective. She understands what it costs when a system doesn't work, and she builds things that actually hold up.
                         </p>
                         <p class="ap-founder-bio">
-                            <strong>Based in Frisco, TX.</strong> Serving businesses and organizations across the Dallas-Fort Worth area.
+                            <strong>Based in Frisco, TX</strong> — serving businesses and organizations across the Dallas-Fort Worth area.
                         </p>
-                        <div class="ap-founder-tags">
-                            <span class="ap-tag">Systems Programming</span>
-                            <span class="ap-tag">Data &amp; Reporting</span>
-                            <span class="ap-tag">Workflow Automation</span>
-                            <span class="ap-tag">Google Certified Trainer</span>
-                            <span class="ap-tag">Microsoft Office Specialist</span>
-                            <span class="ap-tag">Frisco, TX · DFW</span>
+                        <div class="ap-founder-focus">
+                            <div class="ap-focus-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Systems &amp; automation built from operational experience</span>
+                            </div>
+                            <div class="ap-focus-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Technical &amp; business perspective on every project</span>
+                            </div>
+                            <div class="ap-focus-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Certified in Google Workspace &amp; Microsoft Office</span>
+                            </div>
+                            <div class="ap-focus-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Locally rooted — DFW community &amp; clients</span>
+                            </div>
                         </div>
                     </div>
 

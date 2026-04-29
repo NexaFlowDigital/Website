@@ -1945,3 +1945,27 @@ header .fa-times{ transform: rotate(180deg); }
     .faq-item.open .faq-answer{ padding: 0 1.8rem 1.6rem; }
 }
 /*--------------------- FAQ Section (End) ---------------------*/
+
+/*--------------------- Services Outline CTA ---------------------*/
+.btn-outline-services{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.3rem 2.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    color: var(--base-color);
+    background: transparent;
+    border: 0.2rem solid rgba(0, 194, 255, 0.40);
+    border-radius: 5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-services:hover{
+    background: var(--base-color);
+    border-color: var(--base-color);
+    color: #0B1628;
+    box-shadow: 0 0.6rem 2rem rgba(0, 194, 255, 0.25);
+    gap: 1.2rem;
+}

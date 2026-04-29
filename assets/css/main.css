@@ -152,6 +152,7 @@ hr.section-divider{
     z-index: 0;
     color: var(--text-dark);
     font-family: 'Cormorant Garamond', serif;
+    text-transform: capitalize;
 }
 
 .heading h2 span::before{

@@ -11,14 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About NexaFlow Digital | Frisco, TX</title>
-    <meta name="description" content="NexaFlow Digital was built to fix what most businesses quietly deal with every day — manual work, disconnected tools, and systems that were never designed for them. Based in Frisco, TX serving DFW.">
+    <title>About NexaFlow Digital | Custom Systems & Automation</title>
+    <meta name="description" content="NexaFlow Digital builds custom systems, automation, and digital tools for businesses that are serious about running smarter. Learn who we are and how we work.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="NexaFlow Digital">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="canonical" href="https://nexaflowdigital.com/about.html">
-    <meta property="og:title" content="About NexaFlow Digital | Frisco, TX">
-    <meta property="og:description" content="NexaFlow Digital was built to solve the operational problems most businesses quietly deal with every day.">
+    <meta property="og:title" content="About NexaFlow Digital">
+    <meta property="og:description" content="NexaFlow Digital builds custom systems, automation, and digital tools for businesses that are serious about running smarter.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexaflowdigital.com/about.html">
     <meta property="og:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
@@ -26,477 +25,12 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <style>
-        body { background-color: #0B1628; }
-
-        /* ── Hero ── */
-        .ap-hero {
-            padding: 10rem 5% 6rem;
-            background:
-                radial-gradient(circle at top right, rgba(0,194,255,0.13), transparent 32%),
-                radial-gradient(circle at bottom left, rgba(0,229,196,0.07), transparent 30%),
-                linear-gradient(135deg, #0B1628 0%, #112240 55%, #0B1628 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .ap-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 0.2rem;
-            background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), rgba(0,229,196,0.5), transparent);
-        }
-        .ap-hero-inner {
-            max-width: 820px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .ap-kicker {
-            display: inline-block;
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: 0.22rem;
-            text-transform: uppercase;
-            color: #00E5C4;
-            margin-bottom: 1.6rem;
-        }
-        .ap-hero h1 {
-            font-size: 5.8rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #FFFFFF;
-            line-height: 1.06;
-            margin-bottom: 2rem;
-        }
-        .ap-hero h1 em {
-            font-style: normal;
-            color: #00C2FF;
-        }
-        .ap-hero-lead {
-            font-size: 1.8rem;
-            color: rgba(255,255,255,0.72);
-            line-height: 1.85;
-            max-width: 660px;
-            margin: 0 auto;
-        }
-
-        /* ── Page body wrapper ── */
-        .ap-body {
-            background: #F4F0E8;
-            max-width: 1200px;
-            margin: 0 auto 2rem;
-            box-sizing: border-box;
-            min-height: 60vh;
-        }
-
-        /* ── Shared section shell ── */
-        .ap-shell {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 5rem 5%;
-        }
-
-        .ap-section-kicker {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.2rem;
-            text-transform: uppercase;
-            color: #00C2FF;
-            display: block;
-            margin-bottom: 1.2rem;
-        }
-
-        /* ── Origin story ── */
-        .ap-origin {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-        }
-        .ap-origin-heading {
-            font-size: 4.2rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #0B1628;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-        }
-        .ap-origin p {
-            font-size: 1.65rem;
-            color: #5A7A96;
-            line-height: 1.9;
-            margin-bottom: 1.6rem;
-        }
-        .ap-origin p strong { color: #0B1628; font-weight: 600; }
-
-        /* Pull quote */
-        .ap-pull {
-            border-left: 0.35rem solid #00C2FF;
-            padding: 1.8rem 2.2rem;
-            background: rgba(0,194,255,0.05);
-            border-radius: 0 1.2rem 1.2rem 0;
-            font-size: 2rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            color: #0B1628;
-            line-height: 1.45;
-            margin: 2.4rem 0;
-        }
-
-        /* ── Problem cards ── */
-        .ap-problems-section {
-            background: linear-gradient(135deg, #0B1628 0%, #112240 50%, #0B1628 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .ap-problems-section::before,
-        .ap-problems-section::after {
-            content: '';
-            position: absolute;
-            left: 0; right: 0;
-            height: 0.2rem;
-            background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), rgba(0,229,196,0.5), transparent);
-        }
-        .ap-problems-section::before { top: 0; }
-        .ap-problems-section::after  { bottom: 0; }
-
-        .ap-problems-head {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .ap-problems-head h2 {
-            font-size: 4.4rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #FFFFFF;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-        .ap-problems-head p {
-            font-size: 1.65rem;
-            color: rgba(255,255,255,0.62);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.75;
-        }
-
-        .ap-problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.8rem;
-        }
-        .ap-problem-card {
-            background: rgba(255,255,255,0.04);
-            border: 0.1rem solid rgba(0,194,255,0.14);
-            border-radius: 1.8rem;
-            padding: 2.8rem 2.4rem;
-            transition: all 0.28s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .ap-problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 0.3rem;
-            background: linear-gradient(90deg, #00C2FF, #00E5C4);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-        .ap-problem-card:hover {
-            background: rgba(0,194,255,0.07);
-            border-color: rgba(0,194,255,0.28);
-            transform: translateY(-0.4rem);
-        }
-        .ap-problem-card:hover::before { transform: scaleX(1); }
-
-        .ap-problem-num {
-            font-size: 4.2rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            background: linear-gradient(135deg, #00C2FF, #00E5C4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 1.4rem;
-        }
-        .ap-problem-card h3 {
-            font-size: 1.95rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        .ap-problem-card p {
-            font-size: 1.45rem;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.75;
-        }
-
-        /* ── Difference section ── */
-        .ap-diff-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .ap-diff-card {
-            background: #FFFFFF;
-            border: 0.1rem solid rgba(11,22,40,0.08);
-            border-radius: 1.8rem;
-            padding: 2.8rem 2.4rem;
-            box-shadow: 0 0.8rem 2.4rem rgba(11,22,40,0.06);
-            transition: all 0.25s ease;
-        }
-        .ap-diff-card:hover {
-            transform: translateY(-0.3rem);
-            border-color: rgba(0,194,255,0.28);
-            box-shadow: 0 1.2rem 3rem rgba(0,194,255,0.08);
-        }
-        .ap-diff-icon {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 1.2rem;
-            background: linear-gradient(135deg, #0B1628, #112240);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.6rem;
-        }
-        .ap-diff-icon i { font-size: 2rem; color: #00C2FF; }
-        .ap-diff-card h3 {
-            font-size: 2rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #0B1628;
-            margin-bottom: 0.8rem;
-        }
-        .ap-diff-card p {
-            font-size: 1.5rem;
-            color: #5A7A96;
-            line-height: 1.8;
-        }
-
-        /* ── Founder bio ── */
-        .ap-founder {
-            background: #FFFFFF;
-            border: 0.1rem solid rgba(11,22,40,0.08);
-            border-radius: 2rem;
-            padding: 4rem;
-            box-shadow: 0 1rem 3rem rgba(11,22,40,0.07);
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 3.5rem;
-            align-items: start;
-        }
-        .ap-founder-photo {
-            width: 16rem;
-            height: 16rem;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: top center;
-            border: 0.3rem solid rgba(0,194,255,0.25);
-            background: linear-gradient(135deg, #0B1628, #112240);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .ap-founder-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .ap-founder-photo-placeholder {
-            width: 18rem;
-            height: 18rem;
-            border-radius: 50%;
-            border: 0.5rem solid #00C2FF;
-            box-shadow: 0 0 0 0.4rem rgba(0,194,255,0.15), 0 1.2rem 3rem rgba(0,0,0,0.18);
-            background: linear-gradient(135deg, #0B1628, #112240);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .ap-founder-photo-placeholder i {
-            font-size: 5rem;
-            color: rgba(0,194,255,0.3);
-        }
-        .ap-founder-name {
-            font-size: 2.8rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #0B1628;
-            margin-bottom: 0.4rem;
-        }
-        .ap-founder-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #00C2FF;
-            letter-spacing: 0.08rem;
-            text-transform: uppercase;
-            margin-bottom: 1.6rem;
-        }
-        .ap-founder-bio {
-            font-size: 1.6rem;
-            color: #5A7A96;
-            line-height: 1.9;
-            margin-bottom: 1.4rem;
-        }
-        .ap-founder-bio strong { color: #0B1628; font-weight: 600; }
-        .ap-founder-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.8rem;
-        }
-        .ap-tag {
-            font-size: 1.3rem;
-            font-weight: 600;
-            padding: 0.6rem 1.2rem;
-            border-radius: 999px;
-            background: rgba(0,194,255,0.08);
-            border: 0.1rem solid rgba(0,194,255,0.20);
-            color: #0B1628;
-        }
-
-        /* ── CTA ── */
-        .ap-cta {
-            text-align: center;
-            padding: 5rem 5%;
-            background: #F4F0E8;
-        }
-        .ap-cta h2 {
-            font-size: 4.4rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #0B1628;
-            line-height: 1.1;
-            margin-bottom: 1.4rem;
-        }
-        .ap-cta p {
-            font-size: 1.7rem;
-            color: #5A7A96;
-            line-height: 1.85;
-            margin-bottom: 2.8rem;
-            max-width: 580px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .ap-cta-btns {
-            display: flex;
-            gap: 1.2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 991px) {
-            .ap-hero h1 { font-size: 4.4rem; }
-            .ap-origin { grid-template-columns: 1fr; gap: 2.8rem; }
-            .ap-problem-grid { grid-template-columns: 1fr 1fr; }
-            .ap-diff-grid { grid-template-columns: 1fr; }
-            .ap-founder { grid-template-columns: 1fr; text-align: center; }
-            .ap-founder-photo, .ap-founder-photo-placeholder { margin: 0 auto; }
-            .ap-founder-tags { justify-content: center; }
-        }
-        @media (max-width: 600px) {
-            .ap-hero h1 { font-size: 3.4rem; }
-            .ap-hero-lead { font-size: 1.6rem; }
-            .ap-origin-heading { font-size: 3.2rem; }
-            .ap-problem-grid { grid-template-columns: 1fr; }
-            .ap-problems-head h2 { font-size: 3.4rem; }
-            .ap-founder { padding: 2.4rem; }
-            .ap-cta h2 { font-size: 3.2rem; }
-        }
-
-        /* ── Why cards (Fix 4) ── */
-        .ap-why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        .ap-why-card {
-            background: #FFFFFF;
-            border: 0.1rem solid rgba(11,22,40,0.08);
-            border-radius: 1.8rem;
-            padding: 2.8rem 2.4rem;
-            box-shadow: 0 0.8rem 2.4rem rgba(11,22,40,0.06);
-            transition: all 0.25s ease;
-        }
-        .ap-why-card:hover {
-            transform: translateY(-0.3rem);
-            border-color: rgba(0,194,255,0.25);
-            box-shadow: 0 1.2rem 3rem rgba(0,194,255,0.08);
-        }
-        .ap-why-icon {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 1.2rem;
-            background: linear-gradient(135deg, #0B1628, #112240);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.8rem;
-        }
-        .ap-why-icon i { font-size: 2rem; color: #00C2FF; }
-        .ap-why-card h3 {
-            font-size: 2rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #0B1628;
-            margin-bottom: 1rem;
-        }
-        .ap-why-card p {
-            font-size: 1.5rem;
-            color: #5A7A96;
-            line-height: 1.8;
-        }
-
-        /* ── Founder focus items (Fix 5) ── */
-        .ap-founder-focus {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1.8rem;
-            padding: 1.8rem 2rem;
-            background: rgba(0,194,255,0.04);
-            border: 0.1rem solid rgba(0,194,255,0.14);
-            border-radius: 1.2rem;
-        }
-        .ap-focus-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .ap-focus-item i {
-            font-size: 1.3rem;
-            color: #00C2FF;
-            flex-shrink: 0;
-        }
-        .ap-focus-item span {
-            font-size: 1.45rem;
-            color: #0B1628;
-            font-weight: 500;
-            line-height: 1.45;
-        }
-
-        @media (max-width: 768px) {
-            .ap-why-grid { grid-template-columns: 1fr; }
-        }
-    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
       "name": "About NexaFlow Digital",
       "url": "https://nexaflowdigital.com/about.html",
-      "description": "NexaFlow Digital was built to fix what most businesses quietly deal with every day — manual work, disconnected tools, and systems that were never designed for them.",
       "publisher": {
         "@type": "ProfessionalService",
         "name": "NexaFlow Digital",
@@ -508,10 +42,312 @@
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "areaServed": "Dallas-Fort Worth"
+        "areaServed": ["Dallas-Fort Worth", "United States"]
       }
     }
     </script>
+
+    <style>
+        body { background-color: #0B1628; }
+
+        /* ── Hero ── */
+        .ab-hero {
+            padding: 10rem 5% 6rem;
+            background:
+                radial-gradient(circle at 75% 30%, rgba(0,194,255,0.12), transparent 35%),
+                radial-gradient(circle at 20% 80%, rgba(0,229,196,0.07), transparent 30%),
+                linear-gradient(135deg, #0B1628 0%, #112240 55%, #0B1628 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .ab-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 0.2rem;
+            background: linear-gradient(90deg, transparent, rgba(0,194,255,0.45), rgba(0,229,196,0.45), transparent);
+        }
+        .ab-hero-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 0.6fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        .ab-kicker {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.22rem;
+            text-transform: uppercase;
+            color: #00E5C4;
+            margin-bottom: 1.6rem;
+            display: block;
+        }
+        .ab-hero h1 {
+            font-size: 5.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.06;
+            margin-bottom: 2rem;
+        }
+        .ab-hero h1 em { font-style: normal; color: #00C2FF; }
+        .ab-hero-lead {
+            font-size: 1.75rem;
+            color: rgba(255,255,255,0.70);
+            line-height: 1.85;
+            margin-bottom: 3rem;
+            max-width: 56rem;
+        }
+        .ab-hero-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .ab-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.45rem;
+            color: rgba(255,255,255,0.72);
+        }
+        .ab-trust-item i { color: #00E5C4; font-size: 1.2rem; flex-shrink: 0; }
+
+        /* Hero right — stat block */
+        .ab-hero-stats {
+            background: rgba(255,255,255,0.04);
+            border: 0.1rem solid rgba(0,194,255,0.18);
+            border-radius: 2rem;
+            padding: 3.2rem 2.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+        .ab-stat { text-align: center; }
+        .ab-stat-num {
+            font-size: 5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00C2FF, #00E5C4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .ab-stat-label {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.4;
+        }
+        .ab-stat-divider {
+            height: 0.1rem;
+            background: rgba(0,194,255,0.18);
+        }
+
+        /* ── Body ── */
+        .ab-body { background: #F4F0E8; max-width: 1200px; margin: 0 auto 2rem; }
+
+        /* ── What sets us apart ── */
+        .ab-apart { padding: 5rem 5%; }
+        .ab-apart-inner { max-width: 1080px; margin: 0 auto; }
+        .ab-section-kicker {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: #00C2FF;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .ab-apart-head {
+            font-size: 4.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #0B1628;
+            line-height: 1.1;
+            margin-bottom: 1.6rem;
+            max-width: 680px;
+        }
+        .ab-apart-lead {
+            font-size: 1.7rem;
+            color: #5A7A96;
+            line-height: 1.9;
+            max-width: 720px;
+            margin-bottom: 4rem;
+        }
+        .ab-apart-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .ab-apart-card {
+            background: #FFFFFF;
+            border: 0.1rem solid rgba(11,22,40,0.08);
+            border-radius: 1.8rem;
+            padding: 2.8rem 2.4rem;
+            box-shadow: 0 0.6rem 2rem rgba(11,22,40,0.06);
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .ab-apart-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 0.3rem;
+            background: linear-gradient(90deg, #00C2FF, #00E5C4);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .ab-apart-card:hover { transform: translateY(-0.4rem); border-color: rgba(0,194,255,0.22); box-shadow: 0 1.2rem 3rem rgba(0,194,255,0.08); }
+        .ab-apart-card:hover::before { transform: scaleX(1); }
+        .ab-card-icon {
+            width: 5rem; height: 5rem;
+            border-radius: 1.2rem;
+            background: linear-gradient(135deg, #0B1628, #112240);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.8rem;
+        }
+        .ab-card-icon i { font-size: 2rem; color: #00C2FF; }
+        .ab-apart-card h3 {
+            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #0B1628;
+            margin-bottom: 0.9rem;
+            line-height: 1.2;
+        }
+        .ab-apart-card p {
+            font-size: 1.5rem;
+            color: #5A7A96;
+            line-height: 1.8;
+        }
+
+        /* ── Leadership ── */
+        .ab-leadership {
+            background: linear-gradient(135deg, #0B1628 0%, #112240 50%, #0B1628 100%);
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        .ab-leadership::before, .ab-leadership::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; height: 0.2rem;
+            background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), rgba(0,229,196,0.5), transparent);
+        }
+        .ab-leadership::before { top: 0; }
+        .ab-leadership::after { bottom: 0; }
+
+        .ab-leadership-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .ab-leader-photo {
+            width: 20rem; height: 20rem;
+            border-radius: 50%;
+            border: 0.4rem solid rgba(0,194,255,0.4);
+            box-shadow: 0 0 0 0.6rem rgba(0,194,255,0.10), 0 1.5rem 4rem rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #112240, #0B1628);
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .ab-leader-photo img {
+            width: 110%; height: 110%;
+            object-fit: cover; object-position: center top;
+            margin: -5%;
+        }
+        .ab-leader-photo-placeholder i {
+            font-size: 6rem; color: rgba(0,194,255,0.25);
+        }
+        .ab-leader-section-kicker {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: #00E5C4;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .ab-leader-name {
+            font-size: 3.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .ab-leader-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #00C2FF;
+            letter-spacing: 0.06rem;
+            text-transform: uppercase;
+            margin-bottom: 2.4rem;
+        }
+        .ab-leader-bio {
+            font-size: 1.65rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.9;
+            margin-bottom: 1.6rem;
+        }
+        .ab-leader-bio strong { color: #FFFFFF; font-weight: 600; }
+        .ab-leader-bio em {
+            font-style: normal;
+            color: #00C2FF;
+            font-weight: 500;
+        }
+
+        /* ── CTA ── */
+        .ab-cta { padding: 5rem 5%; text-align: center; background: #F4F0E8; }
+        .ab-cta h2 {
+            font-size: 4.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #0B1628;
+            line-height: 1.1;
+            margin-bottom: 1.4rem;
+        }
+        .ab-cta p {
+            font-size: 1.7rem;
+            color: #5A7A96;
+            line-height: 1.85;
+            margin-bottom: 2.8rem;
+            max-width: 540px;
+            margin-left: auto; margin-right: auto;
+        }
+        .ab-cta-btns { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+
+        /* ── Responsive ── */
+        @media (max-width: 991px) {
+            .ab-hero-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+            .ab-hero h1 { font-size: 4.4rem; }
+            .ab-hero-stats { flex-direction: row; justify-content: space-around; flex-wrap: wrap; }
+            .ab-stat { min-width: 12rem; }
+            .ab-stat-divider { display: none; }
+            .ab-apart-grid { grid-template-columns: 1fr 1fr; }
+            .ab-leadership-inner { grid-template-columns: 1fr; text-align: center; }
+            .ab-leader-photo { margin: 0 auto; }
+        }
+        @media (max-width: 640px) {
+            .ab-hero h1 { font-size: 3.4rem; }
+            .ab-hero-lead { font-size: 1.6rem; }
+            .ab-apart-grid { grid-template-columns: 1fr; }
+            .ab-apart-head { font-size: 3.2rem; }
+            .ab-leader-name { font-size: 3rem; }
+            .ab-cta h2 { font-size: 3.2rem; }
+            .ab-cta-btns { flex-direction: column; align-items: center; }
+            .ab-cta-btns .btn { width: 100%; justify-content: center; display: flex; }
+        }
+    </style>
 </head>
 <body>
 
@@ -527,6 +363,7 @@
                 <a href="about.html" class="active">about</a>
                 <a href="index.html#service">services</a>
                 <a href="index.html#portfolio">work</a>
+                <a href="faq.html">FAQ</a>
                 <a href="index.html#contact">contact</a>
                 <a href="client.html">Client Login</a>
             </nav>
@@ -535,197 +372,131 @@
     </div>
 
     <!-- ══ HERO ══ -->
-    <div class="ap-hero">
-        <div class="ap-hero-inner">
-            <span class="ap-kicker">About NexaFlow Digital</span>
-            <h1>We got tired of watching<br>businesses work <em>around</em><br>the tools they had.</h1>
-            <p class="ap-hero-lead">
-                So we built a company that fixes it — from the inside out.
-                NexaFlow Digital exists because too many great businesses are being
-                slowed down by systems that were never designed for them.
-            </p>
+    <div class="ab-hero">
+        <div class="ab-hero-inner">
+
+            <div>
+                <span class="ab-kicker">About NexaFlow Digital</span>
+                <h1>We build the systems<br>businesses <em>actually</em><br>needed yesterday.</h1>
+                <p class="ab-hero-lead">
+                    NexaFlow Digital exists for one reason: too many capable businesses are being held back by tools that don't fit, processes that were never designed to scale, and data that nobody fully trusts. We fix that — with custom systems built around how your business actually works.
+                </p>
+                <div class="ab-hero-trust">
+                    <div class="ab-trust-item"><i class="fas fa-check-circle"></i><span>Every solution built from scratch — no templates, ever</span></div>
+                    <div class="ab-trust-item"><i class="fas fa-check-circle"></i><span>Experience across industries, company sizes, and complexity levels</span></div>
+                    <div class="ab-trust-item"><i class="fas fa-check-circle"></i><span>Headquartered in Frisco, TX — serving clients nationwide</span></div>
+                </div>
+            </div>
+
+            <div class="ab-hero-stats">
+                <div class="ab-stat">
+                    <div class="ab-stat-num">100+</div>
+                    <div class="ab-stat-label">Hours saved per client through automation</div>
+                </div>
+                <div class="ab-stat-divider"></div>
+                <div class="ab-stat">
+                    <div class="ab-stat-num">30+</div>
+                    <div class="ab-stat-label">Custom systems, tools &amp; websites delivered</div>
+                </div>
+                <div class="ab-stat-divider"></div>
+                <div class="ab-stat">
+                    <div class="ab-stat-num">10+</div>
+                    <div class="ab-stat-label">Years of operational &amp; technical experience</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- ══ PAGE BODY ══ -->
-    <div class="ap-body">
+    <!-- ══ BODY ══ -->
+    <div class="ab-body">
 
-        <!-- Origin Story — scannable 3-column why cards -->
-        <div class="ap-shell">
-            <div style="text-align:center; margin-bottom:3.5rem;">
-                <span class="ap-section-kicker">Why we exist</span>
-                <h2 style="font-size:4.4rem; font-family:'Cormorant Garamond',serif; font-weight:700; color:#0B1628; line-height:1.1; max-width:700px; margin:0 auto;">
-                    We built this because we've been inside the problem.
-                </h2>
-            </div>
+        <!-- What Sets Us Apart -->
+        <div class="ab-apart">
+            <div class="ab-apart-inner">
+                <span class="ab-section-kicker">What sets us apart</span>
+                <h2 class="ab-apart-head">We don't just build things. We build things that work.</h2>
+                <p class="ab-apart-lead">
+                    Anyone can deliver a dashboard or launch a website. What's harder — and what most agencies don't do — is understand your business well enough to build something your team will actually use six months from now. That's the standard we hold every project to.
+                </p>
 
-            <div class="ap-why-grid">
+                <div class="ab-apart-grid">
 
-                <div class="ap-why-card">
-                    <div class="ap-why-icon"><i class="fas fa-eye"></i></div>
-                    <h3>We saw it firsthand</h3>
-                    <p>Our founder spent over a decade embedded inside organizations — schools, districts, accounting departments, multi-site businesses — watching the same friction points show up again and again. Spreadsheets doing the job of software. Reports nobody trusted. Data nobody could agree on.</p>
-                </div>
-
-                <div class="ap-why-card">
-                    <div class="ap-why-icon"><i class="fas fa-wrench"></i></div>
-                    <h3>We built the fix</h3>
-                    <p>The frustrating part wasn't that these problems existed — it was that they were solvable. Not with expensive enterprise software. Just with someone who understood the workflow, knew what to build, and actually followed through. That's exactly what NexaFlow does.</p>
-                </div>
-
-                <div class="ap-why-card">
-                    <div class="ap-why-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>We serve DFW businesses</h3>
-                    <p>NexaFlow was built to fill that gap — for businesses in Frisco, TX and across the Dallas-Fort Worth area that deserve better tools than what they've been making do with. Local, hands-on, and built around how your business actually works.</p>
-                </div>
-
-            </div>
-
-            <div class="ap-pull" style="margin-top:3rem;">
-                "It doesn't have to be this way. Most of these problems aren't hard to solve — they just need someone who knows how to look at them."
-            </div>
-        </div>
-
-        <!-- Problems We Solve Band -->
-        <div class="ap-problems-section">
-            <div class="ap-shell">
-                <div class="ap-problems-head">
-                    <span class="ap-section-kicker" style="color:#00E5C4;">What we fix</span>
-                    <h2>The problems we were<br>built to solve.</h2>
-                    <p>These aren't abstract issues. They're the specific things we've seen inside real organizations — and built NexaFlow to address.</p>
-                </div>
-                <div class="ap-problem-grid">
-
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">01</div>
-                        <h3>Manual work that should be automated</h3>
-                        <p>If your team is doing the same data entry, copying, formatting, or reporting task more than once — that's a system problem, not a people problem. We fix it.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Built on real operational experience</h3>
+                        <p>Our team has worked inside complex operations across industries — not as outside consultants, but as the people responsible for making things run. We know what breaks, what slows teams down, and what a real fix looks like.</p>
                     </div>
 
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">02</div>
-                        <h3>Data nobody trusts</h3>
-                        <p>When reports come from four different sources and nobody can agree on the number, decisions stall. We build a single source of truth your team can actually rely on.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Everything designed around your workflow</h3>
+                        <p>We don't adapt your business to fit a product — we build the product to fit your business. That means asking harder questions upfront and delivering something that works the way your team actually works.</p>
                     </div>
 
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">03</div>
-                        <h3>Tools that don't fit how you work</h3>
-                        <p>Off-the-shelf software forces you to adapt to it. Custom programs adapt to you. We build tools around how your team actually operates — not how a vendor thinks you should.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>We measure success in outcomes</h3>
+                        <p>A system nobody uses isn't a solution — it's a sunk cost. We measure every engagement by what changes for your business: time saved, errors eliminated, decisions made faster, and revenue protected.</p>
                     </div>
 
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">04</div>
-                        <h3>A website that doesn't represent you</h3>
-                        <p>If your website looks like it was built five years ago or doesn't match the quality of your actual work, it's costing you clients before they ever reach out.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Transparent from start to finish</h3>
+                        <p>You'll know exactly what we're building, why, and when it will be done. We don't disappear mid-project. Every engagement is structured so you're never left guessing where things stand.</p>
                     </div>
 
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">05</div>
-                        <h3>No visibility into what's happening</h3>
-                        <p>Running a business without real-time data is guesswork. We build dashboards that give you a clear view of performance, operations, and what needs attention — right now.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>We stand behind what we deliver</h3>
+                        <p>Delivery isn't the end of our responsibility — it's the beginning. We support what we build, we stay available after launch, and if something isn't right, we fix it. That's not a policy. It's how we operate.</p>
                     </div>
 
-                    <div class="ap-problem-card">
-                        <div class="ap-problem-num">06</div>
-                        <h3>A brand that doesn't close deals</h3>
-                        <p>Credibility is built before a conversation starts. We help businesses look as professional and capable as they actually are — with branding and design that works as hard as you do.</p>
+                    <div class="ab-apart-card">
+                        <div class="ab-card-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                        <h3>Built to grow with you</h3>
+                        <p>We build systems with the next phase in mind — not just what you need today. What NexaFlow delivers is designed to scale as your business evolves, without having to start over every time your needs change.</p>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <!-- What Makes Us Different -->
-        <div class="ap-shell">
-            <div style="text-align:center; margin-bottom: 3.5rem;">
-                <span class="ap-section-kicker">Why NexaFlow</span>
-                <h2 style="font-size:4.2rem; font-family:'Cormorant Garamond',serif; font-weight:700; color:#0B1628; line-height:1.1;">The difference is where<br>we come from.</h2>
-            </div>
-            <div class="ap-diff-grid">
+        <!-- Leadership -->
+        <div class="ab-leadership">
+            <div class="ab-leadership-inner">
 
-                <div class="ap-diff-card">
-                    <div class="ap-diff-icon"><i class="fas fa-hard-hat"></i></div>
-                    <h3>We've been inside the problem</h3>
-                    <p>NexaFlow wasn't started by someone who learned to code and then decided to start an agency. It was built by someone who spent years inside organizations that had the exact problems you're dealing with — and fixed them. That operational experience changes everything about how we approach your project.</p>
+                <div class="ab-leader-photo" id="leaderPhotoWrap">
+                    <img src="assets/images/About/erika.png"
+                         alt="Erika — Founder & CEO, NexaFlow Digital"
+                         onerror="this.style.display='none'; document.getElementById('leaderIcon').style.display='block';">
+                    <i class="fas fa-user" id="leaderIcon" style="display:none; font-size:6rem; color:rgba(0,194,255,0.25);"></i>
                 </div>
 
-                <div class="ap-diff-card">
-                    <div class="ap-diff-icon"><i class="fas fa-drafting-compass"></i></div>
-                    <h3>Everything is built for you specifically</h3>
-                    <p>We don't use templates and call it custom. Every program, dashboard, automation, and website we deliver is designed around how your business works. That's not a sales line — it's the only way we build.</p>
+                <div>
+                    <span class="ab-leader-section-kicker">Leadership</span>
+                    <div class="ab-leader-name">Erika</div>
+                    <div class="ab-leader-title">Founder &amp; CEO · NexaFlow Digital</div>
+
+                    <p class="ab-leader-bio">
+                        Erika founded NexaFlow Digital with a background that spans both sides of what it takes to run a successful business — <strong>the technical and the operational</strong>. Before building NexaFlow, she spent over a decade working across industries in roles that required her to understand systems, people, and performance at the same time.
+                    </p>
+                    <p class="ab-leader-bio">
+                        On the technical side, she designed and implemented data systems, automated complex reporting pipelines, built custom operational tools, and managed technology infrastructure for organizations managing large-scale, high-stakes workflows. On the business side, she led high-performing teams, managed client relationships, drove revenue, and operated in fast-paced environments where accountability and results were non-negotiable.
+                    </p>
+                    <p class="ab-leader-bio">
+                        That combination — <em>technical depth and business fluency</em> — is what shapes how NexaFlow approaches every engagement. We don't just build what you ask for. We understand what you're actually trying to accomplish, and we build what will get you there.
+                    </p>
                 </div>
 
-                <div class="ap-diff-card">
-                    <div class="ap-diff-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>We measure in outcomes, not deliverables</h3>
-                    <p>A dashboard nobody uses isn't a solution. An automation that breaks after two weeks isn't a win. We care about what actually changes for your business — hours saved, errors eliminated, decisions made faster.</p>
-                </div>
-
-                <div class="ap-diff-card">
-                    <div class="ap-diff-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>You always know where things stand</h3>
-                    <p>We communicate clearly from the first conversation to the final delivery. No black boxes, no surprises, no going dark mid-project. We work with you, not just for you.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Founder Bio -->
-        <div style="padding: 0 5% 5rem;">
-            <div style="max-width: 1080px; margin: 0 auto;">
-                <span class="ap-section-kicker" style="display:block; margin-bottom:2rem; text-align:center;">The person behind it</span>
-                <div class="ap-founder">
-
-                    <div class="ap-founder-photo-placeholder" id="founderPhotoWrap">
-                        <img src="assets/images/About/erika.png"
-                             alt="Erika — Founder of NexaFlow Digital"
-                             style="width:110%; height:110%; object-fit:cover; object-position:center top; border-radius:50%; margin:-5%;"
-                             onerror="this.style.display='none'; document.getElementById('founderIcon').style.display='flex';">
-                        <i class="fas fa-user" id="founderIcon" style="display:none; font-size:5rem; color:rgba(0,194,255,0.3);"></i>
-                    </div>
-
-                    <div>
-                        <div class="ap-founder-name">Erika</div>
-                        <div class="ap-founder-title">Founder &amp; Lead Systems Builder · NexaFlow Digital</div>
-                        <p class="ap-founder-bio">
-                            Erika built NexaFlow Digital after spending over a decade working inside the operational reality of schools, districts, and businesses across Texas — designing systems, automating workflows, and fixing the exact problems NexaFlow now solves for clients every day.
-                        </p>
-                        <p class="ap-founder-bio">
-                            Her background spans systems programming, data analysis, financial accounting, and instructional technology — which means she approaches every project from both a technical and a business perspective. She understands what it costs when a system doesn't work, and she builds things that actually hold up.
-                        </p>
-                        <p class="ap-founder-bio">
-                            <strong>Based in Frisco, TX</strong> — serving businesses and organizations across the Dallas-Fort Worth area.
-                        </p>
-                        <div class="ap-founder-focus">
-                            <div class="ap-focus-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Systems &amp; automation built from operational experience</span>
-                            </div>
-                            <div class="ap-focus-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Technical &amp; business perspective on every project</span>
-                            </div>
-                            <div class="ap-focus-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Certified in Google Workspace &amp; Microsoft Office</span>
-                            </div>
-                            <div class="ap-focus-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Locally rooted — DFW community &amp; clients</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
 
         <!-- CTA -->
-        <div class="ap-cta">
-            <h2>Sound like the kind of partner you've been looking for?</h2>
-            <p>Tell us what's not working — and we'll tell you exactly how we'd fix it.</p>
-            <div class="ap-cta-btns">
+        <div class="ab-cta">
+            <h2>Ready to work with a team that gets it?</h2>
+            <p>Tell us what's not working — and we'll show you exactly how we'd fix it.</p>
+            <div class="ab-cta-btns">
                 <a href="index.html#contact" class="btn">Start a conversation <i class="fas fa-arrow-right"></i></a>
                 <a href="index.html#service" class="btn btn-outline-dark">View our services</a>
             </div>
@@ -738,7 +509,7 @@
                     <a href="index.html" class="footer-logo-wrap" aria-label="NexaFlow Digital Home">
                         <img src="assets/images/About/NexaFlow-Logo-Footer.png" alt="NexaFlow Digital Logo" class="footer-logo">
                     </a>
-                    <p class="footer-brand-copy">Systems, automation, and digital support for businesses in Frisco and DFW.</p>
+                    <p class="footer-brand-copy">Systems, automation, and digital tools built for businesses that are ready to run smarter.</p>
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.instagram.com/NexaFlowDigital" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -759,8 +530,8 @@
                     <a href="about.html">About</a>
                     <a href="index.html#process">Process</a>
                     <a href="index.html#portfolio">Work</a>
+                    <a href="faq.html">FAQ</a>
                     <a href="index.html#contact">Contact</a>
-                    <a href="client.html">Client Login</a>
                 </div>
                 <div class="footer-contact-compact">
                     <h4>Start a Project</h4>
@@ -778,7 +549,7 @@
             </div>
         </footer>
 
-    </div><!-- /.ap-body -->
+    </div><!-- /.ab-body -->
 
     <script src="assets/vendors/jquery/jquery-3.6.0.js"></script>
     <script src="assets/js/script.js"></script>

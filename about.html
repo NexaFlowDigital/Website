@@ -147,7 +147,10 @@
         }
 
         /* ── Body ── */
-        .ab-body { background: #F4F0E8; max-width: 1200px; margin: 0 auto 2rem; }
+        .ab-body {
+            background: #F4F0E8;
+            width: 100%;
+        }
 
         /* ── What sets us apart ── */
         .ab-apart { padding: 5rem 5%; }
@@ -347,6 +350,37 @@
             .ab-cta-btns { flex-direction: column; align-items: center; }
             .ab-cta-btns .btn { width: 100%; justify-content: center; display: flex; }
         }
+
+        /* ── About page specific overrides ── */
+
+        /* Footer logo — constrain and clean up display */
+        .ab-body .footer-logo {
+            width: 18rem;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            /* If the logo has a white background box, clip it cleanly */
+            border-radius: 0.4rem;
+        }
+
+        /* Zero gap between hero and warm body section */
+        .ab-hero { margin-bottom: 0; }
+
+        /* Footer inside ab-body — remove top margin and border-radius
+           so it sits flush as part of the page, not a floating card */
+        .ab-body .footer-premium {
+            margin-top: 0;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        /* Ensure ab-body truly fills width with no gaps */
+        .ab-body {
+            overflow-x: hidden;
+        }
+
     </style>
 </head>
 <body>
@@ -507,7 +541,10 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <a href="index.html" class="footer-logo-wrap" aria-label="NexaFlow Digital Home">
-                        <img src="assets/images/About/NexaFlow-Logo-Footer.png" alt="NexaFlow Digital Logo" class="footer-logo">
+                        <img src="assets/images/About/NexaFlow-Logo-Footer.png" 
+                             alt="NexaFlow Digital Logo" 
+                             class="footer-logo"
+                             onerror="this.src='assets/images/About/NexaFlow-Logo.png'">
                     </a>
                     <p class="footer-brand-copy">Systems, automation, and digital tools built for businesses that are ready to run smarter.</p>
                     <div class="footer-social">

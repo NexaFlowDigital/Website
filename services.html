@@ -114,6 +114,7 @@
         .sv-card.open {
             border-color: rgba(0,194,255,0.30);
             box-shadow: 0 0.8rem 3rem rgba(0,194,255,0.10);
+            border-left: 0.35rem solid #00C2FF;
         }
 
         /* Card header — always visible, click to expand */
@@ -178,88 +179,97 @@
             overflow: hidden;
             transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .sv-card.open .sv-card-body {
-            max-height: 120rem;
-        }
+        .sv-card.open .sv-card-body { max-height: 120rem; }
         @media (max-width: 640px){
-            .sv-card.open .sv-card-body {
-                max-height: 200rem;
-            }
+            .sv-card.open .sv-card-body { max-height: 200rem; }
         }
+
         .sv-card-body-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
-            border-top: 0.1rem solid rgba(11,22,40,0.07);
+            border-top: 0.1rem solid rgba(0,194,255,0.12);
+            animation: svFadeIn 0.35s ease forwards;
         }
 
-        /* Left — description */
+        @keyframes svFadeIn {
+            from { opacity: 0; transform: translateY(0.8rem); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Left — description: warm tinted bg */
         .sv-card-desc {
             padding: 3rem 3rem 3.2rem;
-            border-right: 0.1rem solid rgba(11,22,40,0.07);
+            background: #FAFBFC;
+            border-right: 0.1rem solid rgba(0,194,255,0.10);
         }
         .sv-card-desc p {
-            font-size: 1.6rem; color: #5A7A96;
-            line-height: 1.9; margin-bottom: 1.6rem;
+            font-size: 1.58rem; color: #5A7A96;
+            line-height: 1.88; margin-bottom: 1.4rem;
         }
-        .sv-card-desc p:last-of-type { margin-bottom: 2rem; }
         .sv-card-desc p strong { color: #0B1628; font-weight: 600; }
 
-        /* Service image */
+        /* Image — smaller, less dominant */
         .sv-card-img {
-            width: 100%; height: 22rem;
-            object-fit: cover;
-            object-position: top center;
-            display: block;
-            border-radius: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 0.6rem 2rem rgba(11,22,40,0.10);
+            width: 100%; height: 17rem;
+            object-fit: cover; object-position: top center;
+            display: block; border-radius: 0.8rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 0.4rem 1.4rem rgba(11,22,40,0.10);
+            border: 0.1rem solid rgba(11,22,40,0.07);
         }
         .sv-card-img-placeholder {
-            width: 100%; height: 22rem;
-            border-radius: 1rem;
-            background: linear-gradient(135deg, #EBF6FF, #F4F0E8);
+            width: 100%; height: 11rem;
+            border-radius: 0.8rem;
+            background: linear-gradient(135deg, #EDF6FF, #F4F0E8);
+            border: 0.1rem solid rgba(0,194,255,0.12);
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
-        .sv-card-img-placeholder i { font-size: 4rem; color: rgba(0,194,255,0.25); }
+        .sv-card-img-placeholder i { font-size: 3rem; color: rgba(0,194,255,0.22); }
 
+        /* Outcome — clean, no border-radius pill */
         .sv-outcome-pill {
-            display: inline-flex; align-items: center; gap: 0.7rem;
-            background: rgba(0,194,255,0.08);
-            border: 0.1rem solid rgba(0,194,255,0.20);
-            border-radius: 999px;
-            padding: 0.8rem 1.4rem;
-            font-size: 1.38rem; font-weight: 600; color: #0B1628;
+            display: flex; align-items: flex-start; gap: 0.8rem;
+            background: rgba(0,194,255,0.06);
+            border-left: 0.3rem solid #00C2FF;
+            border-radius: 0 0.6rem 0.6rem 0;
+            padding: 1rem 1.4rem;
+            font-size: 1.4rem; font-weight: 600; color: #0B1628;
+            line-height: 1.5;
         }
-        .sv-outcome-pill i { color: #00C2FF; font-size: 1.1rem; }
+        .sv-outcome-pill i { color: #00C2FF; font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 
-        /* Right — includes */
-        .sv-card-includes { padding: 3rem 3rem 3.2rem; }
-        .sv-includes-label {
-            font-size: 1.1rem; font-weight: 700;
-            letter-spacing: 0.18rem; text-transform: uppercase;
-            color: #00C2FF; display: block; margin-bottom: 1.8rem;
+        /* Right — includes: pure white bg */
+        .sv-card-includes {
+            padding: 3rem 3rem 3.2rem;
+            background: #FFFFFF;
         }
-        .sv-includes-list { list-style: none; padding: 0; margin: 0 0 2.4rem; }
+        .sv-includes-label {
+            font-size: 1.05rem; font-weight: 700;
+            letter-spacing: 0.18rem; text-transform: uppercase;
+            color: #00C2FF; display: block; margin-bottom: 1.6rem;
+        }
+        .sv-includes-list { list-style: none; padding: 0; margin: 0 0 2.2rem; }
         .sv-includes-list li {
-            display: flex; align-items: flex-start; gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 0.1rem solid rgba(11,22,40,0.06);
-            font-size: 1.48rem; color: #0B1628;
-            line-height: 1.5; font-weight: 500;
+            display: flex; align-items: center; gap: 1rem;
+            padding: 0.9rem 0;
+            border-bottom: 0.1rem solid rgba(11,22,40,0.05);
+            font-size: 1.48rem; color: #2E4057;
+            line-height: 1.45; font-weight: 500;
         }
         .sv-includes-list li:last-child { border-bottom: none; padding-bottom: 0; }
-        .sv-includes-list li i { color: #00C2FF; font-size: 1.2rem; flex-shrink: 0; margin-top: 0.2rem; }
+        .sv-includes-list li i { color: #00C2FF; font-size: 1.1rem; flex-shrink: 0; }
 
+        /* CTAs */
         .sv-card-cta {
-            display: inline-flex; align-items: center; gap: 0.8rem;
-            font-size: 1.45rem; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 0.7rem;
+            font-size: 1.42rem; font-weight: 700;
             color: #00C2FF;
             transition: gap 0.2s ease, color 0.2s ease;
         }
-        .sv-card-cta:hover { gap: 1.2rem; color: #00E5C4; }
-        .sv-card-cta i { font-size: 1.2rem; }
+        .sv-card-cta:hover { gap: 1.1rem; color: #00E5C4; }
+        .sv-card-cta i { font-size: 1.1rem; }
 
         /* ══ CTA band — matches FAQ ══ */
         .sv-cta-band {
@@ -391,9 +401,10 @@
                                 <li><i class="fas fa-check"></i>Team walkthrough and ongoing support</li>
                             </ul>
                             <a href="index.html#contact" class="sv-card-cta">Start a conversation <i class="fas fa-arrow-right"></i></a>
+                            
                             <div style="margin-top:1.4rem; padding-top:1.4rem; border-top:0.1rem solid rgba(11,22,40,0.06);">
-                                <a href="https://sites.google.com/garlandisd.net/campusdata/student-search" target="_blank" rel="noopener noreferrer" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
-                                    <i class="fas fa-external-link-alt" style="font-size:1.1rem;"></i> View a live example
+                                <a href="index.html#portfolio" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
+                                    <i class="fas fa-layer-group" style="font-size:1.1rem;"></i> See related work
                                 </a>
                             </div>
                         </div>
@@ -431,9 +442,10 @@
                                 <li><i class="fas fa-check"></i>Testing, monitoring, and post-launch support</li>
                             </ul>
                             <a href="index.html#contact" class="sv-card-cta">Start a conversation <i class="fas fa-arrow-right"></i></a>
+                            
                             <div style="margin-top:1.4rem; padding-top:1.4rem; border-top:0.1rem solid rgba(11,22,40,0.06);">
-                                <a href="https://nexaflowdigital.github.io/support-desk/" target="_blank" rel="noopener noreferrer" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
-                                    <i class="fas fa-external-link-alt" style="font-size:1.1rem;"></i> View a live example
+                                <a href="index.html#portfolio" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
+                                    <i class="fas fa-layer-group" style="font-size:1.1rem;"></i> See related work
                                 </a>
                             </div>
                         </div>
@@ -471,9 +483,10 @@
                                 <li><i class="fas fa-check"></i>Training and ongoing support</li>
                             </ul>
                             <a href="index.html#contact" class="sv-card-cta">Start a conversation <i class="fas fa-arrow-right"></i></a>
+                            
                             <div style="margin-top:1.4rem; padding-top:1.4rem; border-top:0.1rem solid rgba(11,22,40,0.06);">
-                                <a href="https://sites.google.com/garlandisd.net/campusdata/campus-data/attendance-report" target="_blank" rel="noopener noreferrer" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
-                                    <i class="fas fa-external-link-alt" style="font-size:1.1rem;"></i> View a live example
+                                <a href="index.html#portfolio" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
+                                    <i class="fas fa-layer-group" style="font-size:1.1rem;"></i> See related work
                                 </a>
                             </div>
                         </div>
@@ -581,9 +594,10 @@
                                 <li><i class="fas fa-check"></i>Launch support and post-delivery maintenance</li>
                             </ul>
                             <a href="index.html#contact" class="sv-card-cta">Start a conversation <i class="fas fa-arrow-right"></i></a>
+                            
                             <div style="margin-top:1.4rem; padding-top:1.4rem; border-top:0.1rem solid rgba(11,22,40,0.06);">
-                                <a href="https://clmmistingsolutions.com/" target="_blank" rel="noopener noreferrer" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
-                                    <i class="fas fa-external-link-alt" style="font-size:1.1rem;"></i> View a live example
+                                <a href="index.html#portfolio" class="sv-card-cta" style="color:#5A7A96; font-weight:500;">
+                                    <i class="fas fa-layer-group" style="font-size:1.1rem;"></i> See related work
                                 </a>
                             </div>
                         </div>

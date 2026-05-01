@@ -1084,81 +1084,66 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const groups = document.querySelectorAll('.featured-solutions-home .filter-slider');
-    const buttons = document.querySelectorAll('.featured-solutions-home .controls .button');
 
-    const sliderConfigs = [
-        {
-            selector: '.all-slider',
-            pagination: '.all-pagination',
-            nextEl: '.all-next',
-            prevEl: '.all-prev'
-        },
-        {
-            selector: '.web-slider',
-            pagination: '.web-pagination',
-            nextEl: '.web-next',
-            prevEl: '.web-prev'
-        },
-        {
-            selector: '.programs-slider',
-            pagination: '.programs-pagination',
-            nextEl: '.programs-next',
-            prevEl: '.programs-prev'
-        },
-        {
-            selector: '.experience-slider',
-            pagination: '.experience-pagination',
-            nextEl: '.experience-next',
-            prevEl: '.experience-prev'
-        }
-    ];
+    var swiperInstances = {};
 
-    sliderConfigs.forEach(function(item){
-        const el = document.querySelector(item.selector);
-        if(el){
-            new Swiper(item.selector, {
-                loop: false,
-                spaceBetween: 18,
-                grabCursor: true,
-                navigation: {
-                    nextEl: item.nextEl,
-                    prevEl: item.prevEl
-                },
-                pagination: {
-                    el: item.pagination,
-                    clickable: true
-                },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 1
-                    },
-                    640: {
-                        slidesPerView: 2
-                    },
-                    1024: {
-                        slidesPerView: 3
-                    }
-                }
-            });
-        }
-    });
+    function initSwiper(selector, paginationEl, nextEl, prevEl) {
+        if (swiperInstances[selector]) return; // already initialized
+        var el = document.querySelector(selector);
+        if (!el) return;
+        swiperInstances[selector] = new Swiper(selector, {
+            loop: false,
+            spaceBetween: 18,
+            grabCursor: true,
+            navigation: { nextEl: nextEl, prevEl: prevEl },
+            pagination: { el: paginationEl, clickable: true },
+            breakpoints: {
+                0:    { slidesPerView: 1 },
+                640:  { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    }
 
-    buttons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            const filter = this.getAttribute('data-filter');
+    // Always init the "all" slider immediately — it's visible on load
+    initSwiper('.all-slider', '.all-pagination', '.all-next', '.all-prev');
 
-            buttons.forEach(function(b){ b.classList.remove('active'); });
+    // Filter button logic
+    var buttons = document.querySelectorAll('.featured-solutions-home .controls .button');
+    var groups  = document.querySelectorAll('.featured-solutions-home .filter-slider');
+
+    var sliderMap = {
+        'programs':   { sel: '.programs-slider',   pag: '.programs-pagination',   next: '.programs-next',   prev: '.programs-prev' },
+        'web':        { sel: '.web-slider',         pag: '.web-pagination',        next: '.web-next',        prev: '.web-prev' },
+        'experience': { sel: '.experience-slider',  pag: '.experience-pagination', next: '.experience-next', prev: '.experience-prev' }
+    };
+
+    buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var filter = this.getAttribute('data-filter');
+
+            buttons.forEach(function(b) { b.classList.remove('active'); });
             this.classList.add('active');
 
-            groups.forEach(function(group){
+            groups.forEach(function(group) {
                 group.classList.remove('active');
-                if(group.getAttribute('data-group') === filter){
+                if (group.getAttribute('data-group') === filter) {
                     group.classList.add('active');
                 }
             });
+
+            // Init the slider for this filter now that it's visible
+            if (filter !== 'all' && sliderMap[filter]) {
+                var cfg = sliderMap[filter];
+                initSwiper(cfg.sel, cfg.pag, cfg.next, cfg.prev);
+                // Force recalc in case Swiper got confused while hidden
+                if (swiperInstances[cfg.sel]) {
+                    swiperInstances[cfg.sel].update();
+                }
+            }
         });
     });
+
 });
 </script>
 

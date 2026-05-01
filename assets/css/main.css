@@ -1969,3 +1969,10 @@ header .fa-times{ transform: rotate(180deg); }
     box-shadow: 0 0.6rem 2rem rgba(0, 194, 255, 0.25);
     gap: 1.2rem;
 }
+
+/* Filter button text-transform override */
+.featured-solutions-home .controls .button,
+.featured-solutions-home .controls .filter-btn {
+    text-transform: none !important;
+    letter-spacing: 0.03rem;
+}

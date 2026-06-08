@@ -1,91 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-              http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <url>
-    <loc>https://nexaflowdigital.com/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/about.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/photo-booth.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/privacy.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.40</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/terms.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.40</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/affiliate-disclosure.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/faq.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/services.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/cfbba.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/goodgrief.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/garlandisd.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://nexaflowdigital.com/sis-platform.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nexaflowdigital.com/</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
+  <url><loc>https://nexaflowdigital.com/services</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://nexaflowdigital.com/about</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://nexaflowdigital.com/faq</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nexaflowdigital.com/photo-booth</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://nexaflowdigital.com/print</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://nexaflowdigital.com/sis-platform</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nexaflowdigital.com/cfbba</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nexaflowdigital.com/goodgrief</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nexaflowdigital.com/garlandisd</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nexaflowdigital.com/privacy</loc><lastmod>2026-06-08</lastmod><changefreq>yearly</changefreq><priority>0.40</priority></url>
+  <url><loc>https://nexaflowdigital.com/terms</loc><lastmod>2026-06-08</lastmod><changefreq>yearly</changefreq><priority>0.40</priority></url>
+  <url><loc>https://nexaflowdigital.com/affiliate-disclosure</loc><lastmod>2026-06-08</lastmod><changefreq>yearly</changefreq><priority>0.30</priority></url>
 </urlset>

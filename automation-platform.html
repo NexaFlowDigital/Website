@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Live Automation Demo | NexaFlow Digital</title>
-    <meta name="description" content="Run a working automation and watch one request carry itself through every step. A live example of the custom workflows NexaFlow Digital builds for businesses in Frisco and across DFW.">
+    <meta name="description" content="Pick the kind of business you run and watch a real automation take a time-eating task off the table in seconds. Live examples of the custom workflows NexaFlow Digital builds for businesses in Frisco and across DFW.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="NexaFlow Digital">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -24,7 +24,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Live Automation Demo | NexaFlow Digital">
-    <meta property="og:description" content="Submit a request and watch the workflow run itself. A live example of the automation we build, with a real confirmation email sent the moment you submit.">
+    <meta property="og:description" content="Pick your business and watch a real automation handle a task that normally takes hours. A live example of the automation we build.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nexaflowdigital.com/automation-platform">
     <meta property="og:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
@@ -33,7 +33,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Live Automation Demo | NexaFlow Digital">
-    <meta name="twitter:description" content="Submit a request and watch the workflow run itself. A live example of the automation we build for businesses.">
+    <meta name="twitter:description" content="Pick your business and watch a real automation handle a task that normally takes hours.">
     <meta name="twitter:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
 
     <!-- Font-Awesome CSS -->
@@ -50,7 +50,7 @@
       "name": "Business Automation",
       "serviceType": "Business Process Automation, Workflow Automation",
       "url": "https://nexaflowdigital.com/automation-platform",
-      "description": "A live, working example of the custom intake and workflow automation NexaFlow Digital builds. One submission is captured, confirmed, logged, routed, and followed up automatically.",
+      "description": "Live, working examples of the custom automation NexaFlow Digital builds, with a distinct workflow for the most common local business types and a general intake flow that works for any business.",
       "provider": {
         "@type": "ProfessionalService",
         "name": "NexaFlow Digital",
@@ -79,7 +79,7 @@
         .ba-kicker { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.22rem; text-transform: uppercase; color: #00E5C4; margin-bottom: 1.4rem; display: block; }
         .ba-hero h1 { font-size: 5.2rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #FFFFFF; line-height: 1.06; margin-bottom: 1.6rem; max-width: 860px; }
         .ba-hero h1 em { font-style: normal; color: #00C2FF; }
-        .ba-hero-lead { font-size: 1.72rem; color: rgba(255,255,255,0.70); line-height: 1.85; margin-bottom: 2.8rem; max-width: 680px; }
+        .ba-hero-lead { font-size: 1.72rem; color: rgba(255,255,255,0.70); line-height: 1.85; margin-bottom: 2.8rem; max-width: 700px; }
         .ba-hero-cta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 
         /* ══ Section shell (reused) ══ */
@@ -105,24 +105,51 @@
         /* ════════════════════════════════════════════════════════
            Live demo widget  (page-scoped, .apx-*)
            ════════════════════════════════════════════════════════ */
-        .apx-console { display: grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); gap: 1.8rem; margin-top: 2.8rem; align-items: start; }
+        /* business-type selector */
+        .apx-typebar-label { font-size: 1.3rem; color: #5A7A96; margin: 2.4rem 0 1.1rem; max-width: 760px; }
+        .apx-typebar { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+        .apx-chip { display: inline-flex; align-items: center; gap: 0.8rem; padding: 1rem 1.6rem; border-radius: 5rem; border: 0.15rem solid #D0DCE8; background: #FFFFFF; color: #0B1628; font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        .apx-chip i { color: #94A9BD; font-size: 1.5rem; transition: color 0.2s ease; }
+        .apx-chip:hover { border-color: #00C2FF; }
+        .apx-chip.active { background: #0B1628; border-color: #0B1628; color: #FFFFFF; box-shadow: 0 0.6rem 1.8rem rgba(11,22,40,0.18); }
+        .apx-chip.active i { color: #00E5C4; }
+        .apx-chip.apx-chip-general { border-style: dashed; }
+
+        .apx-tasknote { display: flex; gap: 1rem; align-items: flex-start; margin: 1.8rem 0 0; max-width: 820px; background: rgba(0,194,255,0.05); border: 0.1rem solid rgba(0,194,255,0.16); border-radius: 1.2rem; padding: 1.6rem 1.8rem; }
+        .apx-tasknote i { color: #00a8e0; font-size: 1.8rem; margin-top: 0.2rem; flex-shrink: 0; }
+        .apx-tasknote p { font-size: 1.45rem; color: #2E4057; line-height: 1.65; margin: 0; }
+        .apx-tasknote b { color: #0B1628; font-weight: 700; }
+
+        .apx-console { display: grid; grid-template-columns: minmax(0,0.95fr) minmax(0,1.05fr); gap: 1.8rem; margin-top: 2rem; align-items: start; }
         .apx-panel { background: #FFFFFF; border: 0.1rem solid rgba(11,22,40,0.08); border-radius: 1.8rem; box-shadow: 0 0.6rem 2rem rgba(11,22,40,0.06); overflow: hidden; }
         .apx-panel-head { padding: 2.2rem 2.4rem 1.6rem; border-bottom: 0.1rem solid #E4ECF3; }
         .apx-phk { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.18rem; text-transform: uppercase; color: #00a8e0; }
         .apx-panel-head h3 { font-size: 2.2rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #0B1628; line-height: 1.15; margin-top: 0.3rem; }
 
+        /* shared form fields */
         .apx-form { padding: 2.4rem; }
         .apx-field { margin-bottom: 1.6rem; }
+        .apx-field:last-child { margin-bottom: 0; }
         .apx-field label { display: block; font-size: 1.3rem; font-weight: 600; color: #0B1628; margin-bottom: 0.7rem; }
         .apx-field label span { font-weight: 400; color: #5A7A96; }
         .apx-field input, .apx-field select, .apx-field textarea { width: 100%; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: #0B1628; background: #F4F0E8; border: 0.1rem solid #D0DCE8; border-radius: 0.9rem; padding: 1.2rem 1.3rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
         .apx-field input:focus, .apx-field select:focus, .apx-field textarea:focus { outline: none; border-color: #00C2FF; box-shadow: 0 0 0 0.3rem rgba(0,194,255,0.18); }
         .apx-field textarea { resize: vertical; min-height: 7rem; }
         .apx-hint { font-size: 1.15rem; color: #5A7A96; margin-top: 0.5rem; }
-        .apx-run { width: 100%; cursor: pointer; justify-content: center; }
+        .apx-run { width: 100%; cursor: pointer; justify-content: center; margin-top: 0.4rem; }
         .apx-run:disabled { opacity: 0.55; cursor: not-allowed; }
-        .apx-mode { margin-top: 1.4rem; font-size: 1.2rem; color: #5A7A96; display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.6; }
+        .apx-mode { margin: 1.4rem 2.4rem 2.2rem; font-size: 1.2rem; color: #5A7A96; display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.6; }
         .apx-mode .apx-dot { width: 0.8rem; height: 0.8rem; border-radius: 50%; background: #00E5C4; margin-top: 0.55rem; flex-shrink: 0; box-shadow: 0 0 0 0.3rem rgba(0,229,196,0.20); }
+
+        /* sample dataset (scan mode) */
+        .apx-data { padding: 1.8rem 2.4rem 0.6rem; }
+        .apx-row { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.2rem; border: 0.1rem solid #E4ECF3; border-radius: 0.9rem; margin-bottom: 0.8rem; background: #FFFFFF; transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; }
+        .apx-row-main { font-weight: 600; font-size: 1.4rem; color: #0B1628; flex-shrink: 0; }
+        .apx-row-meta { font-size: 1.25rem; color: #5A7A96; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .apx-row-badge { font-size: 1rem; font-weight: 700; letter-spacing: 0.05rem; text-transform: uppercase; padding: 0.4rem 0.9rem; border-radius: 5rem; white-space: nowrap; background: #EEF3F8; color: #94A9BD; }
+        .apx-row-badge.ok { background: #E3F7F1; color: #0A9B85; }
+        .apx-row-badge.flag { background: #FFEFE2; color: #B5611F; }
+        .apx-row.hit { border-color: #00C2FF; background: #F2FBFF; box-shadow: 0 0 0 0.3rem rgba(0,194,255,0.10); }
 
         /* workflow pipeline */
         .apx-flow { padding: 1.6rem 2.4rem 2.4rem; }
@@ -158,7 +185,6 @@
         .apx-scale-k { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.16rem; text-transform: uppercase; color: #00C2FF; }
         .apx-scale h4 { font-size: 2rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #fff; margin: 0.4rem 0 1.6rem; }
         .apx-slider-row { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
-        .apx-slider-row label { font-size: 1.4rem; color: rgba(255,255,255,0.78); }
         .apx-slider-row b { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; color: #00E5C4; line-height: 1; }
         .apx-slider-row span { font-size: 1.3rem; color: rgba(255,255,255,0.55); }
         input[type="range"].apx-range { -webkit-appearance: none; appearance: none; width: 100%; height: 0.5rem; border-radius: 1rem; background: rgba(255,255,255,0.18); outline: none; margin: 0.8rem 0 1.8rem; }
@@ -184,6 +210,9 @@
             .ba-section h2 { font-size: 2.7rem; }
             .apx-tiles { grid-template-columns: 1fr; }
             .apx-scale-grid { grid-template-columns: 1fr; }
+            .apx-chip { font-size: 1.25rem; padding: 0.9rem 1.3rem; }
+            .apx-row { flex-wrap: wrap; }
+            .apx-row-meta { flex-basis: 100%; order: 3; white-space: normal; }
             .ba-cta-band { padding: 2.8rem 2.2rem; }
             .ba-cta-band h2 { font-size: 2.8rem; }
             .ba-cta-btns { flex-direction: column; align-items: center; }
@@ -219,8 +248,8 @@
         <section class="ba-hero">
             <p class="ba-breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/services">Services</a> &nbsp;/&nbsp; <a href="/business-automation">Automation</a> &nbsp;/&nbsp; <span>Live Demo</span></p>
             <span class="ba-kicker">Live Automation Demo</span>
-            <h1>Submit a request and watch the work <em>finish itself.</em></h1>
-            <p class="ba-hero-lead">This is a small, working version of the automation we build around how a business already runs. Fill it out and watch one submission carry itself through every step. The confirmation it sends is real, so check your inbox after.</p>
+            <h1>Pick your business. Watch it <em>handle the busywork.</em></h1>
+            <p class="ba-hero-lead">Every kind of business has one job it does over and over that quietly eats hours. Choose the one closest to yours and run the automation we'd build for it. You'll see it work in seconds, on a sample, with no signup.</p>
             <div class="ba-hero-cta">
                 <a href="#demo" class="btn">Run the demo <i class="fas fa-arrow-right"></i></a>
                 <a href="/business-automation" class="btn-outline-dark" style="color:#fff;border-color:rgba(255,255,255,0.3);">About this service</a>
@@ -231,23 +260,38 @@
         <section class="ba-section ba-reveal">
             <span class="ba-section-kicker">Why a demo</span>
             <h2>Automation usually has <em>nothing to look at</em></h2>
-            <p class="ba-lead">The whole point of automation is that the work happens in the background, without anyone touching it. That also makes it hard to picture. So instead of describing it, we built a piece of one you can run yourself. Send a request below and the same kind of workflow we build for clients takes it from there.</p>
+            <p class="ba-lead">The point of automation is that the work happens in the background, without anyone touching it. That also makes it hard to picture. So instead of describing it, we built a piece of one for each kind of business, working from sample data, so you can run it and see exactly what it takes off your plate.</p>
         </section>
 
         <!-- DEMO -->
         <section class="ba-section ba-reveal" id="demo">
             <span class="ba-section-kicker">Try it</span>
-            <h2>One request in. Five steps handled.</h2>
+            <h2>Pick your business, then run its automation</h2>
+
+            <p class="apx-typebar-label">Each one handles a different task that business does constantly. Not listed? <b>Any business</b> is the general version, an intake flow that confirms, logs, and follows up on any request.</p>
+            <div class="apx-typebar" id="typebar">
+                <button type="button" class="apx-chip" data-biz="salon"><i class="fas fa-spa"></i> Salon &amp; spa</button>
+                <button type="button" class="apx-chip" data-biz="dental"><i class="fas fa-tooth"></i> Dental &amp; medical</button>
+                <button type="button" class="apx-chip" data-biz="home"><i class="fas fa-tools"></i> Home services</button>
+                <button type="button" class="apx-chip" data-biz="fitness"><i class="fas fa-dumbbell"></i> Fitness studio</button>
+                <button type="button" class="apx-chip" data-biz="restaurant"><i class="fas fa-utensils"></i> Restaurant</button>
+                <button type="button" class="apx-chip" data-biz="professional"><i class="fas fa-balance-scale"></i> Law &amp; professional</button>
+                <button type="button" class="apx-chip apx-chip-general" data-biz="general"><i class="fas fa-calendar-check"></i> Any business</button>
+            </div>
+
+            <div class="apx-tasknote"><i class="fas fa-lightbulb"></i><p id="taskNote"></p></div>
 
             <div class="apx-console">
 
-                <!-- left: trigger -->
+                <!-- left: trigger / data -->
                 <div class="apx-panel">
                     <div class="apx-panel-head">
-                        <span class="apx-phk">Step 1 &middot; The trigger</span>
-                        <h3>A new request comes in</h3>
+                        <span class="apx-phk" id="leftKicker">Step 1 &middot; The work</span>
+                        <h3 id="leftTitle">What it works from</h3>
                     </div>
-                    <div class="apx-form">
+
+                    <!-- intake mode (General) -->
+                    <div class="apx-form" id="paneIntake" style="display:none;">
                         <div class="apx-field">
                             <label for="f-name">Your name</label>
                             <input id="f-name" type="text" placeholder="Jordan Avery" autocomplete="name">
@@ -260,56 +304,66 @@
                         <div class="apx-field">
                             <label for="f-type">What do you need?</label>
                             <select id="f-type">
-                                <option>New project request</option>
+                                <option>New request</option>
                                 <option>Quote or estimate</option>
-                                <option>Support request</option>
-                                <option>Schedule a call</option>
+                                <option>Appointment</option>
+                                <option>Question</option>
                             </select>
                         </div>
                         <div class="apx-field">
                             <label for="f-detail">A few details <span>(optional)</span></label>
                             <textarea id="f-detail" placeholder="Tell us what you're trying to get done..."></textarea>
                         </div>
-                        <button class="btn apx-run" id="runBtn">Run the automation <i class="fas fa-play"></i></button>
-                        <p class="apx-mode"><span class="apx-dot"></span><span id="modeText">Demo mode. The workflow runs on screen. Connect the backend in one step to send real confirmations.</span></p>
+                        <button class="btn apx-run" id="runIntake">Run the automation <i class="fas fa-play"></i></button>
                     </div>
+
+                    <!-- scan mode (verticals) -->
+                    <div id="paneScan">
+                        <div class="apx-data" id="dataList"></div>
+                        <div class="apx-form" style="padding-top:0.8rem;">
+                            <div class="apx-field">
+                                <label for="s-email">See it for real <span>(optional)</span></label>
+                                <input id="s-email" type="email" placeholder="you@yourbusiness.com" autocomplete="email">
+                                <p class="apx-hint" id="sHint">We'll email you a sample of what it generates.</p>
+                            </div>
+                            <button class="btn apx-run" id="runScan">Run the automation <i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+
+                    <p class="apx-mode"><span class="apx-dot"></span><span id="modeText">Demo mode. The workflow runs on screen. Connect the backend in one step to send real emails.</span></p>
                 </div>
 
                 <!-- right: workflow -->
                 <div class="apx-panel">
                     <div class="apx-panel-head">
                         <span class="apx-phk">Step 2 &middot; The workflow</span>
-                        <h3>What happens automatically</h3>
+                        <h3 id="flowTitle">What happens automatically</h3>
                     </div>
                     <div class="apx-flow">
 
                         <div class="apx-stage" data-stage="capture">
                             <div class="apx-ico"><i class="fas fa-file-alt"></i></div>
-                            <div class="apx-stage-txt"><h4>Request captured</h4><p>Cleaned up and saved as a structured record. No rekeying.</p></div>
+                            <div class="apx-stage-txt"><h4></h4><p></p></div>
                             <div class="apx-status">Queued</div>
                         </div>
-
                         <div class="apx-stage" data-stage="email">
                             <div class="apx-ico"><i class="fas fa-envelope"></i></div>
-                            <div class="apx-stage-txt"><h4>Confirmation sent</h4><p>The requester gets an instant, branded reply on its own.</p></div>
+                            <div class="apx-stage-txt"><h4></h4><p></p></div>
                             <div class="apx-status">Queued</div>
                         </div>
-
                         <div class="apx-stage" data-stage="notify">
                             <div class="apx-ico"><i class="fas fa-bell"></i></div>
-                            <div class="apx-stage-txt"><h4>Team notified</h4><p>The right person is pinged the moment it lands.</p></div>
+                            <div class="apx-stage-txt"><h4></h4><p></p></div>
                             <div class="apx-status">Queued</div>
                         </div>
-
                         <div class="apx-stage" data-stage="log">
                             <div class="apx-ico"><i class="fas fa-list"></i></div>
-                            <div class="apx-stage-txt"><h4>Logged to the pipeline</h4><p>Added to the tracker, tagged, and ready to work.</p></div>
+                            <div class="apx-stage-txt"><h4></h4><p></p></div>
                             <div class="apx-status">Queued</div>
                         </div>
-
                         <div class="apx-stage" data-stage="followup">
                             <div class="apx-ico"><i class="fas fa-clock"></i></div>
-                            <div class="apx-stage-txt"><h4>Follow-up scheduled</h4><p>A reminder is set so nothing slips if there's no reply.</p></div>
+                            <div class="apx-stage-txt"><h4></h4><p></p></div>
                             <div class="apx-status">Queued</div>
                         </div>
 
@@ -319,16 +373,16 @@
                             <p id="resultBody"></p>
 
                             <div class="apx-tiles">
-                                <div class="apx-tile"><div class="n" id="tManual">12 min</div><div class="l">By hand</div></div>
-                                <div class="apx-tile"><div class="n good" id="tAuto">3.1s</div><div class="l">This run</div></div>
+                                <div class="apx-tile"><div class="n" id="tManual">12 min</div><div class="l" id="tManualL">By hand</div></div>
+                                <div class="apx-tile"><div class="n good" id="tAuto">3.1s</div><div class="l" id="tAutoL">This run</div></div>
                                 <div class="apx-tile"><div class="n" id="tMult">230&times;</div><div class="l">Faster</div></div>
                             </div>
 
                             <div class="apx-scale">
                                 <span class="apx-scale-k">Now picture it at your volume</span>
-                                <h4>How many of these come in a week?</h4>
+                                <h4 id="scaleQ">How many a week?</h4>
                                 <div class="apx-slider-row">
-                                    <b id="volNum">40</b><span>requests a week</span>
+                                    <b id="volNum">40</b><span id="volUnit">a week</span>
                                 </div>
                                 <input type="range" class="apx-range" id="volRange" min="5" max="300" step="5" value="40">
                                 <div class="apx-scale-grid">
@@ -347,8 +401,8 @@
         <!-- CONTEXT -->
         <section class="ba-section ba-reveal">
             <span class="ba-section-kicker">What you just saw</span>
-            <h2>This is one workflow. Yours is built around your <em>actual process</em></h2>
-            <p class="ba-lead">The demo is intentionally simple. The version we build for a business runs inside your own tools and is shaped to how your team already works, including your steps, your handoffs, and the systems you already use. We find the manual steps, then build a workflow that does them reliably, in the background, every time.</p>
+            <h2>These are examples. Yours is built around your <em>actual process</em></h2>
+            <p class="ba-lead">Each demo runs on sample data to show the idea. The real version plugs into your own tools and the way your team already works, including your steps, your handoffs, and the systems you already use. We find the task that's quietly eating hours, then build a workflow that does it reliably, in the background, every time.</p>
         </section>
 
         <!-- CTA -->
@@ -419,56 +473,247 @@
     <script>
     /* ================================================================
        CONFIG
-       Paste your Apps Script Web App URL here to send REAL confirmation
-       emails (deploy steps in README.md). Leave blank for demo-only.
+       Paste your Apps Script Web App URL here to send REAL emails
+       (deploy steps in README.md). Leave blank for demo-only.
        ================================================================ */
-    var AUTOMATION_ENDPOINT = "https://script.google.com/macros/s/AKfycbzUKHxWGSHIPW39VmqiccTFGjfDgNqjESIh37lx6Uz64weNAnKuCROqnIagk5RXV9Vkaw/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
+    var AUTOMATION_ENDPOINT = "https://script.google.com/macros/s/AKfycbzeYnHA3U26RGwi3gsyt9WpZnZjEpCvqgTZORIGi5nScKN14V-hS7g70GWebtBDO5qj3Q/exec"; // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
-    /* assumptions used for the math */
-    var MANUAL_MIN_PER_REQUEST = 12;   // minutes to do all 5 steps by hand
-    var FT_HOURS_PER_WEEK = 40;        // a full-time week
-
+    var FT_HOURS_PER_WEEK = 40;
     var STAGES = ["capture","email","notify","log","followup"];
-    var LABELS = {
-        capture:  ["Saving record","Saved"],
-        email:    ["Sending email","Sent"],
-        notify:   ["Notifying team","Notified"],
-        log:      ["Writing to pipeline","Logged"],
-        followup: ["Scheduling reminder","Scheduled"]
+
+    /* Each business gets its OWN automation around a real, time-eating task.
+       "general" is the catch-all intake flow for anyone not listed. */
+    var BUSINESSES = {
+        salon: {
+            mode: "scan", unit: "client", manualMin: 6, scaleDefault: 40,
+            taskNote: "Rebooking lapsed clients by hand means combing through visit history one at a time. This finds who's overdue and writes each a personal nudge.",
+            leftTitle: "Clients, by last visit",
+            flowTitle: "What the win-back automation does",
+            runLabel: "Run the win-back scan",
+            sHint: "We'll email you a sample rebook text it writes.",
+            rows: [
+                { main:"Maria G.",  meta:"Color \u00b7 every 6 wks \u00b7 last 9 wks ago",       badge:"Overdue",  action:true },
+                { main:"Tom R.",    meta:"Cut \u00b7 every 4 wks \u00b7 last 3 wks ago",          badge:"On track", action:false },
+                { main:"Priya S.",  meta:"Mani-pedi \u00b7 every 3 wks \u00b7 last 7 wks ago",    badge:"Overdue",  action:true },
+                { main:"Dana L.",   meta:"Facial \u00b7 every 8 wks \u00b7 last 5 wks ago",       badge:"On track", action:false },
+                { main:"Chris W.",  meta:"Cut & color \u00b7 every 6 wks \u00b7 last 11 wks ago", badge:"Overdue",  action:true }
+            ],
+            steps: {
+                capture:  { i:"fas fa-search",         t:"Clients scanned",      d:"Each client's usual visit interval is checked against their last appointment.", doing:"Scanning",    done:"Scanned" },
+                email:    { i:"fas fa-user-clock",     t:"Overdue clients found", d:"The ones past due for their usual visit are pulled out.",                       doing:"Finding",     done:"Found" },
+                notify:   { i:"fas fa-comment-dots",   t:"Texts personalized",    d:"A friendly rebook message is written for each, with their service.",            doing:"Writing",     done:"Written" },
+                log:      { i:"fas fa-paper-plane",    t:"Messages sent",         d:"Each overdue client gets their nudge. On-track clients are left alone.",        doing:"Sending",     done:"Sent" },
+                followup: { i:"fas fa-calendar-check", t:"Next scan scheduled",   d:"The sweep runs again next week on its own.",                                    doing:"Scheduling",  done:"Scheduled" }
+            },
+            emailSubject: "Your client win-back automation just ran",
+            emailIntro: "On a sample client list, it found 3 clients overdue for their usual visit and drafted each a personal rebook text. Here's one it wrote:",
+            emailArtifact: "Hi Maria, it's been about 9 weeks since your last color with us. Want me to hold your usual Saturday slot? Just reply YES and it's done."
+        },
+        dental: {
+            mode: "scan", unit: "patient", manualMin: 12, scaleDefault: 40,
+            taskNote: "Verifying insurance by phone runs 10 to 15 minutes per patient, hours a day for a busy front desk. This checks tomorrow's whole schedule and flags only the problems.",
+            leftTitle: "Tomorrow's patients",
+            flowTitle: "What the insurance check does",
+            runLabel: "Run the insurance check",
+            sHint: "We'll email you the sample exceptions report it builds.",
+            rows: [
+                { main:"Olivia M.", meta:"Cleaning \u00b7 BlueCross",  badge:"Active",        action:false },
+                { main:"Ben K.",    meta:"Crown \u00b7 Aetna",         badge:"Needs pre-auth", action:true },
+                { main:"Sara P.",   meta:"New patient \u00b7 Cigna",   badge:"Active",        action:false },
+                { main:"Will T.",   meta:"Checkup \u00b7 MetLife",     badge:"Active",        action:false },
+                { main:"Grace L.",  meta:"Filling \u00b7 Delta",       badge:"Plan inactive", action:true }
+            ],
+            steps: {
+                capture:  { i:"fas fa-id-card",          t:"Schedule pulled",   d:"Tomorrow's appointments load with each patient's plan.",            doing:"Loading",    done:"Loaded" },
+                email:    { i:"fas fa-search",           t:"Eligibility checked", d:"Every policy is verified for active coverage and benefits.",       doing:"Verifying",  done:"Verified" },
+                notify:   { i:"fas fa-exclamation-circle", t:"Issues flagged",    d:"Inactive plans or pre-auth needs are flagged before the visit.",   doing:"Flagging",   done:"Flagged" },
+                log:      { i:"fas fa-clipboard-check",  t:"Front desk briefed", d:"A clean exceptions list lands. No hold music for the team.",        doing:"Summarizing", done:"Sent" },
+                followup: { i:"fas fa-calendar-check",   t:"Tomorrow's run set", d:"It runs again tomorrow morning, automatically.",                   doing:"Scheduling", done:"Scheduled" }
+            },
+            emailSubject: "Your insurance check just ran",
+            emailIntro: "On a sample of tomorrow's schedule, it verified 5 patients and flagged 2 that need attention before they arrive. Here's one:",
+            emailArtifact: "Ben K. (Crown, Aetna): coverage active, but crowns require pre-authorization. Flagged for the front desk to handle today."
+        },
+        home: {
+            mode: "scan", unit: "quote", manualMin: 8, scaleDefault: 30,
+            taskNote: "Most estimates that go quiet are lost to silence, not a no. This nudges every open quote on a schedule and stops the moment a homeowner replies.",
+            leftTitle: "Open estimates",
+            flowTitle: "What the follow-up automation does",
+            runLabel: "Run the follow-up sweep",
+            sHint: "We'll email you a sample follow-up it writes.",
+            rows: [
+                { main:"Johnson", meta:"Roof \u00b7 $8,400 \u00b7 sent 3 days ago",     badge:"No reply", action:true },
+                { main:"Patel",   meta:"HVAC \u00b7 $5,200 \u00b7 sent 6 days ago",     badge:"No reply", action:true },
+                { main:"Nguyen",  meta:"Remodel \u00b7 $22,000 \u00b7 sent 1 day ago",  badge:"Fresh",    action:false },
+                { main:"Carter",  meta:"Fence \u00b7 $3,100 \u00b7 sent 9 days ago",    badge:"No reply", action:true },
+                { main:"Diaz",    meta:"Plumbing \u00b7 $900 \u00b7 accepted",          badge:"Won",      action:false }
+            ],
+            steps: {
+                capture:  { i:"fas fa-file-invoice-dollar", t:"Open quotes scanned", d:"Every estimate is checked for whether it's been answered.",      doing:"Scanning",   done:"Scanned" },
+                email:    { i:"fas fa-clock",               t:"Stale quotes found",  d:"Quotes with no reply for a few days are pulled out.",            doing:"Finding",    done:"Found" },
+                notify:   { i:"fas fa-comment-dots",        t:"Follow-ups written",  d:"A specific, friendly nudge is drafted for each homeowner.",      doing:"Writing",    done:"Written" },
+                log:      { i:"fas fa-paper-plane",         t:"Nudges sent",         d:"Each gets a timely follow-up. Won and fresh quotes are skipped.", doing:"Sending",    done:"Sent" },
+                followup: { i:"fas fa-redo",                t:"Next touch queued",   d:"Still no reply? The next nudge is scheduled automatically.",     doing:"Scheduling", done:"Scheduled" }
+            },
+            emailSubject: "Your quote follow-up just ran",
+            emailIntro: "On a sample of open estimates, it found 3 that had gone quiet and drafted a follow-up for each. Here's one:",
+            emailArtifact: "Hi Mr. Johnson, following up on your roof estimate from a few days back. Happy to answer questions or lock in a start date whenever you're ready. Want me to hold a spot?"
+        },
+        fitness: {
+            mode: "scan", unit: "member", manualMin: 7, scaleDefault: 40,
+            taskNote: "Failed cards and expiring plans quietly bleed revenue. This catches them and sends each member a one-tap fix before they lapse.",
+            leftTitle: "Membership payments",
+            flowTitle: "What the payment recovery does",
+            runLabel: "Run the payment recovery",
+            sHint: "We'll email you a sample fix-it notice it sends.",
+            rows: [
+                { main:"Alex R.",  meta:"Monthly \u00b7 card declined",     badge:"At risk", action:true },
+                { main:"Jamie L.", meta:"Annual \u00b7 expires in 3 days",  badge:"At risk", action:true },
+                { main:"Sam D.",   meta:"Monthly \u00b7 paid",              badge:"Active",  action:false },
+                { main:"Riya N.",  meta:"Monthly \u00b7 card expired",      badge:"At risk", action:true },
+                { main:"Cole B.",  meta:"Class pack \u00b7 paid",           badge:"Active",  action:false }
+            ],
+            steps: {
+                capture:  { i:"fas fa-credit-card",        t:"Payments scanned",      d:"Every membership is checked for failed or expiring payments.",  doing:"Scanning",   done:"Scanned" },
+                email:    { i:"fas fa-exclamation-circle", t:"At-risk members found", d:"Declined cards and lapsing plans are pulled out.",              doing:"Finding",    done:"Found" },
+                notify:   { i:"fas fa-comment-dots",       t:"Fix-it notes written",  d:"Each member gets a friendly note with a one-tap update link.",  doing:"Writing",    done:"Written" },
+                log:      { i:"fas fa-paper-plane",        t:"Notices sent",          d:"Members are nudged to fix their card before access lapses.",    doing:"Sending",    done:"Sent" },
+                followup: { i:"fas fa-redo",               t:"Retry scheduled",       d:"The card is retried and re-checked automatically.",             doing:"Scheduling", done:"Scheduled" }
+            },
+            emailSubject: "Your payment recovery just ran",
+            emailIntro: "On a sample membership list, it caught 3 at-risk payments and wrote each member a one-tap fix. Here's one:",
+            emailArtifact: "Hi Alex, your card on file didn't go through this month. Tap here to update it and keep your membership active. Takes about 30 seconds."
+        },
+        restaurant: {
+            mode: "scan", unit: "review", manualMin: 5, scaleDefault: 50,
+            taskNote: "New reviews land all day across Google and Yelp. This rounds them up every morning and flags anything negative so you can reply fast, not days late.",
+            leftTitle: "New reviews overnight",
+            flowTitle: "What the review watch does",
+            runLabel: "Run the review watch",
+            sHint: "We'll email you the sample morning digest it builds.",
+            rows: [
+                { main:"Google \u00b7 5\u2605", meta:"\u201cBest brisket in town\u201d", badge:"Positive",    action:false },
+                { main:"Yelp \u00b7 2\u2605",   meta:"\u201cWait was too long\u201d",    badge:"Needs reply", action:true },
+                { main:"Google \u00b7 4\u2605", meta:"\u201cGreat service\u201d",        badge:"Positive",    action:false },
+                { main:"Google \u00b7 1\u2605", meta:"\u201cOrder was wrong\u201d",      badge:"Needs reply", action:true },
+                { main:"Yelp \u00b7 5\u2605",   meta:"\u201cOur new spot\u201d",         badge:"Positive",    action:false }
+            ],
+            steps: {
+                capture:  { i:"fas fa-star",               t:"Reviews collected",   d:"New Google and Yelp reviews are pulled in overnight.",        doing:"Collecting", done:"Collected" },
+                email:    { i:"fas fa-search",             t:"Sorted by sentiment", d:"Each is sorted by rating and what it's about.",               doing:"Sorting",    done:"Sorted" },
+                notify:   { i:"fas fa-exclamation-circle", t:"Negatives flagged",   d:"Anything two stars or below is flagged for a fast reply.",    doing:"Flagging",   done:"Flagged" },
+                log:      { i:"fas fa-paper-plane",        t:"Manager alerted",     d:"A morning digest lands with the flagged ones up top.",        doing:"Sending",    done:"Sent" },
+                followup: { i:"fas fa-redo",               t:"Tomorrow's watch set", d:"It runs again tomorrow morning, automatically.",            doing:"Scheduling", done:"Scheduled" }
+            },
+            emailSubject: "Your review watch just ran",
+            emailIntro: "On a sample of overnight reviews, it sorted 5 and flagged 2 that need a reply today. Here's one:",
+            emailArtifact: "Yelp, 2 stars: \u201cWait was too long.\u201d Flagged for a same-day response, with a suggested reply ready for the manager to approve."
+        },
+        professional: {
+            mode: "scan", unit: "file", manualMin: 7, scaleDefault: 25,
+            taskNote: "Cases and tax returns stall waiting on client paperwork. This tracks exactly what's missing per client and chases only what they still owe.",
+            leftTitle: "Client files, missing items",
+            flowTitle: "What the document chase does",
+            runLabel: "Run the document chase",
+            sHint: "We'll email you a sample request it sends.",
+            rows: [
+                { main:"File 1042 \u00b7 Smith",  meta:"Missing: W-2, ID",                 badge:"Incomplete", action:true },
+                { main:"File 1044 \u00b7 Lee",    meta:"All documents received",           badge:"Complete",   action:false },
+                { main:"File 1047 \u00b7 Brown",  meta:"Missing: signed engagement letter", badge:"Incomplete", action:true },
+                { main:"File 1051 \u00b7 Garcia", meta:"Missing: 1099, bank statement",     badge:"Incomplete", action:true },
+                { main:"File 1053 \u00b7 Adams",  meta:"All documents received",           badge:"Complete",   action:false }
+            ],
+            steps: {
+                capture:  { i:"fas fa-folder-open",        t:"Files reviewed",     d:"Each file is checked against its required-documents list.", doing:"Reviewing",  done:"Reviewed" },
+                email:    { i:"fas fa-exclamation-circle", t:"Missing items found", d:"Exactly what's outstanding per client is identified.",      doing:"Finding",    done:"Found" },
+                notify:   { i:"fas fa-comment-dots",       t:"Requests written",   d:"Each client gets a note listing only what they still owe.", doing:"Writing",    done:"Written" },
+                log:      { i:"fas fa-paper-plane",        t:"Requests sent",      d:"Clients with complete files are left alone.",               doing:"Sending",    done:"Sent" },
+                followup: { i:"fas fa-clipboard-check",    t:"Checklist updated",  d:"As documents come in, the file checks itself off.",         doing:"Updating",   done:"Updated" }
+            },
+            emailSubject: "Your document chase just ran",
+            emailIntro: "On a sample of client files, it found 3 with missing paperwork and wrote each client a request for only what's outstanding. Here's one:",
+            emailArtifact: "Hi Mr. Smith, to keep your return moving we still need your W-2 and a copy of your ID. You can upload both securely with the link below."
+        },
+        general: {
+            mode: "intake", unit: "request", manualMin: 12, scaleDefault: 40,
+            taskNote: "Not listed, or want the basics? This is the catch-all: turn any incoming request into a confirmed, logged, followed-up booking. It works for any business.",
+            leftTitle: "A new request comes in",
+            leftKicker: "Step 1 \u00b7 The trigger",
+            flowTitle: "What happens automatically",
+            steps: {
+                capture:  { i:"fas fa-file-alt", t:"Request captured",     d:"Cleaned up and saved as a structured record. No rekeying.",  doing:"Saving",     done:"Saved" },
+                email:    { i:"fas fa-envelope", t:"Confirmation sent",    d:"The requester gets an instant, branded reply on its own.",   doing:"Sending",    done:"Sent" },
+                notify:   { i:"fas fa-bell",     t:"Team notified",        d:"The right person is pinged the moment it lands.",            doing:"Notifying",  done:"Notified" },
+                log:      { i:"fas fa-list",     t:"Logged to the tracker", d:"Added to the pipeline, tagged, and ready to work.",         doing:"Logging",    done:"Logged" },
+                followup: { i:"fas fa-clock",    t:"Follow-up scheduled",  d:"A reminder is set so nothing slips if there's no reply.",    doing:"Scheduling", done:"Scheduled" }
+            }
+        }
     };
 
-    var runBtn   = document.getElementById('runBtn');
+    var biz = null, currentMode = "scan", running = false, lastAutoSeconds = 3.1;
+
+    /* element helpers */
+    function qStage(s){ return document.querySelector('[data-stage="'+s+'"]'); }
+    function qStatus(s){ return qStage(s).querySelector('.apx-status'); }
+    function setState(s, cls){ var el = qStage(s); el.classList.remove('active','done'); if(cls){ el.classList.add(cls); } }
+    function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+    function setIcon(s, cls){ qStage(s).querySelector('.apx-ico i').className = cls; }
+
     var result   = document.getElementById('result');
     var modeText = document.getElementById('modeText');
-    var running  = false;
-    var lastAutoSeconds = 3.1;
+    if (AUTOMATION_ENDPOINT) { modeText.textContent = "Live mode. A real sample email is sent to the address you enter."; }
 
-    if (AUTOMATION_ENDPOINT) {
-        modeText.textContent = "Live mode. A real confirmation is sent to the address you enter.";
+    function renderRows(rows){
+        var html = "";
+        for(var i=0;i<rows.length;i++){
+            var r = rows[i];
+            var bc = r.action ? "flag" : "ok";
+            html += '<div class="apx-row" data-action="'+(r.action?'1':'0')+'">' +
+                    '<span class="apx-row-main">'+r.main+'</span>' +
+                    '<span class="apx-row-meta">'+r.meta+'</span>' +
+                    '<span class="apx-row-badge '+bc+'">'+r.badge+'</span></div>';
+        }
+        document.getElementById('dataList').innerHTML = html;
     }
 
-    function qStatus(stage){ return document.querySelector('[data-stage="'+stage+'"] .apx-status'); }
-    function qStage(stage){ return document.querySelector('[data-stage="'+stage+'"]'); }
-    function setState(stage, cls){ var el = qStage(stage); el.classList.remove('active','done'); if(cls) el.classList.add(cls); }
-    function resetFlow(){ result.classList.remove('show'); STAGES.forEach(function(s){ setState(s,null); qStatus(s).textContent = "Queued"; }); }
-    function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+    function applyBusiness(id){
+        var b = BUSINESSES[id]; if(!b){ return; }
+        biz = b; currentMode = b.mode;
+        var chips = document.querySelectorAll('.apx-chip');
+        for(var i=0;i<chips.length;i++){ chips[i].classList.toggle('active', chips[i].getAttribute('data-biz') === id); }
 
-    function fireBackend(payload){
-        if(!AUTOMATION_ENDPOINT){ return Promise.resolve({ ok:false, demo:true }); }
-        return fetch(AUTOMATION_ENDPOINT, { method:'POST', body: JSON.stringify(payload) })
-            .then(function(){ return { ok:true }; })
-            .catch(function(e){ console.error(e); return { ok:false, error:true }; });
+        document.getElementById('taskNote').textContent = b.taskNote;
+        document.getElementById('leftKicker').textContent = b.leftKicker || "Step 1 \u00b7 The work";
+        document.getElementById('leftTitle').textContent = b.leftTitle;
+        document.getElementById('flowTitle').textContent = b.flowTitle;
+
+        document.getElementById('paneIntake').style.display = (b.mode === "intake") ? "block" : "none";
+        document.getElementById('paneScan').style.display   = (b.mode === "scan")   ? "block" : "none";
+
+        if(b.mode === "scan"){
+            renderRows(b.rows);
+            document.getElementById('sHint').textContent = b.sHint;
+            document.getElementById('runScan').innerHTML = b.runLabel + ' <i class="fas fa-play"></i>';
+        }
+
+        STAGES.forEach(function(s){
+            var st = qStage(s);
+            setState(s, null);
+            qStatus(s).textContent = "Queued";
+            st.querySelector('h4').textContent = b.steps[s].t;
+            st.querySelector('p').textContent  = b.steps[s].d;
+            setIcon(s, b.steps[s].i);
+        });
+
+        document.getElementById('volUnit').textContent = b.unit + "s a week";
+        document.getElementById('scaleQ').textContent = "How many " + b.unit + "s a week?";
+        document.getElementById('volRange').value = b.scaleDefault;
+        result.classList.remove('show');
     }
 
-    /* ---- scaled "what would this take" math ---- */
-    function fmtHours(h){
-        if(h < 1){ return Math.round(h*60) + " min"; }
-        return (Math.round(h*10)/10) + " hrs";
-    }
-    function fmtAuto(totalSeconds){
-        if(totalSeconds < 90){ return Math.max(1, Math.round(totalSeconds)) + " sec"; }
-        return (Math.round(totalSeconds/60)) + " min";
-    }
+    /* scale math */
+    function fmtHours(h){ if(h < 1){ return Math.round(h*60) + " min"; } return (Math.round(h*10)/10) + " hrs"; }
+    function fmtAuto(sec){ if(sec < 90){ return Math.max(1, Math.round(sec)) + " sec"; } return Math.round(sec/60) + " min"; }
     function peopleEquivalent(weeklyHours){
         var fte = weeklyHours / FT_HOURS_PER_WEEK;
         if(fte >= 1){ return (Math.round(fte*10)/10) + " full-time people"; }
@@ -478,86 +723,148 @@
         if(fte >= 0.25){ return "about a quarter of a full-time person"; }
         return Math.round(fte*100) + "% of a full-time person";
     }
+    function sampleCount(){ return biz.mode === "scan" ? biz.rows.length : 1; }
 
     function updateScale(){
         var vol = parseInt(document.getElementById('volRange').value, 10);
         document.getElementById('volNum').textContent = vol;
-
-        var manualHrsWeek = (vol * MANUAL_MIN_PER_REQUEST) / 60;
-        var autoSecWeek   = vol * lastAutoSeconds;
+        var manualHrsWeek = (vol * biz.manualMin) / 60;
+        var autoPerItem   = lastAutoSeconds / sampleCount();
+        var autoSecWeek   = vol * autoPerItem;
         var manualHrsYear = manualHrsWeek * 52;
         var workWeeksYear = Math.round(manualHrsYear / FT_HOURS_PER_WEEK);
 
         document.getElementById('sManual').textContent = fmtHours(manualHrsWeek);
         document.getElementById('sAuto').textContent   = fmtAuto(autoSecWeek);
-
         document.getElementById('sHeadline').innerHTML =
             "By hand, that is <b>" + fmtHours(manualHrsWeek) + " a week</b>, around <b>" +
-            Math.round(manualHrsYear) + " hours a year</b>. Set against a 40-hour week, keeping up with this one task by hand is <b>" +
-            peopleEquivalent(manualHrsWeek) + "</b>, or roughly <b>" + workWeeksYear +
+            Math.round(manualHrsYear) + " hours a year</b>. Set against a 40-hour week, keeping up with your " +
+            biz.unit + "s by hand is <b>" + peopleEquivalent(manualHrsWeek) + "</b>, or roughly <b>" + workWeeksYear +
             " full work weeks</b> a year. The automation does it on its own.";
+    }
+
+    function fireBackend(payload){
+        if(!AUTOMATION_ENDPOINT){ return Promise.resolve({ ok:false, demo:true }); }
+        return fetch(AUTOMATION_ENDPOINT, { method:'POST', body: JSON.stringify(payload) })
+            .then(function(){ return { ok:true }; })
+            .catch(function(e){ console.error(e); return { ok:false, error:true }; });
     }
 
     function run(){
         if(running){ return; }
-        var name   = (document.getElementById('f-name').value || "there").trim() || "there";
-        var email  = document.getElementById('f-email').value.trim();
-        var type   = document.getElementById('f-type').value;
-        var detail = document.getElementById('f-detail').value.trim();
+        var bizId = document.querySelector('.apx-chip.active').getAttribute('data-biz');
+        var payload = { business: bizId, mode: biz.mode, source: "automation-platform" };
+        var email = "";
+
+        if(biz.mode === "intake"){
+            var nm = (document.getElementById('f-name').value || "there").trim() || "there";
+            email = document.getElementById('f-email').value.trim();
+            payload.name = nm;
+            payload.email = email;
+            payload.type = document.getElementById('f-type').value;
+            payload.detail = document.getElementById('f-detail').value.trim();
+        } else {
+            email = document.getElementById('s-email').value.trim();
+            payload.email = email;
+            payload.subject = biz.emailSubject;
+            payload.intro = biz.emailIntro;
+            payload.artifact = biz.emailArtifact;
+        }
 
         if(AUTOMATION_ENDPOINT && email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-            alert("That email doesn't look right. Check it so the confirmation can arrive.");
+            alert("That email doesn't look right. Check it so the sample can arrive.");
             return;
         }
 
         running = true;
-        runBtn.disabled = true;
-        resetFlow();
+        var btn = (biz.mode === "intake") ? document.getElementById('runIntake') : document.getElementById('runScan');
+        document.getElementById('runIntake').disabled = true;
+        document.getElementById('runScan').disabled = true;
+        STAGES.forEach(function(s){ setState(s, null); qStatus(s).textContent = "Queued"; });
+        result.classList.remove('show');
+
+        // clear any prior row highlights
+        var rowEls = document.querySelectorAll('#dataList .apx-row');
+        for(var r=0;r<rowEls.length;r++){ rowEls[r].classList.remove('hit'); }
 
         var start = performance.now();
-        var backend = fireBackend({ name:name, email:email, type:type, detail:detail, source:"automation-platform" });
+        var backend = fireBackend(payload);
 
         var chain = Promise.resolve();
-        STAGES.forEach(function(stage){
+        STAGES.forEach(function(stage, idx){
             chain = chain.then(function(){
                 setState(stage,'active');
-                qStatus(stage).textContent = LABELS[stage][0];
-                return wait(600 + Math.random()*260);
+                qStatus(stage).textContent = biz.steps[stage].doing;
+                // highlight action rows on the "find" step (2nd step) in scan mode
+                if(biz.mode === "scan" && idx === 1){
+                    var rl = document.querySelectorAll('#dataList .apx-row[data-action="1"]');
+                    for(var k=0;k<rl.length;k++){ rl[k].classList.add('hit'); }
+                }
+                return wait(600 + Math.random()*240);
             }).then(function(){
                 setState(stage,'done');
-                qStatus(stage).textContent = LABELS[stage][1];
+                qStatus(stage).textContent = biz.steps[stage].done;
                 return wait(110);
             });
         });
 
         chain.then(function(){
             lastAutoSeconds = Math.round((performance.now() - start) / 100) / 10;
-            var mult = Math.round((MANUAL_MIN_PER_REQUEST * 60) / lastAutoSeconds);
+            var sc = sampleCount();
+            var mult = Math.round((biz.manualMin * 60 * sc) / lastAutoSeconds);
 
-            document.getElementById('tManual').textContent = MANUAL_MIN_PER_REQUEST + " min";
+            document.getElementById('tManual').textContent = biz.manualMin + " min";
             document.getElementById('tAuto').textContent   = lastAutoSeconds + "s";
             document.getElementById('tMult').innerHTML     = mult + "&times;";
 
+            if(biz.mode === "scan"){
+                document.getElementById('tManualL').textContent = "Per " + biz.unit;
+                document.getElementById('tAutoL').textContent   = "All " + sc + " " + biz.unit + "s";
+            } else {
+                document.getElementById('tManualL').textContent = "By hand";
+                document.getElementById('tAutoL').textContent   = "This run";
+            }
             return backend;
         }).then(function(res){
             var title = document.getElementById('resultTitle');
             var body  = document.getElementById('resultBody');
-            if(res.ok){
-                title.textContent = "Done. Check your inbox.";
-                body.textContent = "That whole sequence ran from one submit, " + name + ". A confirmation is on its way to " + email + ". In a real build, every step is wired into your own tools.";
+
+            if(biz.mode === "intake"){
+                if(res.ok){
+                    title.textContent = "Done. Check your inbox.";
+                    body.textContent = "That whole sequence ran from one submit. A confirmation is on its way to " + email + ". In a real build, every step is wired into your own tools.";
+                } else {
+                    title.textContent = "Done.";
+                    body.textContent = "That whole sequence ran from one submit. This is demo mode, so no email went out. Connect the backend in one step and the confirmation becomes real.";
+                }
             } else {
-                title.textContent = "Done.";
-                body.textContent = "That whole sequence ran from one submit, " + name + ". This is demo mode, so no email went out. Connect the backend in one step and the confirmation becomes real.";
+                var actionCount = biz.rows.filter(function(x){ return x.action; }).length;
+                var head = "It scanned " + biz.rows.length + " " + biz.unit + "s, found " + actionCount + " that needed action, and handled them in " + lastAutoSeconds + "s. ";
+                if(res.ok){
+                    title.textContent = "Done. Check your inbox.";
+                    body.textContent = head + "A sample of what it generated is on its way to " + email + ".";
+                } else {
+                    title.textContent = "Done.";
+                    body.textContent = head + (email ? "Connect the backend in one step to send the sample for real." : "Add your email above to get the sample it generated.");
+                }
             }
             updateScale();
             result.classList.add('show');
-            runBtn.disabled = false;
+            document.getElementById('runIntake').disabled = false;
+            document.getElementById('runScan').disabled = false;
             running = false;
         });
     }
 
-    runBtn.addEventListener('click', run);
-    document.getElementById('volRange').addEventListener('input', updateScale);
+    document.getElementById('runIntake').addEventListener('click', run);
+    document.getElementById('runScan').addEventListener('click', run);
+    document.getElementById('volRange').addEventListener('input', function(){ if(biz){ updateScale(); } });
+
+    var chipEls = document.querySelectorAll('.apx-chip');
+    for(var c=0;c<chipEls.length;c++){
+        chipEls[c].addEventListener('click', function(){ applyBusiness(this.getAttribute('data-biz')); });
+    }
+    applyBusiness('salon'); // default to a vertical so the distinct automations show first
 
     /* Scroll reveal (same pattern as other pages) */
     var baReveals = document.querySelectorAll('.ba-reveal');

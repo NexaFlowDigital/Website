@@ -1224,7 +1224,7 @@ document.addEventListener('DOMContentLoaded', function () {
         message:        form.elements['message']?.value.trim() || ''
       };
 
-      fetch(ENDPOINT, {
+fetch(ENDPOINT, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type':'application/json' },
@@ -1234,11 +1234,14 @@ document.addEventListener('DOMContentLoaded', function () {
         msg.textContent = 'Thanks! Your message has been sent.';
         form.reset();
 
+        if (typeof gtag === 'function') {
+          gtag('event', 'submit_lead_form');
+        }
+
         if (phoneField) {
           phoneField.style.display = 'none';
           phoneField.required = false;
         }
-
         if (otherService) {
           otherService.style.display = 'none';
           otherService.required = false;

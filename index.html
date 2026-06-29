@@ -1221,7 +1221,8 @@ document.addEventListener('DOMContentLoaded', function () {
         service:        form.elements['service']?.value.trim() || '',
         other_service:  otherService ? otherService.value.trim() : '',
         contact_method: form.elements['contact_method']?.value.trim() || '',
-        message:        form.elements['message']?.value.trim() || ''
+        message:        form.elements['message']?.value.trim() || '',
+        captcha:        form.querySelector('[name="cf-turnstile-response"]')?.value || ''
       };
 
       fetch(ENDPOINT, {

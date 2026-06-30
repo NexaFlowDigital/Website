@@ -1235,6 +1235,10 @@ document.addEventListener('DOMContentLoaded', function () {
         msg.textContent = 'Thanks! Your message has been sent.';
         form.reset();
 
+        if (typeof gtag === 'function') {
+          gtag('event', 'submit_lead_form');
+        }
+
         if (phoneField) {
           phoneField.style.display = 'none';
           phoneField.required = false;

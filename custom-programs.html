@@ -161,7 +161,7 @@
     },
     {
       "@type": "Question",
-      "name": "How much time can automation actually save?",
+      "name": "How much time can automation save?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It depends on how much manual work you do today. Our clients save 100+ hours per year on average, and some recover 15+ hours every week from a single automated workflow. We estimate the savings with you before we build."
@@ -187,6 +187,8 @@
         <header class="header">
             <a class="logo" href="/"><img src="assets/images/About/NexaFlow-Logo.png" alt="NexaFlow Digital Logo" class="logo-img"></a>
             <nav class="navbar">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
                 <div class="nav-dropdown">
                     <a href="/#service" class="active">Services <i class="fas fa-chevron-down"></i></a>
                     <div class="nav-drop-menu">
@@ -196,7 +198,7 @@
                         <a href="/marketing-branding"><i class="fas fa-pen-nib"></i><strong>Branding &amp; Design</strong><small>Logos, brand identity, and marketing materials</small></a>
                     </div>
                 </div>
-                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
                 <a href="/faq">FAQ</a>
                 <a href="/client">Client Login</a>
                 <a href="/#contact" class="nav-quote">Get a free quote</a>
@@ -210,7 +212,7 @@
         <section class="sp-hero">
             <div>
                 <p class="sp-crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#service">Services</a> &nbsp;/&nbsp; Custom Software &amp; Automation</p>
-                <h1>Software built around how your business actually works.</h1>
+                <h1>Software built around how your business operates.</h1>
                 <p class="sp-hero-lead">If your team runs on spreadsheets, copy and paste, and reminders, we build the tool that replaces it. Portals, trackers, and workflows that move work forward on their own.</p>
                 <ul class="sp-checks">
                     <li><i class="fas fa-check"></i>Built from scratch for your process</li>
@@ -239,44 +241,29 @@
                 <h2>What we build</h2>
                 <p>Every build starts from how your team works today. These are the most common.</p>
             </div>
-            <div class="sp-list">
-                <div class="sp-item">
-                    <i class="fas fa-id-card"></i>
-                    <h3>Client and internal portals</h3>
-                    <p>1 place for your team or your clients to log in, see what matters, and take action, with the right access for each role.</p>
+            <div class="fx">
+                <div class="fx-list" role="tablist" aria-label="Features">
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="portal" data-title="Client and internal portals" data-desc="1 place for your team or your clients to log in, see what matters, and take action, with the right access for each role."><i class="fas fa-id-card"></i>Client and internal portals</button>
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="webapp" data-title="Custom web applications" data-desc="Apps built for a specific job your business depends on, from any browser, on any device."><i class="fas fa-window-restore"></i>Custom web applications</button>
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="workflow" data-title="Workflow automation" data-desc="Data moves between your systems on its own, so nobody copies and pastes the same information twice."><i class="fas fa-sync-alt"></i>Workflow automation</button>
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="notify" data-title="Follow-ups and notifications" data-desc="Reminders, confirmations, and alerts go out on time without depending on someone remembering."><i class="fas fa-bell"></i>Follow-ups and notifications</button>
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="intake" data-title="Intake and onboarding" data-desc="New clients, hires, or requests flow through the same steps every time, with nothing skipped."><i class="fas fa-user-plus"></i>Intake and onboarding</button>
+                    <button class="fx-tab" type="button" role="tab" aria-selected="false" data-fx="sheet" data-title="Spreadsheet replacements" data-desc="The spreadsheet your business runs on, rebuilt as a secure, shared system built to grow with you."><i class="fas fa-th-list"></i>Spreadsheet replacements</button>
                 </div>
-                <div class="sp-item">
-                    <i class="fas fa-window-restore"></i>
-                    <h3>Custom web applications</h3>
-                    <p>Apps built for a specific job your business depends on, from any browser, on any device.</p>
-                </div>
-                <div class="sp-item">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Workflow automation</h3>
-                    <p>Data moves between your systems on its own, so nobody copies and pastes the same information twice.</p>
-                </div>
-                <div class="sp-item">
-                    <i class="fas fa-bell"></i>
-                    <h3>Follow-ups and notifications</h3>
-                    <p>Reminders, confirmations, and alerts go out on time without depending on someone remembering.</p>
-                </div>
-                <div class="sp-item">
-                    <i class="fas fa-user-plus"></i>
-                    <h3>Intake and onboarding</h3>
-                    <p>New clients, hires, or requests flow through the same steps every time, with nothing skipped.</p>
-                </div>
-                <div class="sp-item">
-                    <i class="fas fa-th-list"></i>
-                    <h3>Spreadsheet replacements</h3>
-                    <p>The spreadsheet your business quietly runs on, rebuilt as a real system that is safe, shared, and built to grow.</p>
+                <div class="fx-panel" role="tabpanel">
+                    <div>
+                        <h3 class="fx-title"></h3>
+                        <p class="fx-desc"></p>
+                    </div>
+                    <div class="fx-stage"></div>
                 </div>
             </div>
         </section>
 
         <section class="sp-section" id="examples">
             <div class="sp-head">
-                <h2>Real systems we have built</h2>
-                <p>Click through tools that real organizations use every day.</p>
+                <h2>Systems we have built</h2>
+                <p>Click through tools our clients use every day.</p>
             </div>
             <div class="showcase">
                 <div class="showcase-tabs" role="tablist" aria-label="Project examples">
@@ -419,7 +406,7 @@
                 <div class="sp-step">
                     <b>2</b>
                     <h3>Approve the plan</h3>
-                    <p>You get a clear quote and plan, and you approve it before anything gets built.</p>
+                    <p>You get a written quote and project plan to approve before anything gets built.</p>
                 </div>
                 <div class="sp-step">
                     <b>3</b>
@@ -459,7 +446,7 @@
                     <p>Usually, yes. Most of what we build pulls from or pushes to the systems you already rely on, so it fits into your setup instead of adding another disconnected tool.</p>
                 </details>
                 <details>
-                    <summary>How much time can automation actually save? <i class="fas fa-plus"></i></summary>
+                    <summary>How much time can automation save? <i class="fas fa-plus"></i></summary>
                     <p>It depends on how much manual work you do today. Our clients save 100+ hours per year on average, and some recover 15+ hours every week from a single automated workflow. We estimate the savings with you before we build.</p>
                 </details>
                 <details>
@@ -473,12 +460,12 @@
             <div class="contact-panel">
                 <div class="contact-copy">
                     <h2>Get a free quote</h2>
-                    <p class="contact-lead">Tell us what you need built, fixed, or automated. You get a clear quote and plan to approve before any work starts.</p>
+                    <p class="contact-lead">Tell us what you need built, improved, or automated. You will get a written quote and project plan to review before any work begins.</p>
 
                     <div class="contact-points">
-                        <div class="contact-point"><i class="fas fa-file-signature"></i><span>A clear quote and plan before any work starts</span></div>
+                        <div class="contact-point"><i class="fas fa-file-signature"></i><span>Written quote and project plan before work begins</span></div>
                         <div class="contact-point"><i class="fas fa-phone-alt"></i><span>Prefer to talk? Call <a href="tel:4698502644" style="color:inherit;font-weight:700;">469-850-2644</a></span></div>
-                        <div class="contact-point"><i class="fas fa-map-marker-alt"></i><span>Based in Frisco, TX. Serving DFW and clients nationwide</span></div>
+                        <div class="contact-point"><i class="fas fa-map-marker-alt"></i><span>Headquartered in Frisco, TX, serving clients nationwide</span></div>
                     </div>
                 </div>
 
@@ -561,8 +548,9 @@
         <div class="footer-column">
             <h4>Company</h4>
             <a href="/about">About</a>
-            <a href="/faq">FAQ</a>
+            <a href="/#process">Process</a>
             <a href="/#contact">Contact</a>
+            <a href="/faq">FAQ</a>
             <a href="/client">Client Login</a>
         </div>
 
@@ -588,6 +576,7 @@
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
             <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+            <a href="#" data-cookie-settings>Cookie Settings</a>
         </div>
     </div>
 </footer>
@@ -598,6 +587,7 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/quote-form.js"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="assets/js/feature-explorer.js"></script>
     <script>
     (function(){
         var pri = 'normal', running = false, timers = [], reqNo = 1048, open = 13;

@@ -21,12 +21,12 @@
     <meta name="author" content="NexaFlow Digital">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-    <link rel="canonical" href="https://nexaflowdigital.com/craft-bar">
+    <link rel="canonical" href="https://nexaflowdigital.com/craft-experiences">
 
     <meta property="og:title" content="NexaFlow Digital | Mobile Craft Bar & Make-N-Take Experiences in Frisco, TX">
     <meta property="og:description" content="A mobile make-n-take craft bar for markets, festivals, parties, and events. Pick a project from the seasonal craft menu and make something 1 of a kind.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nexaflowdigital.com/craft-bar.html">
+    <meta property="og:url" content="https://nexaflowdigital.com/craft-experiences.html">
     <meta property="og:image" content="https://nexaflowdigital.com/assets/images/About/NexaFlow-Logo.png">
     <meta property="og:site_name" content="NexaFlow Digital">
 
@@ -57,7 +57,7 @@
         "name": "Dallas-Fort Worth"
       },
       "description": "A mobile make-n-take craft bar for markets, festivals, parties, and private events in the Dallas-Fort Worth area, with seasonal themed projects and all supplies provided.",
-      "url": "https://nexaflowdigital.com/craft-bar.html"
+      "url": "https://nexaflowdigital.com/craft-experiences.html"
     }
     </script>
 
@@ -133,37 +133,46 @@
             border-color: var(--base-color);
         }
 
-        .craft-hero-panel {
-            background: #fff;
-            border: 1px solid rgba(13,92,145,0.10);
+        .craft-hero-image {
             border-radius: 2.2rem;
-            padding: 3rem;
-            box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid rgba(13,92,145,0.10);
+            box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,0.08);
+            background: #fff;
         }
 
-        .craft-hero-panel h3 {
-            font-size: 2.3rem;
-            margin-bottom: 1.6rem;
-            color: var(--black);
+        .craft-hero-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
-        .craft-hero-list {
+        .craft-perks {
             display: grid;
-            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.6rem;
+            margin-top: 4rem;
         }
 
-        .craft-hero-item {
+        .craft-perk {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 1.1rem;
             font-size: 1.55rem;
             line-height: 1.7;
             color: var(--grey);
+            background: #fff;
+            border: 1px solid rgba(13,92,145,0.10);
+            border-radius: 1.4rem;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 0.6rem 1.8rem rgba(0,0,0,0.04);
         }
 
-        .craft-hero-item i {
+        .craft-perk i {
             color: var(--base-color);
             margin-top: 0.3rem;
+            font-size: 1.7rem;
         }
 
         .craft-section {
@@ -277,6 +286,20 @@
             color: #fff;
             background: var(--theme-accent, var(--base-color));
             transition: background 0.3s ease;
+        }
+
+        .theme-photo {
+            margin: 0.5rem 0 2.2rem;
+            border-radius: 1.4rem;
+            overflow: hidden;
+            border: 1px solid rgba(13,92,145,0.08);
+        }
+
+        .theme-photo img {
+            width: 100%;
+            height: 26rem;
+            object-fit: cover;
+            display: block;
         }
 
         .theme-feature h3 {
@@ -519,17 +542,19 @@
             margin-top: 2rem;
         }
 
-        .craft-pair-icon {
-            width: 6rem;
-            height: 6rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .craft-pair-img {
             border-radius: 1.4rem;
-            background: rgba(13,92,145,0.08);
-            color: var(--base-color);
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(13,92,145,0.08);
+        }
+
+        .craft-pair-img img {
+            width: 100%;
+            height: 24rem;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
         }
 
         .craft-pair-card h3 {
@@ -562,8 +587,13 @@
             .theme-stage,
             .craft-steps-grid,
             .craft-fit-grid,
-            .craft-pair-banner {
+            .craft-pair-banner,
+            .craft-perks {
                 grid-template-columns: 1fr;
+            }
+
+            .theme-photo img {
+                height: 20rem;
             }
 
             .craft-page-hero h1 {
@@ -642,17 +672,18 @@
                         </div>
                     </div>
 
-                    <div class="craft-hero-panel">
-                        <h3>The craft bar experience</h3>
-                        <div class="craft-hero-list">
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>All supplies, tools, and materials provided</span></div>
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>Projects for all ages and skill levels</span></div>
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>A fresh craft menu every season</span></div>
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>Priced per project. Make 1 or make a few</span></div>
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>Walk-ups welcome at markets and festivals</span></div>
-                            <div class="craft-hero-item"><i class="fas fa-check-circle"></i><span>Add our Magic Mirror photo booth for the full experience</span></div>
-                        </div>
+                    <div class="craft-hero-image">
+                        <img src="assets/images/crafts/craft-hero.jpg" alt="Colorful embroidery floss arranged in a heart shape">
                     </div>
+                </div>
+
+                <div class="craft-perks">
+                    <div class="craft-perk"><i class="fas fa-box-open"></i><span>All supplies, tools, and materials provided</span></div>
+                    <div class="craft-perk"><i class="fas fa-users"></i><span>Projects for all ages and skill levels</span></div>
+                    <div class="craft-perk"><i class="fas fa-calendar-alt"></i><span>A fresh craft menu every season</span></div>
+                    <div class="craft-perk"><i class="fas fa-tag"></i><span>Priced per project. Make 1 or make a few</span></div>
+                    <div class="craft-perk"><i class="fas fa-walking"></i><span>Walk-ups welcome at markets and festivals</span></div>
+                    <div class="craft-perk"><i class="fas fa-camera-retro"></i><span>Add the Magic Mirror photo booth for the full experience</span></div>
                 </div>
             </div>
         </section>
@@ -782,8 +813,8 @@
                     </div>
 
                     <div class="craft-pair-card">
-                        <div class="craft-pair-icon">
-                            <i class="fas fa-camera-retro"></i>
+                        <div class="craft-pair-img">
+                            <img src="assets/images/featured/photo-booth.png" alt="Magic Mirror photo booth with ring light">
                         </div>
                         <h3>What the package includes</h3>
                         <div class="craft-pair-points">
@@ -925,7 +956,7 @@
             <a href="https://crm.nexaflowdigital.com" target="_blank" rel="noopener" class="footer-ext">Nonprofit CRM <i class="fas fa-external-link-alt"></i></a>
             <a href="https://social.nexaflowdigital.com" target="_blank" rel="noopener" class="footer-ext">Social <i class="fas fa-external-link-alt"></i></a>
             <a href="/photo-booth" class="footer-ext">Photo Booth</a>
-            <a href="/craft-bar" class="footer-ext">Craft Bar</a>
+            <a href="/craft-experiences" class="footer-ext">Craft Bar</a>
         </div>
 
         <div class="footer-contact-compact">
@@ -979,6 +1010,7 @@
         const themes = [
             {
                 id: 'christmas',
+                img: 'assets/images/crafts/christmas.jpg',
                 label: 'Christmas',
                 icon: 'fa-snowflake',
                 accent: '#1a7a4c',
@@ -995,6 +1027,7 @@
             },
             {
                 id: 'halloween',
+                img: 'assets/images/crafts/halloween.jpg',
                 label: 'Halloween',
                 icon: 'fa-ghost',
                 accent: '#c05621',
@@ -1011,6 +1044,7 @@
             },
             {
                 id: 'fall',
+                img: 'assets/images/crafts/fall.jpg',
                 label: 'Fall',
                 icon: 'fa-leaf',
                 accent: '#b7791f',
@@ -1027,6 +1061,7 @@
             },
             {
                 id: 'valentines',
+                img: 'assets/images/crafts/valentines.jpg',
                 label: "Valentine's Day",
                 icon: 'fa-heart',
                 accent: '#c53058',
@@ -1043,6 +1078,7 @@
             },
             {
                 id: 'spring',
+                img: 'assets/images/crafts/spring.jpg',
                 label: 'Spring',
                 icon: 'fa-sun',
                 accent: '#2b8a9d',
@@ -1076,6 +1112,7 @@
               '<div class="theme-stage">' +
                 '<div class="theme-feature">' +
                   '<span class="theme-badge"><i class="fas ' + t.icon + '"></i>' + t.label + ' &bull; ' + t.badge + '</span>' +
+                  '<div class="theme-photo"><img src="' + t.img + '" alt="' + t.title + '"></div>' +
                   '<h3>' + t.title + '</h3>' +
                   '<p>' + t.blurb + '</p>' +
                   '<div class="theme-builds">' +

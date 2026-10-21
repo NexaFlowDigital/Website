@@ -288,6 +288,72 @@
             transition: background 0.3s ease;
         }
 
+        .theme-booth {
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            margin-bottom: 2.2rem;
+            border: 1px solid rgba(13,92,145,0.10);
+            box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,0.08);
+        }
+
+        .theme-booth img {
+            width: 100%;
+            height: 54rem;
+            object-fit: cover;
+            object-position: center 15%;
+            display: block;
+        }
+
+        .theme-booth-label {
+            position: absolute;
+            left: 2rem;
+            bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.9rem 1.6rem;
+            border-radius: 99px;
+            background: rgba(255,255,255,0.94);
+            color: var(--black);
+            font-size: 1.4rem;
+            font-weight: 600;
+            box-shadow: 0 0.6rem 1.6rem rgba(0,0,0,0.15);
+        }
+
+        .theme-booth-label i {
+            color: var(--theme-accent, var(--base-color));
+        }
+
+        .theme-side-photo {
+            border-radius: 1.4rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(13,92,145,0.08);
+            position: relative;
+        }
+
+        .theme-side-photo img {
+            width: 100%;
+            height: 24rem;
+            object-fit: cover;
+            display: block;
+        }
+
+        .theme-side-photo span {
+            position: absolute;
+            left: 1.2rem;
+            top: 1.2rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 99px;
+            background: var(--theme-accent, var(--base-color));
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            text-transform: uppercase;
+        }
+
         .theme-photo {
             margin: 0.5rem 0 2.2rem;
             border-radius: 1.4rem;
@@ -592,7 +658,11 @@
                 grid-template-columns: 1fr;
             }
 
-            .theme-photo img {
+            .theme-booth img {
+                height: 26rem;
+            }
+
+            .theme-side-photo img {
                 height: 20rem;
             }
 
@@ -712,40 +782,40 @@
                 <div class="craft-head">
                     <h2>How it <span>works</span></h2>
                     <p>
-                        No reservations, no prep, no experience needed. Just show up and make something.
+                        No reservations and no experience needed. Pick it out at the booth and create it at home.
                     </p>
                 </div>
 
                 <div class="craft-steps-grid">
                     <div class="craft-step-card">
                         <div class="craft-step-num">01</div>
-                        <h3>Pick Your Project</h3>
+                        <h3>Grab a Bag</h3>
                         <p>
-                            Browse the craft menu and pick what you want to make. Can't decide? Make more than 1.
+                            Start at the bag basket. Every kit gets its own bag, so you can make 1 or a few.
                         </p>
                     </div>
 
                     <div class="craft-step-card">
                         <div class="craft-step-num">02</div>
-                        <h3>Grab Your Supplies</h3>
+                        <h3>Pick Your Base</h3>
                         <p>
-                            Everything you need is right on the bar. Pick your colors, charms, and finishing touches.
+                            Choose the piece you want to make from the sample creations and the base bins on the bar.
                         </p>
                     </div>
 
                     <div class="craft-step-card">
                         <div class="craft-step-num">03</div>
-                        <h3>Make It Yours</h3>
+                        <h3>Choose Your Extras</h3>
                         <p>
-                            Craft at your own pace right at the bar, and we're there to help whenever you want it.
+                            Add your colors, charms, ribbon, and finishing touches. Everything is labeled and right in front of you.
                         </p>
                     </div>
 
                     <div class="craft-step-card">
                         <div class="craft-step-num">04</div>
-                        <h3>Take It Home</h3>
+                        <h3>Take It Home &amp; Create</h3>
                         <p>
-                            Pay per project at the booth and walk away with something you made yourself.
+                            Pay per kit at the booth and make it at home. It's a gift, an activity, and a keepsake in 1 bag.
                         </p>
                     </div>
                 </div>
@@ -768,7 +838,7 @@
                         <i class="fas fa-store"></i>
                         <h3>Markets &amp; Festivals</h3>
                         <p>
-                            Catch our booth at seasonal markets and festivals around North Dallas. Walk-ups welcome. Grab a seat, make a craft, and take it home the same day.
+                            Catch our booth at seasonal markets and festivals around North Dallas. Walk-ups welcome. Grab a bag, pick your supplies, and take your kit home the same day.
                         </p>
                     </div>
 
@@ -1010,87 +1080,92 @@
         const themes = [
             {
                 id: 'christmas',
-                img: 'assets/images/crafts/christmas.jpg',
+                booth: 'assets/images/crafts/booth-christmas.jpg',
+                sample: 'assets/images/crafts/christmas-samples.jpg',
                 label: 'Christmas',
                 icon: 'fa-snowflake',
                 accent: '#1a7a4c',
                 badge: 'On the Menu',
                 title: 'The Ornament Bar',
-                blurb: 'Make your own 1-of-a-kind ornament. Fill it, paint it, glitter it, and finish it with ribbon and charms. Straight from the bar to your tree.',
+                blurb: 'Pick your ornament shape, then load your bag with paint, ribbon, bells, and pom poms. Snowflakes, trees, gingerbread, reindeer, and stars, all ready to make your own.',
                 builds: [
-                    { icon: 'fa-gift', name: 'Fillable Ornament', desc: 'Fill a clear ornament with your favorite colors, glitter, and snow.' },
-                    { icon: 'fa-paint-brush', name: 'Painted Ornament', desc: 'Paint, marble, or hand-letter your own design.' },
-                    { icon: 'fa-tags', name: 'Gift Tag Charm', desc: 'A quick little make for kids and gift-toppers.' }
+                    { icon: 'fa-tree', name: 'Wood Shape Ornament', desc: 'Trees, snowflakes, gingerbread, reindeer, angels, and stars.' },
+                    { icon: 'fa-gift', name: 'Fillable Ornament', desc: 'A clear ornament ready for your favorite colors and fillers.' },
+                    { icon: 'fa-bell', name: 'Pom Pom Wreath', desc: 'A mini wreath ornament with pom poms, bells, and a bow.' }
                 ],
-                supplies: ['Clear ornaments', 'Paint & marbling colors', 'Glitter & snow fill', 'Mini bows & charms', 'Ribbon & twine', 'Name tags'],
+                supplies: ['Wood ornament shapes', 'Paints & brushes', 'Ribbon', 'Ornament hooks', 'Jingle bells', 'Pom poms', 'Wood embellishments', 'Sticky dots'],
                 note: 'A holiday favorite for Christmas markets, tree lightings, and company parties.'
             },
             {
                 id: 'halloween',
-                img: 'assets/images/crafts/halloween.jpg',
+                booth: 'assets/images/crafts/booth-halloween.jpg',
+                sample: 'assets/images/crafts/halloween.jpg',
                 label: 'Halloween',
                 icon: 'fa-ghost',
                 accent: '#c05621',
                 badge: 'On the Menu',
                 title: 'The Spooky Lantern Bar',
-                blurb: 'Make your own glowing lantern or potion jar. Layer the fills, pick your spooky accents, and light it up before you leave.',
+                blurb: 'Pick a jar or lantern, then fill your bag with spooky fillers, charms, and a flameless light. Jack-o-lanterns, ghosts, black cats, and more.',
                 builds: [
-                    { icon: 'fa-lightbulb', name: 'Spooky Lantern', desc: 'A glowing jar lantern with colored fill and a flameless light.' },
-                    { icon: 'fa-hat-wizard', name: 'Potion Jar', desc: 'Layer colors and label your own shelf-ready potion.' },
-                    { icon: 'fa-spider', name: 'Treat Bucket Tags', desc: 'Personalize your trick-or-treat bucket with tags and charms.' }
+                    { icon: 'fa-lightbulb', name: 'Spooky Lantern', desc: 'A glowing jar lantern with a flameless light.' },
+                    { icon: 'fa-hat-wizard', name: 'Potion Jar', desc: 'Layered colors and a label for a shelf-ready potion.' },
+                    { icon: 'fa-spider', name: 'Treat Bucket Tags', desc: 'Tags and charms to personalize a trick-or-treat bucket.' }
                 ],
-                supplies: ['Jars & lanterns', 'Colored fills', 'Flameless lights', 'Spooky charms', 'Labels & markers', 'Ribbon & twine'],
-                note: 'Kid-friendly and mess-free. No flames, no drying time, ready to take home.'
+                supplies: ['Jars & lanterns', 'Colored fillers', 'Flameless lights', 'Spooky charms', 'Ribbon & twine', 'Labels & markers'],
+                note: 'Kid-friendly and mess-free. No flames and no drying time.'
             },
             {
                 id: 'fall',
-                img: 'assets/images/crafts/fall.jpg',
+                booth: 'assets/images/crafts/booth-fall.jpg',
+                sample: 'assets/images/crafts/fall.jpg',
                 label: 'Fall',
                 icon: 'fa-leaf',
                 accent: '#b7791f',
                 badge: 'On the Menu',
                 title: 'The Mini Wreath Bar',
-                blurb: 'Make your own fall mini wreath. Pick your stems, berries, and ribbon from the bar and finish it off with a bow.',
+                blurb: 'Pick a wreath base, then gather your stems, berries, ribbon, and accents from the bar. Every wreath comes out different.',
                 builds: [
                     { icon: 'fa-circle-notch', name: 'Mini Wreath', desc: 'A door-ready mini wreath, made stem by stem.' },
-                    { icon: 'fa-seedling', name: 'Pumpkin Decorating', desc: 'Dress up a faux pumpkin with paint, florals, and ribbon. No carving, no mess.' },
-                    { icon: 'fa-mug-hot', name: 'Harvest Jar', desc: 'A layered jar of fall colors for your mantle or table.' }
+                    { icon: 'fa-seedling', name: 'Pumpkin Decorating', desc: 'Dress up a faux pumpkin with paint, florals, and ribbon.' },
+                    { icon: 'fa-mug-hot', name: 'Harvest Jar', desc: 'A layered jar of fall colors for a mantle or table.' }
                 ],
-                supplies: ['Wreath bases', 'Fall stems & berries', 'Faux pumpkins', 'Paints & markers', 'Ribbon & bows', 'Raffia & twine'],
+                supplies: ['Grapevine wreath bases', 'Fall stems & berries', 'Mini pumpkins', 'Ribbon & raffia', 'Pinecones', 'Wood cutouts', 'Markers'],
                 note: 'Everything is faux, so your wreath looks just as good in November as the day you made it.'
             },
             {
                 id: 'valentines',
-                img: 'assets/images/crafts/valentines.jpg',
+                booth: 'assets/images/crafts/booth-valentines.jpg',
+                sample: 'assets/images/crafts/valentines.jpg',
                 label: "Valentine's Day",
                 icon: 'fa-heart',
                 accent: '#c53058',
                 badge: 'On the Menu',
                 title: 'The Charm Bar',
-                blurb: 'Make your own charm bracelet or keychain. Pick your chain, pick your charms, and we finish and clasp it for you on the spot.',
+                blurb: 'Pick your chain, then choose your charms, pearls, and beads. Hearts, bows, cherries, and flowers for bracelets and keychains.',
                 builds: [
                     { icon: 'fa-gem', name: 'Charm Bracelet', desc: 'Pick a chain and load it up, charm by charm.' },
                     { icon: 'fa-key', name: 'Charm Keychain', desc: 'The charm bar on a keychain. A favorite for gifts.' },
                     { icon: 'fa-sun', name: 'Heart Suncatcher', desc: 'A beaded suncatcher in pinks, reds, and clears.' }
                 ],
-                supplies: ['Chains & keyrings', 'Letter charms', 'Heart & novelty charms', 'Beads & crystals', 'Clasps & findings', 'Gift pouches'],
-                note: 'Perfect for galentine\'s parties, date nights, and gifts that actually mean something.'
+                supplies: ['Gold & silver chains', 'Keyrings', 'Heart & bow charms', 'Pearls', 'Beads & crystals', 'Clasps & rings', 'Gift pouches'],
+                note: "Perfect for galentine's parties, date nights, and gifts that mean something."
             },
             {
                 id: 'spring',
-                img: 'assets/images/crafts/spring.jpg',
+                booth: 'assets/images/crafts/booth-spring.jpg',
+                sample: 'assets/images/crafts/spring.jpg',
                 label: 'Spring',
                 icon: 'fa-sun',
                 accent: '#2b8a9d',
                 badge: 'On the Menu',
                 title: 'The Suncatcher Bar',
-                blurb: 'Make your own window suncatcher. String your crystals, beads, and shapes exactly how you want them, then hang it where the light hits.',
+                blurb: 'Pick a shape, then choose your crystals, beads, and florals. Hearts, butterflies, suns, moons, and stars that catch the light.',
                 builds: [
-                    { icon: 'fa-rainbow', name: 'Beaded Suncatcher', desc: 'Crystals and colored beads, strung piece by piece.' },
-                    { icon: 'fa-spa', name: 'Flower Crown', desc: 'A wearable crown of faux blooms from the flower bar.' },
+                    { icon: 'fa-rainbow', name: 'Crystal Suncatcher', desc: 'Crystals and beads strung from a shape of your choice.' },
+                    { icon: 'fa-spa', name: 'Flower Crown', desc: 'A wearable crown of faux blooms and greenery.' },
                     { icon: 'fa-egg', name: 'Spring Jar Garden', desc: 'A little faux garden in a jar. No watering required.' }
                 ],
-                supplies: ['Beads & crystals', 'Suncatcher shapes', 'Faux blooms & greenery', 'Crown bases', 'Jars & fillers', 'Cord & wire'],
+                supplies: ['Wood & metal shapes', 'Crystals & prisms', 'Beads', 'Metal rings', 'Cord', 'Faux florals & greenery'],
                 note: 'A favorite for outdoor markets, spring festivals, and school and community events.'
             }
         ];
@@ -1109,10 +1184,13 @@
         function renderStage(t) {
             stageEl.innerHTML =
             '<div class="theme-panel" style="--theme-accent:' + t.accent + '">' +
+              '<div class="theme-booth">' +
+                '<img src="' + t.booth + '" alt="' + t.title + ' booth setup">' +
+                '<span class="theme-booth-label"><i class="fas ' + t.icon + '"></i>' + t.title + ' booth</span>' +
+              '</div>' +
               '<div class="theme-stage">' +
                 '<div class="theme-feature">' +
                   '<span class="theme-badge"><i class="fas ' + t.icon + '"></i>' + t.label + ' &bull; ' + t.badge + '</span>' +
-                  '<div class="theme-photo"><img src="' + t.img + '" alt="' + t.title + '"></div>' +
                   '<h3>' + t.title + '</h3>' +
                   '<p>' + t.blurb + '</p>' +
                   '<div class="theme-builds">' +
@@ -1122,6 +1200,7 @@
                   '</div>' +
                 '</div>' +
                 '<div class="theme-side">' +
+                  '<div class="theme-side-photo"><span>Finished pieces</span><img src="' + t.sample + '" alt="Finished ' + t.label + ' crafts"></div>' +
                   '<h3>On the bar</h3>' +
                   '<p>Every theme comes with a full spread of supplies. Mix, match, and make it your own.</p>' +
                   '<div class="supply-chips">' +
@@ -1132,6 +1211,9 @@
               '</div>' +
             '</div>';
         }
+
+        // Preload every theme's images so tab switches are instant
+        themes.forEach(t => { [t.booth, t.sample].forEach(src => { const i = new Image(); i.src = src; }); });
 
         function activate(id) {
             const t = themes.find(x => x.id === id) || themes[0];
